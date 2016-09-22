@@ -1,0 +1,18 @@
+.fecha {
+    color: #fff;
+    display: inline-block;
+    float: left;
+    font: 13px/1 "prelobook";
+    padding-top: 18px;
+}
+.logo a.go-ec {
+    background-position: 0 0;
+    width: 73px;
+}
+.logo a.go-videos {
+    background-position: -73px 0;
+    width: 201px;
+}
+
+
+

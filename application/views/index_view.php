@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <h1 style="font-size:20pt">Bien</h1>
-
+        <li><a href="<?= site_url('videos/index') ?>">Videos</a></li>
     </div>
 
 <script src="<?php echo base_url('assets/jquery/jquery-2.1.4.min.js')?>"></script>
