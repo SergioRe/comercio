@@ -1,4 +1,4 @@
-.fecha {
+.vg-opts .fecha {
     color: #fff;
     display: inline-block;
     float: left;
@@ -13,6 +13,86 @@
     background-position: -73px 0;
     width: 201px;
 }
+.logo {
+    float: left;
+    width: 274px;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+* {
+    box-sizing: border-box;
+}
 
+.vg-social {
+    float: right;
+    margin-bottom: 10px;
+    width: 132px;
+}
+
+.vg-social ul {
+    overflow: hidden;
+}
+ul, ol {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+.vg-social ul li {
+    float: left;
+    margin-right: 10px;
+}
+
+.vg-search {
+    clear: both;
+}
+.vg-search input {
+    color: #5b5b5b;
+    font: 13px/1 "prelobook";
+    padding: 0 10px;
+    width:100%;
+    max-width:398px;
+}
+.vg-search input, .vg-search button {
+    background-color: #fff;
+    border: 0 none;
+    float: left;
+    height: 27px;
+}
+input {
+    line-height: normal;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+
+.vg-search button {
+    color: #cdac47;
+    font: 13px/27px "FontAwesome";
+    width: 27px;
+}
+.vg-search input, .vg-search button {
+    background-color: #fff;
+    border: 0 none;
+    float: left;
+    height: 27px;
+}
 
 

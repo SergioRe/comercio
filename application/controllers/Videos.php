@@ -13,7 +13,7 @@ class Videos extends CI_Controller {
         $data = array();
         $dias = array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sábado");
         $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
-        $fecha = $dias[date('w')]." ".date('d')." de ".$meses[date('n')-1]. " del ".date('Y') ;
+        $fecha = date('d')." de ".$meses[date('n')-1]. " del ".date('Y') ;
         $data['fecha'] = $fecha;
         $this->load->view('videos/index_view',$data);
     }
