@@ -32,10 +32,12 @@
                 height: 68px;
                 text-indent: -9999px;
             }
-/*            .col-lg-6{
-                 padding-left: 60px;
-                 padding-left: auto;
-            }*/
+            @media (min-width: 600px) {
+                .row {
+                    margin-left: 20px;
+                    margin-right: 20px;
+                }
+            }
         </style>
         <div class="container fondovideos">
             <div class="row">
