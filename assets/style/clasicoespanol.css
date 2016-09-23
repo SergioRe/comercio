@@ -1,0 +1,10 @@
+.zona-clasicoespanol { background-image: url(../i/clasicoespanol/bg_flujos.jpg); height: 200px; padding: 12px 20px; width: 980px; }
+.zona-clasicoespanol a.btn_mundial { display: inline-block; width: 180px; height: 170px; }
+	.flow-zone { float: right; width: 746px; }
+		.note-flow { float: left; height: 176px; margin-right: 14px; width: 176px; }
+		.note-flow.last { margin-right: 0; }
+			.flow-image { height: 176px; overflow: hidden; }
+			.flow-image a.img { height: 98px; } 
+				.flow-detail { background-image: url("../i/clasicoespanol/bg_title.jpg"); background-position: center 0; min-height: 78px; padding: 10px; }
+					.flow-title { font: 16px/1.1 "preloextrabold_italic"; margin: 0; }
+					.flow-title a { color: #fff; }

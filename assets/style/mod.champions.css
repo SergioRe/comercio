@@ -1,0 +1,25 @@
+/* MODULO FLUJOS */
+.mod-champions { background-image: url("../i/mod_champions/bg_previa_champions.jpg"); height: 266px; margin: 0 auto; padding: 17px 21px 0 22px; position: relative; width: 980px; }
+.mod-champions > h2, .mod-champions > h2 > a { color: #fff; float: left; font: 58px/1 "prelo_slabblack"; margin: 0 0 15px; text-shadow: 2px 2px 1px #000; text-transform: uppercase; }
+.mod-champions > h2 > a { margin-bottom: 0; }
+.mod-champions > h2 > a:hover { text-decoration: none; }
+.mod-champions .ads-190 { line-height: 0.7; position: absolute; right: 21px; top: 10px; width: 190px; }
+	.mod-flujos { }
+		.mod-flujo { border-right: 1px solid #9badc9; float: left; height: 165px; margin-right: 9px; padding-right: 9px; width: 230px; }
+		.mod-flujo figure { margin-bottom: 5px; width: 220px; }
+		.mod-flujo h2 { font: 15px/1.1 "prelobold"; margin: 0; }
+		.mod-flujo h2 a { color: #fff; }
+		.mod-flujo.last { border-right: 0; margin-right: 0; padding-right: 0; width: 220px; }
+
+/* MODULO MINUTO A MINUTO */
+#single_w { position: relative; }
+.m2m-champions { background-image: url("../i/mod_champions/bg_m2m_champions.jpg"); height: 434px; margin: 0 auto; padding-top: 10px; position: relative; width: 980px; }
+.m2m-champions .ecw-elpa .ecw-nm .ecw-nm1, .m2m-champions .ecw-elpa .ecw-nm .ecw-nm2 { font: 19px/1 "prelobold"; }
+	.m2m-banners { }
+	.m2m-banners .ads-190 { line-height: .7; position: absolute; top: 10px; width: 190px; }
+	.m2m-banners .ads-190.left { left: 15px; }
+	.m2m-banners .ads-190.right { right: 13px; }
+	.h-m2m { text-align: center; }
+	.h-m2m > h2, .h-m2m > h2 > a { color: #fff; font: 58px/1 "prelo_slabblack"; margin: 0 0 5px; text-shadow: 2px 2px 1px #000; text-transform: uppercase; }
+	.h-m2m > h2 > a { margin-bottom: 0; }
+	.h-m2m > h2 > a:hover { text-decoration: none; }

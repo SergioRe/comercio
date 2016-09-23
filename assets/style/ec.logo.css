@@ -1,0 +1,61 @@
+/* LOGO EC HOME */
+/*body#home .ec-logo-slinks h1, body#home .ec-logo-slinks h1 a, body#home .ec-logo-slinks h2, body#home .ec-logo-slinks h2 a { height: 73px; width: 330px; }*/
+body#home .ec-logo-slinks h1, body#home .ec-logo-slinks h1 a, body#home .ec-logo-slinks h2, body#home .ec-logo-slinks h2 a { height: 50px; width: 305px; }
+body#home .ec-logo-slinks h1, body#home .ec-logo-slinks h2 { margin: 10px auto; }
+/*body#home .ec-logo-slinks h1{margin-top:-13px}*/
+/*body#home .ec-logo-slinks h1 a, body#home .ec-logo-slinks h2 a { background: url("../i/ec_logo_gorro_navidad.png?ec") no-repeat center; }*/
+body#home .ec-logo-slinks h1 a, body#home .ec-logo-slinks h2 a { background: url("../i/ec_logo.png?ecpe") no-repeat 0 0; }
+
+/* LOGO EC SECCION PERSONAJES Y TEMAS ESPECIALES */
+.cnt-header h1, .cnt-header h2, .cnt-header h1 a, .cnt-header h2 a { height: 31px !important; width: 181px !important; }
+.cnt-header h1 a, .cnt-header h2 a { background-image: url("../i/ec_logo.png") !important; background-position: 0 -323px; }
+
+/* LOGO EC LAS FUERZAS VIVAS Y SMARTPHONES */
+#cintillo_header .contenido .logo { background-image: url("../i/ec_logo.png"); background-position: 0 -323px; height: 31px; width: 181px; }
+
+/* LOGO EC REDES SOCIALES */
+.header .ctn-header { padding-top: 3px; }
+.header .ctn-header a { background-image: url("../i/ec_logo.png"); background-position: 0 -323px; height: 31px; width: 181px; }
+.header .ctn-header a img { display: none; }
+
+/* LOGO EC MOTORSHOW */
+.header-comercio .ctn-header { padding-top: 3px; }
+.header-comercio .ctn-header a { background-image: url("../i/ec_logo.png"); background-position: 0 -323px; height: 31px; width: 181px; }
+.header-comercio .ctn-header a img { display: none; }
+.header-comercio .ctn-header span { background-image: none; height: 31px; padding-bottom: 5px; width: 181px; }
+
+/* LOGO EC PERROS PERDIDOS */
+.logo-social h1, .logo-social h1 a, .logo-social h2, .logo-social h2 a { height: 31px; width: 181px; }
+.logo-social h1, .logo-social h2 { margin-top: 3px; padding-top: 0; }
+.logo-social h1 a, .logo-social h2 a { background-image: url("../i/ec_logo.png"); background-position: 0 -323px; }
+
+/* LOGO EC PREMIOS DT Y LUCES */
+header .cont_header > span { margin-top: 10px; }
+header .cont_header > span a { background-image: url("../i/ec_logo.png"); background-position: 0 -323px; height: 31px; margin-bottom: 0; width: 181px; }
+
+/* LOGO EC PROMO CUATRIMOTO */
+.cont-cintillo .cintillo { box-sizing: border-box; height: 42px; padding: 5px 0; }
+.cont-cintillo .cintillo .cont_logo_buscar { padding-top: 0; }
+.cont-cintillo .cintillo .cont_log .u-links { margin-top: 3px; }
+	.cont_logo_buscar > a { background-image: url("../i/ec_logo.png"); background-position: 0 -323px; display: block; float: left; height: 31px; margin-bottom: 0; width: 181px; }
+	.cont_logo_buscar > a > img { display: none; }
+
+/* VIDEOS */
+header.wrap { }
+header.wrap .logo { background-image: url("../i/ec_logo.png"); background-position: 0 -323px; background-repeat: no-repeat; height: 31px; margin-top: 15px; padding: 0 0 0 195px; text-align: left; }
+header.wrap .logo img { display: none; }
+
+/* LANDING PAQUETES */
+.logo-eco { height: 50px; width: 303px; }
+.logo-eco a { background-image: url("../i/ec_logo.png"); }
+
+/* RSS */
+body#home #header h1 a, body#fonoavisos #header h1 a, body#concesionarios #header h1 a, body.fotozoom #header h1 a { background-image: url("../i/ec_logo.png"); height: 50px; width: 303px; }
+
+/* FIESTAS PATRIAS */
+body.fiestaspatrias .escarapela{display:inline-block; background:url(../i/escarapela.png) 0 0 no-repeat; width:69px; height:69px; text-indent:100%; overflow:hidden; white-space:nowrap; vertical-align:top; display:inline-block}
+
+/* CONSECIONARIOS */
+body#concesionarios .ec-logo-slinks h1, body#concesionarios .ec-logo-slinks h1 a, body#concesionarios .ec-logo-slinks h2, body#concesionarios .ec-logo-slinks h2 a { height: 50px; width: 303px; }
+body#concesionarios .ec-logo-slinks h1, body#concesionarios .ec-logo-slinks h2 { margin: 10px auto; }
+body#concesionarios .ec-logo-slinks h1 a, body#concesionarios .ec-logo-slinks h2 a { background-image: url("../i/ec_logo.png?ec"); text-indent: -9999px; }
