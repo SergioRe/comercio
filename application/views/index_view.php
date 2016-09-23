@@ -30,9 +30,7 @@
         <link rel="stylesheet" href="<?php echo base_url('assets/style/mod.lifweek.css')?>">
         <link rel="stylesheet" href="<?php echo base_url('assets/style/widget_suplementos.css')?>">
     <!--bluekai--> 	
-	</div>
-
-		<nav class="ec-marcas">
+    <nav class="ec-marcas">
 	<ul>
 		<li><a href="" >Novedades!</a></li>
 		<li><a href="" >¡Vamos!</a></li>
