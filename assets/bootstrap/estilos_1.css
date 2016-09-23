@@ -84,10 +84,14 @@ p,div, span{line-height:1.3em;}
 .column-clear{clear:both;}
 .clear{overflow: hidden;}
 
-
+*{
+    margin: 0;
+    padding: 0;
+}
 .mainWrap{
     width:970px;
     margin:0 auto;
+    height: 40px;
 }
  @media (min-width:768px){.mainWrap{width:768px;}}
  @media (min-width:992px){.mainWrap{width:970px}}
