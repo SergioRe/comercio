@@ -12,6 +12,6 @@ class Inicio extends CI_Controller {
         $this->load->helper('url');
         $data = array();
         $data['abra'] = 'ghghhghg';
-        $this->load->view('index_view',$data);
+        $this->load->view('indexx_view',$data);
     }
 }

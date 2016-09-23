@@ -29,20 +29,20 @@
         <link rel="stylesheet" href="<?php echo base_url('assets/style/mod.lifweek.block.css')?>">
         <link rel="stylesheet" href="<?php echo base_url('assets/style/mod.lifweek.css')?>">
         <link rel="stylesheet" href="<?php echo base_url('assets/style/widget_suplementos.css')?>">
-    <!--bluekai--> 	
-    <nav class="ec-marcas">
-	<ul>
-		<li><a href="" >Novedades!</a></li>
-		<li><a href="" >¡Vamos!</a></li>
-		<li><a href="" >Ruedas &amp; Tuercas</a></li>
-		<li><a href="" >MenúPerú</a></li>
-		<li><a href="" >Casa y Más</a></li>
-		<li><a href="" target="_blank" >El Dominical</a></li>
-		<li><a href="" target="_blank" >Urbania</a></li>
-		<li><a href="" target="_blank" >Neoauto</a></li>
-		<li><a href="" >Aptitus</a></li>
-	</ul>
-</nav>	
+    <!--bluekai--> 
+        <nav class="ec-marcas">
+            <ul>
+                <li><a href="" >Novedades!</a></li>
+                <li><a href="" >¡Vamos!</a></li>
+                <li><a href="" >Ruedas &amp; Tuercas</a></li>
+                <li><a href="" >MenúPerú</a></li>
+                <li><a href="" >Casa y Más</a></li>
+                <li><a href="" target="_blank" >El Dominical</a></li>
+                <li><a href="" target="_blank" >Urbania</a></li>
+                <li><a href="" target="_blank" >Neoauto</a></li>
+                <li><a href="" >Aptitus</a></li>
+            </ul>
+        </nav>	
 	<div class="ec-apertura">
 	<!--links toma de canal
 			  <div class="ads-980x180">
