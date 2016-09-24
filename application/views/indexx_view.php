@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/font-awesome/css/font-awesome.css')?>" >
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript" ></script>
     <script src="<?php echo base_url('assets/bootstrap/js/menu.js')?>" type="text/javascript"></script> 
+    <link href="<?php echo base_url('assets/bootstrap/css/bootstrap-social.css')?>" rel="stylesheet">
 
 </head>
 <body>
@@ -34,12 +35,34 @@
         </nav>
     </div><!--end mainWrap-->
     <div class="container ec-apertura">
+        <br/>
         <div class="row">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-10">
-                <br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="col-lg-4">
+                <button type="button" class="btn btn-sm btn-ing-reg-sus">Ingresa</button>&nbsp;
+                <button type="button" class="btn btn-sm">Registrate</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-sm">Suscríbete</button>
             </div>
-            <div class="col-lg-1"></div>
+            <div class="col-lg-4 text-center" style="top: 7px;">
+                <?php echo $fecha;?>
+                <br/><br/>
+                <img src="<?php echo base_url('assets/imagenes/ec_logo.png')?>">
+            </div>
+            <div class="col-lg-4" style="top: 3px;">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="<?php echo base_url('assets/imagenes/btn_suscriptores.png')?>">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <input type="text" class="form-control"/>
+                            <span class="input-group-addon">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/><br/><br/><br/>
         </div>
     </div>
 </body>

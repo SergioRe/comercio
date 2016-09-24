@@ -11,7 +11,9 @@ class Inicio extends CI_Controller {
     public function index(){
         $this->load->helper('url');
         $data = array();
-        $data['abra'] = 'ghghhghg';
+        $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+        $fecha = date('d')." de ".$meses[date('n')-1]. " del ".date('Y') ;
+        $data['fecha'] = $fecha;
         $this->load->view('indexx_view',$data);
     }
 }

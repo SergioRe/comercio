@@ -188,7 +188,7 @@ text-decoration:none;
 
 @media (min-width: 768px) and (max-width: 979px) {
 
-.mainWrap{width:768px;}
+.mainWrap{width:768px;height: 34px;}
 .menu ul {top:37px;}
 .menu li a{font-size:12px;
 padding:8px;}
