@@ -5,7 +5,7 @@ class Inicio extends CI_Controller {
 
     public function __construct(){
         parent::__construct();
-        $this->load->model('submenu_model','submenu');
+        //$this->load->model('submenu_model','submenu');
     }
 
     public function index(){

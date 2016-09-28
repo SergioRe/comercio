@@ -15,12 +15,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript" ></script>
     <script src="<?php echo base_url('assets/bootstrap/js/menu.js')?>" type="text/javascript"></script> 
     <link href="<?php echo base_url('assets/bootstrap/css/bootstrap-social.css')?>" rel="stylesheet">
-<script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js')?>" type="text/javascript"></script> 
+    <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js')?>" type="text/javascript"></script>
 <style>
   /* Note: Try to remove the following lines to see the effect of CSS positioning */
   .affix {
       top: 0;
       width: 100%;
+  }
+  .affix-top{
+      width: 1035px;
+      margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
   }
 
   .affix + .container-fluid {
@@ -90,41 +97,40 @@
         </div>
         <BR/>
     </div>
-    <div class="container ec-apertura">
-        <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Sta</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">POLITICA</a></li>
-                    <li><a href="#">ECONOMIA</a></li>
-                    <li><a href="#">OPINION</a></li>
-                    <li><a href="#">SOCIEDAD</a></li>
-                    <li><a href="#">MUNOD</a></li>
-                    <li><a href="#">TECNO</a></li>
-                    <li><a href="#">WUF</a></li>
-                    <li><a href="#">LUCES</a></li>
-                    <li><a href="#">TV</a></li>
-                    <li><a href="#">DT</a></li>
-                    <li><a href="#">PLAY</a></li>
-                </ul>
-            </div>
-                <!-- /.navbar-collapse -->
-            <!-- /.container -->
-        </nav>
-    
+            <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Sta</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">POLITICA</a></li>
+                        <li><a href="#">ECONOMIA</a></li>
+                        <li><a href="#">OPINION</a></li>
+                        <li><a href="#">SOCIEDAD</a></li>
+                        <li><a href="#">MUNOD</a></li>
+                        <li><a href="#">TECNO</a></li>
+                        <li><a href="#">WUF</a></li>
+                        <li><a href="#">LUCES</a></li>
+                        <li><a href="#">TV</a></li>
+                        <li><a href="#">DT</a></li>
+                        <li><a href="#">PLAY</a></li>
+                    </ul>
+                </div>
+                </div>
+                    <!-- /.navbar-collapse -->
+                <!-- /.container -->
+            </nav>
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    </div>
-</body>
+    </div></body>
 </html>
