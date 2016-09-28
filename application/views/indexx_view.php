@@ -16,6 +16,17 @@
     <script src="<?php echo base_url('assets/bootstrap/js/menu.js')?>" type="text/javascript"></script> 
     <link href="<?php echo base_url('assets/bootstrap/css/bootstrap-social.css')?>" rel="stylesheet">
 <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js')?>" type="text/javascript"></script> 
+<style>
+  /* Note: Try to remove the following lines to see the effect of CSS positioning */
+  .affix {
+      top: 0;
+      width: 100%;
+  }
+
+  .affix + .container-fluid {
+      padding-top: 70px;
+  }
+  </style>
 </head>
 <body>
     <div class="mainWrap">
@@ -78,34 +89,42 @@
             </div>
         </div>
         <BR/>
-        <nav class="navbar navbar-default">
+    </div>
+    <div class="container ec-apertura">
+        <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Cambiar Navegacion</span>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand">CC</a>
+                <a class="navbar-brand" href="#">Sta</a>
             </div>
-
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a class="tipoletra" href="#">POLITICA</a></li>
-                    <li><a class="tipoletra" href="#">ECONOMIA</a></li>
-                    <li><a class="tipoletra" href="#">OPINION SOCIEDAD</a></li>
-                    <li><a class="tipoletra" href="#">MUNDO</a></li>
-                    <li><a class="tipoletra" href="#">TECNO</a></li>
-                    <li><a class="tipoletra" href="#">WUF</a></li>
-                    <li><a class="tipoletra" href="#">LUCES</a></li>
-                    <li><a class="tipoletra" href="#">TV</a></li>
-                    <li><a class="tipoletra" href="#">DT</a></li>
-                    <li><a class="tipoletra" href="#">Servicios</a></li>
+                    <li><a href="#">POLITICA</a></li>
+                    <li><a href="#">ECONOMIA</a></li>
+                    <li><a href="#">OPINION</a></li>
+                    <li><a href="#">SOCIEDAD</a></li>
+                    <li><a href="#">MUNOD</a></li>
+                    <li><a href="#">TECNO</a></li>
+                    <li><a href="#">WUF</a></li>
+                    <li><a href="#">LUCES</a></li>
+                    <li><a href="#">TV</a></li>
+                    <li><a href="#">DT</a></li>
+                    <li><a href="#">PLAY</a></li>
                 </ul>
             </div>
+                <!-- /.navbar-collapse -->
+            <!-- /.container -->
         </nav>
-        <div class="row"><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div>
+    
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     </div>
 </body>
 </html>
