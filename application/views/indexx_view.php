@@ -91,16 +91,16 @@
 
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">POLITICA</a></li>
-                    <li><a href="#">ECONOMIA</a></li>
-                    <li><a href="#">OPINION SOCIEDAD</a></li>
-                    <li><a href="#">MUNDO</a></li>
-                    <li><a href="#">TECNO</a></li>
-                    <li><a href="#">WUF</a></li>
-                    <li><a href="#">LUCES</a></li>
-                    <li><a href="#">TV</a></li>
-                    <li><a href="#">DT</a></li>
-                    <li><a href="#">Servicios</a></li>
+                    <li><a class="tipoletra" href="#">POLITICA</a></li>
+                    <li><a class="tipoletra" href="#">ECONOMIA</a></li>
+                    <li><a class="tipoletra" href="#">OPINION SOCIEDAD</a></li>
+                    <li><a class="tipoletra" href="#">MUNDO</a></li>
+                    <li><a class="tipoletra" href="#">TECNO</a></li>
+                    <li><a class="tipoletra" href="#">WUF</a></li>
+                    <li><a class="tipoletra" href="#">LUCES</a></li>
+                    <li><a class="tipoletra" href="#">TV</a></li>
+                    <li><a class="tipoletra" href="#">DT</a></li>
+                    <li><a class="tipoletra" href="#">Servicios</a></li>
                 </ul>
             </div>
         </nav>

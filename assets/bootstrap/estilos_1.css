@@ -282,3 +282,14 @@ width:100%;}
 .vg-social{
     top: 10px;
 }
+
+.tipoletra{
+    color: #333;
+    display: inline-block;
+    font: 14px/35px "prelobold";
+    min-width: 100%;
+    padding: 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
