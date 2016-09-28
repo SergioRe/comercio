@@ -96,7 +96,7 @@ p,div, span{line-height:1.3em;}
  @media (min-width:768px){.mainWrap{width:768px;}}
  @media (min-width:992px){.mainWrap{width:970px}}
  @media (min-width:1200px){.mainWrap{width:1035px}}
-
+ 
 .title{margin:100px 0 20px 0;
 text-align:center;
 color:#3E4156;}
@@ -109,15 +109,28 @@ background:#333;
 
 .menu{display:block;}
 
-.menu li{
-    /*display: inline-block;*/
-    position: relative;
-    z-index:100;
-    border-right: 1px solid #ccc;
-    text-align: center;
-    display: table-cell;
-    width: 1%;
-    text-align: center;
+@media (min-width: 768px) {   
+    .movil{  
+        width: 1%;
+        position: relative;
+        z-index:100;
+        border-right: 1px solid #ccc;
+        text-align: left;
+        text-align: center;
+        display: table-cell;
+    }
+}
+@media (max-width: 768px) {  
+    .menu li{
+        /*display: inline-block;*/
+        position: relative;
+        z-index:100;
+        border-right: 1px solid #ccc;
+        text-align: center;
+        display: table-cell;
+        width: 100%;
+        text-align: left;
+    }
 }
 
 .menu li:first-child{margin-left:0;}
@@ -243,4 +256,29 @@ width:100%;}
 }
 .ec-apertura{
     background-color: #f7c600;
+}
+.buscar{
+    font-size: 14px;
+    padding: 3px;
+    width: 127px;
+    background-color: #fff;
+    border: 0 none;
+    color: #cdac47;
+    float: left;
+    height: 25px;
+}
+.buscarbtn{
+    background-color: #fff;
+    border: 0 none;
+    color: #cdac47;
+    float: left;
+    height: 25px;
+    padding: 0;
+}
+.imgsus{
+    width:100%;
+    max-width:230px;
+}
+.vg-social{
+    top: 10px;
 }
