@@ -279,6 +279,15 @@ width:100%;}
     width:100%;
     max-width:230px;
 }
+
+.imgsus1{
+    width:100px;
+    height: 20px;
+}
+.imgsus2{
+    width:50px;
+    height: 30px;
+}
 .vg-social{
     top: 10px;
 }
@@ -292,4 +301,96 @@ width:100%;}
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
+}
+
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+/*.affix-top{
+    width: 1035px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
+
+@media (min-width: 768px) {   
+    .affix-top{  
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .tipoletra{
+        color: #333;
+        display: inline-block;
+        font-size: 9px;
+        min-width: 100%;
+        padding: 0 10px;
+        text-align: center;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+    .imgsus1{
+        width:0px;
+        height: 0px;
+    }
+}
+@media (max-width: 768px) {  
+    .affix-top{
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (min-width: 992px) {   
+    .affix-top{  
+        width: 970px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .tipoletra{
+        color: #333;
+        display: inline-block;
+        font: 13px/35px "prelobold";
+        min-width: 100%;
+        padding: 0 10px;
+        text-align: center;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+}
+
+@media (min-width: 1200px) {   
+    .affix-top{  
+        width: 1035px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/*
+ @media (min-width:768px){.mainWrap{width:768px;}}
+ @media (min-width:992px){.mainWrap{width:970px}}
+ @media (min-width:1200px){.mainWrap{width:1035px}}
+}*/
+
+.affix + .container-fluid {
+    padding-top: 70px;
+}
+.letra3{
+    color: #1C1C1C;
+}
+.colorplay{
+    background: black;
+}
+.colorletrablanco{
+    background: #fff;
+    font-size: 14px;
 }
