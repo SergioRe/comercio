@@ -16,6 +16,18 @@
     <script src="<?php echo base_url('assets/bootstrap/js/menu.js')?>" type="text/javascript"></script> 
     <link href="<?php echo base_url('assets/bootstrap/css/bootstrap-social.css')?>" rel="stylesheet">
     <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js')?>" type="text/javascript"></script>
+    <style type="text/css">
+        .elecciones-flujos{
+            background-image: url("<?php echo base_url('assets/imagenes/bg_mod_elecciones.jpg')?>");
+            border-bottom: 2px solid #ffc905;
+            border-top: 2px solid #ffc905;
+            padding: 14px 22px 0;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 26px;
+            padding-right: 26px;
+        }
+    </style>
 </head>
 <body>
     <div class="mainWrap">
@@ -38,9 +50,9 @@
         <br/>
         <div class="row">
             <div class="col-lg-4">
-                <button type="button" class="btn btn-sm btn-ing-reg-sus">Ingresa</button>&nbsp;
-                <button type="button" class="btn btn-sm">Registrate</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button type="button" class="btn btn-sm">Suscríbete</button>
+                <button type="button" class="btn btn-default btn-sm">Ingresa</button>&nbsp;
+                <button type="button" class="btn btn-default btn-sm">Registrate</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-default btn-sm">Suscríbete</button>
             </div>
             <div class="col-lg-4 text-center" style="top: 7px;">
                 <?php echo $fecha;?>
@@ -77,50 +89,104 @@
                 </div>
             </div>
         </div>
-        <BR/>
+        <br/>
     </div>
-    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197" style="background: #BDBDBD;border: 0px;">
-        <!-- Brand and toggle get grouped for better mobile display -->
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197" style="background: #BDBDBD;border: 0px;margin-bottom: 0px;">
         <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">
-                <img class="imgsus1" src="<?php echo base_url('assets/imagenes/ec_logo.png')?>">
-            </a>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img class="imgsus1" src="<?php echo base_url('assets/imagenes/ec_logo.png')?>">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a class="tipoletra" href="#"><b class="letra3">POLITICA</b></a></li>
+                    <li><a class="tipoletra" href="#"><b class="letra3">ECONOMIA</b></a></li>
+                    <li><a class="tipoletra" href="#"><b class="letra3">OPINION</b></a></li>
+                    <li><a class="tipoletra" href="#"><b class="letra3">SOCIEDAD</b></a></li>
+                    <li><a class="tipoletra" href="#"><b class="letra3">MUNOD</b></a></li>
+                    <li><a class="tipoletra" href="#"><b class="letra3">TECNO</b></a></li>
+                    <li><a class="tipoletra" href="#"><b class="letra3">WUF</b></a></li>
+                    <li><a class="tipoletra" href="#"><b class="letra3">LUCES</b></a></li>
+                    <li><a class="tipoletra" href="#"><b class="letra3">TV</b></a></li>
+                    <li><a class="tipoletra" href="#"><b class="letra3">DT</b></a></li>
+                    <li class="colorplay">
+                        <a class="tipoletra" href="#">
+                            <b>PLAY</b>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a class="tipoletra" href="#"><b class="letra3">POLITICA</b></a></li>
-                <li><a class="tipoletra" href="#"><b class="letra3">ECONOMIA</b></a></li>
-                <li><a class="tipoletra" href="#"><b class="letra3">OPINION</b></a></li>
-                <li><a class="tipoletra" href="#"><b class="letra3">SOCIEDAD</b></a></li>
-                <li><a class="tipoletra" href="#"><b class="letra3">MUNOD</b></a></li>
-                <li><a class="tipoletra" href="#"><b class="letra3">TECNO</b></a></li>
-                <li><a class="tipoletra" href="#"><b class="letra3">WUF</b></a></li>
-                <li><a class="tipoletra" href="#"><b class="letra3">LUCES</b></a></li>
-                <li><a class="tipoletra" href="#"><b class="letra3">TV</b></a></li>
-                <li><a class="tipoletra" href="#"><b class="letra3">DT</b></a></li>
-                <li class="colorplay">
-                    <a class="tipoletra" href="#">
-                        <b>PLAY</b>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        </div>
-            <!-- /.navbar-collapse -->
-        <!-- /.container -->
     </nav>
     <div class="container ec-apertura">
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/>
+        <div class="row elecciones-flujos">
+            <!--<div class="col-lg-3">-->
+                <div class="thumbnail f-elecciones">
+                    <img src="<?php echo base_url('assets/imagenes/opinion.jpg')?>" alt="imagen">
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="coloreleciones">
+                                <b>Donec nec justo eget felis facilisis fermentum.Aliquam porttitor.</b>
+                            </a>
+                        </p>
+                    </div>
+                 </div>
+<!--            </div>
+            <div class="col-lg-3">-->
+                <div class="thumbnail  f-elecciones">
+                    <img src="<?php echo base_url('assets/imagenes/mundo.jpg')?>" alt="imagen">
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="coloreleciones">
+                                <b>Donec nec justo eget felis facilisis fermentum.Aliquam porttitor.</b>
+                            </a>
+                        </p>
+                    </div>
+                 </div>
+<!--            </div>
+            <div class="col-lg-3">-->
+                <div class="thumbnail  f-elecciones">
+                    <img src="<?php echo base_url('assets/imagenes/opinion2.jpg')?>" alt="imagen">
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="coloreleciones">
+                                <b>Donec nec justo eget felis facilisis fermentum.Aliquam porttitor.</b>
+                            </a>
+                        </p>
+                    </div>
+                 </div>
+<!--            </div>
+            <div class="col-lg-3">-->
+                <div class="thumbnail  f-elecciones">
+                    <img src="<?php echo base_url('assets/imagenes/mundodos.jpg')?>" alt="imagen">
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="coloreleciones">
+                                <b>Donec nec justo eget felis facilisis fermentum.Aliquam porttitor.</b>
+                            </a>
+                        </p>
+                    </div>
+                 </div>
+                 <div class="thumbnail  f-elecciones">
+                    <img src="<?php echo base_url('assets/imagenes/politica.jpg')?>" alt="imagen">
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="coloreleciones">
+                                <b>Donec nec justo eget felis facilisis fermentum.Aliquam porttitor.</b>
+                            </a>
+                        </p>
+                    </div>
+                 </div>
+            <!--</div>-->
+        </div>
     </div>
     </body>
 </html>
