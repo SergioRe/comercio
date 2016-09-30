@@ -106,18 +106,18 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a class="tipoletra" href="#"><b class="letra3">POLITICA</b></a></li>
-                    <li><a class="tipoletra" href="#"><b class="letra3">ECONOMIA</b></a></li>
-                    <li><a class="tipoletra" href="#"><b class="letra3">OPINION</b></a></li>
-                    <li><a class="tipoletra" href="#"><b class="letra3">SOCIEDAD</b></a></li>
-                    <li><a class="tipoletra" href="#"><b class="letra3">MUNOD</b></a></li>
-                    <li><a class="tipoletra" href="#"><b class="letra3">TECNO</b></a></li>
-                    <li><a class="tipoletra" href="#"><b class="letra3">WUF</b></a></li>
-                    <li><a class="tipoletra" href="#"><b class="letra3">LUCES</b></a></li>
-                    <li><a class="tipoletra" href="#"><b class="letra3">TV</b></a></li>
-                    <li><a class="tipoletra" href="#"><b class="letra3">DT</b></a></li>
+                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">POLITICA</b></a></li>
+                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">ECONOMIA</b></a></li>
+                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">OPINION</b></a></li>
+                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">SOCIEDAD</b></a></li>
+                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">MUNOD</b></a></li>
+                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">TECNO</b></a></li>
+                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">WUF</b></a></li>
+                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">LUCES</b></a></li>
+                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">TV</b></a></li>
+                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">DT</b></a></li>
                     <li class="colorplay">
-                        <a class="tipoletra" href="#">
+                        <a class="tipoletra" target="_blank" href="<?= site_url('videos/index') ?>">
                             <b>PLAY</b>
                         </a>
                     </li>
@@ -130,7 +130,11 @@
         <div class="row elecciones-flujos">
             <!--<div class="col-lg-3">-->
                 <div class="thumbnail f-elecciones">
-                    <img src="<?php echo base_url('assets/imagenes/opinion.jpg')?>" alt="imagen">
+                    <img src="<?php echo base_url('assets/imagenes/opinion.jpg')?>" alt="imagen" style="position: relative;">
+                    <button type="button" class="btn btn-sm botonencimaimg">
+                       OPINIÓN
+                    </button>
+                    </a>
                     <div class="caption">
                         <p>
                             <a href="#" class="coloreleciones">
@@ -142,7 +146,10 @@
 <!--            </div>
             <div class="col-lg-3">-->
                 <div class="thumbnail  f-elecciones">
-                    <img src="<?php echo base_url('assets/imagenes/mundo.jpg')?>" alt="imagen">
+                    <img src="<?php echo base_url('assets/imagenes/mundo.jpg')?>" alt="imagen" style="position: relative;">
+                    <button type="button" class="btn btn-sm botonencimaimg">
+                       MUNDO
+                    </button>
                     <div class="caption">
                         <p>
                             <a href="#" class="coloreleciones">
@@ -154,7 +161,10 @@
 <!--            </div>
             <div class="col-lg-3">-->
                 <div class="thumbnail  f-elecciones">
-                    <img src="<?php echo base_url('assets/imagenes/opinion2.jpg')?>" alt="imagen">
+                    <img src="<?php echo base_url('assets/imagenes/opinion2.jpg')?>" alt="imagen" style="position: relative;">
+                    <button type="button" class="btn btn-sm botonencimaimg">
+                       OPINIÓN
+                    </button>
                     <div class="caption">
                         <p>
                             <a href="#" class="coloreleciones">
@@ -166,7 +176,10 @@
 <!--            </div>
             <div class="col-lg-3">-->
                 <div class="thumbnail  f-elecciones">
-                    <img src="<?php echo base_url('assets/imagenes/mundodos.jpg')?>" alt="imagen">
+                    <img src="<?php echo base_url('assets/imagenes/mundodos.jpg')?>" alt="imagen" style="position: relative;">
+                    <button type="button" class="btn btn-sm botonencimaimg">
+                       MUNDO
+                    </button>
                     <div class="caption">
                         <p>
                             <a href="#" class="coloreleciones">
@@ -176,7 +189,10 @@
                     </div>
                  </div>
                  <div class="thumbnail  f-elecciones">
-                    <img src="<?php echo base_url('assets/imagenes/politica.jpg')?>" alt="imagen">
+                    <img src="<?php echo base_url('assets/imagenes/politica.jpg')?>" alt="imagen" style="position: relative;">
+                    <button type="button" class="btn btn-sm botonencimaimg">
+                       POLÍTICA
+                    </button>
                     <div class="caption">
                         <p>
                             <a href="#" class="coloreleciones">
@@ -187,6 +203,41 @@
                  </div>
             <!--</div>-->
         </div>
+    </div>
+    <div class="container ec-apertura">
+        <div class="row">
+            <div class="col-lg-3">
+                <img src="<?php echo base_url('assets/imagenes/tres.jpg')?>" alt="imagen">
+            </div>
+            <div class="col-lg-4">
+                <ul class="media-list main-list item_noticiax2" style="margin-left: 30px;">
+                    <li class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="<?php echo base_url('assets/imagenes/uno.jpg')?>" alt="imagen">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading colorblancoletra">Lorem ipsum dolor asit amet</h4>
+                            <p class="by-author colorblancoletra">By Jhon Doe</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-5">
+                <ul class="media-list main-list item_noticiax2" style="margin-left: 30px;">
+                    <li class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="<?php echo base_url('assets/imagenes/dos.jpg')?>" alt="imagen">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading colorblancoletra">Lorem ipsum dolor asit amet</h4>
+                            <p class="by-author colorblancoletra">By Jhon Doe</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br>
     </div>
     </body>
 </html>

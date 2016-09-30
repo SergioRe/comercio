@@ -405,3 +405,32 @@ width:100%;}
     margin: 0 14px 14px 0;
     width: 176px;
 }
+.linea{
+    border-right: 2px solid #ccc;
+    position: relative;
+    z-index:100;
+    text-align: center;
+    display: table-cell;
+}
+.colorblanco{
+    background: #ffffff;
+}
+.colorblancoletra{
+    color: #ffffff;
+}
+.botonencimaimg{
+    position: absolute;
+    top: 77px;
+    background-color: #ffc905;
+    font: 11px/17px 'prelobold';
+    left: 0;
+    width: 70px;
+}
+.item_noticiax2{
+    background: #19171b none repeat scroll 0 0;
+    float: left;
+    margin-right: 10px;
+    padding: 4px;
+    width: 335px;
+}
+
