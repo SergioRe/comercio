@@ -27,9 +27,19 @@
             padding-left: 26px;
             padding-right: 26px;
         }
+        .elecciones-flujos2{
+            background: #ffffff;
+            border-bottom: 2px solid #ffc905;
+            border-top: 2px solid #ffc905;
+            padding: 14px 22px 0;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 26px;
+            padding-right: 26px;
+        }
     </style>
 </head>
-<body>
+<body style="background: #eee;">
     <div class="mainWrap">
         <a id="touch-menu" class="mobile-menu" href="#"><i class="icon-reorder"></i>Menu</a>
         <nav>
@@ -205,12 +215,13 @@
         </div>
     </div>
     <div class="container ec-apertura">
+        <div class="row elecciones-flujos2">
         <div class="row">
-            <div class="col-lg-3">
-                <img src="<?php echo base_url('assets/imagenes/tres.jpg')?>" alt="imagen">
+            <div class="col-lg-4">
+                <img class="imagenelecciones" src="<?php echo base_url('assets/imagenes/tres.jpg')?>" alt="imagen">
             </div>
             <div class="col-lg-4">
-                <ul class="media-list main-list item_noticiax2" style="margin-left: 30px;">
+                <ul class="media-list main-list item_noticiax2">
                     <li class="media">
                         <a class="pull-left" href="#">
                             <img class="media-object" src="<?php echo base_url('assets/imagenes/uno.jpg')?>" alt="imagen">
@@ -222,8 +233,8 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-5">
-                <ul class="media-list main-list item_noticiax2" style="margin-left: 30px;">
+            <div class="col-lg-4">
+                <ul class="media-list main-list item_noticiax2">
                     <li class="media">
                         <a class="pull-left" href="#">
                             <img class="media-object" src="<?php echo base_url('assets/imagenes/dos.jpg')?>" alt="imagen">
@@ -238,6 +249,41 @@
         </div>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <br><br><br><br><br><br>
+        </div>
+    </div>
+    <div class="container fondomostaza">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="cnt-links">
+                    <div class="t-red">Red el Comercio</div>
+                </div><br>
+                <div class="ec-red-links">
+                    <p class="textofoorter">
+                        <a class="colorletrafooter" href="http://peru21.pe/?ref=ecf" target="_blank" title="Diario Perú21">peru21.pe</a>
+                        •<a class="colorletrafooter" href="http://gestion.pe/?ref=ecf" target="_blank" title="Diario Gestión">gestion.pe</a>
+                        •<a class="colorletrafooter" href="http://depor.com/?ref=ecf" target="_blank" title="Depor.com">depor.com</a>
+                        •<a class="colorletrafooter" href="http://www.trome.pe/?ref=ecf" target="_blank" title="Diario Trome">trome.pe</a>
+                        •<a class="colorletrafooter" href="http://aptitus.com/?ref=ecf" target="_blank" title="Aptitus">aptitus.com</a>
+                        •<a class="colorletrafooter" href="http://neoauto.com/?ref=ecf" target="_blank" title="Neoauto">neoauto.com</a>
+                        •<a class="colorletrafooter" href="http://urbania.pe/?ref=ecf" target="_blank" title="Urbania">urbania.pe</a>
+                        •<a class="colorletrafooter" href="http://peru.com/?ref=ecf" target="_blank" title="peru.com">peru.com</a>
+                        •<a class="colorletrafooter" href="http://ofertop.pe/?ref=ecf" target="_blank" title="Ofertop">ofertop.pe</a>
+                        •<a class="colorletrafooter" href="http://publimetro.pe/?ref=ecf" target="_blank" title="Publimetro">publimetro.pe</a>
+                        •<a class="colorletrafooter" href="http://laprensa.pe/?ref=ecf" target="_blank" title="La Prensa">laprensa.pe</a>
+                        •<a class="colorletrafooter" class="last" href="http://gec.pe/?ref=ecf" target="_blank" title="GEC">gec.pe</a>
+                        •<a class="colorletrafooter" href="http://clubelcomercio.pe/?ref=ecf" target="_blank" title="Club El Comercio">Club El Comercio</a>
+                        •<a class="colorletrafooter" href="http://comprabien.com/?ref=ecf" target="_blank" title="CompraBien.com">comprabien.com</a>
+                        •<a class="colorletrafooter" href="http://perured.pe/?ref=ecf" target="_blank" title="PerúRed">Perured.pe</a>
+                        •<a class="colorletrafooter" href="http://shopin.pe/?ref=ecf" target="_blank" title="Shopin">Shopin.pe</a>
+                        •<a class="colorletrafooter" href="http://sepp.pe/?ref=ecf" target="_blank" title="Sepp">Sepp.pe</a>
+                        •<a class="colorletrafooter" href="http://clasificados.pe/?ref=ecf" target="_blank" title="Clasificados">clasificados.pe</a>
+                        •<a class="colorletrafooter" href="http://pagoefectivo.pe/?ref=ecf" target="_blank" title="Pagoefectivo">pagoefectivo.pe</a>
+                        •<a class="colorletrafooter" href="http://www.avansys.edu.pe/?ref=ecf" target="_blank" title="Avansys">avansys.edu.pe</a>
+                        •<a class="colorletrafooter" href="http://www.estilomio.com/?ref=ecf" target="_blank" title="Estilomio.com">Estilomio.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
     </body>
 </html>
