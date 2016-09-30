@@ -37,6 +37,16 @@
             padding-left: 26px;
             padding-right: 26px;
         }
+        .elecciones-flujos3{
+            background: #252525;
+            border-bottom: 2px solid #252525;
+            border-top: 2px solid #252525;
+            padding: 14px 22px 0;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
         .ec-gda {
             background: rgba(0, 0, 0, 0) url("<?php echo base_url('assets/imagenes/logo_gda.png')?>") no-repeat scroll 0 52px;
             padding: 62px 0 0 87px;
@@ -65,7 +75,7 @@
         <br/>
         <div class="row">
             <div class="col-lg-4">
-                <button type="button" class="btn btn-default btn-sm">Ingresa</button>&nbsp;
+                <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">Ingresa</button>&nbsp;
                 <button type="button" class="btn btn-default btn-sm">Registrate</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button type="button" class="btn btn-default btn-sm">Suscríbete</button>
             </div>
@@ -257,17 +267,45 @@
         </div>
     </div>
     <div class="container fondoblanco">
-        <div class="row">
-            <div class="col-lg-3">
-                Avance
-            </div>
-            <div class="col-lg-4">
-                Avance
-            </div>
-            <div class="col-lg-5">
-                Avance
+        <br>
+        <div class="row elecciones-flujos3">
+            <div class="col-lg-12">
+                <div class="ec-click1">
+                    <h3 class="letraclip">Click!</h3>
+                </div>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+<!--                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>-->
+                    </ol>
+                    <div class="carousel-inner ec-clickcolor" role="listbox">
+                        <div class="item active">
+                            <img src="<?php echo base_url('assets/imagenes/slaideruno.jpg')?>" alt="Chania" width="460" height="345">
+                            <h2 class="slaiderletra text-center">PPK y sus ministros en sesión de gimnasia con Vania Masías</h2>
+                        </div>
+                        <div class="item">
+                            <img src="<?php echo base_url('assets/imagenes/eslaiderdos.jpg')?>" alt="Flower" width="460" height="345">
+                            <h2 class="slaiderletra text-center">Ruta por algunos de los pueblos y ciudades más bellos de Italia</h2>
+                        </div>
+                        <div class="item">
+                            <img src="<?php echo base_url('assets/imagenes/eslaidertres.jpg')?>" alt="Flower" width="460" height="345">
+                            <h2 class="slaiderletra text-center">Ex Combate Ximena Hoyos luce orgullosa su nuevo físico</h2>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
+                </div>
+                <br/>
             </div>
         </div>
+        <br/>
     </div>
     <div class="container ec-apertura">
         <br/>
@@ -353,6 +391,25 @@
                         •<a class="colorletrafooter" href="#" target="_blank" title="Avansys">avansys.edu.pe</a>
                         •<a class="colorletrafooter" href="#" target="_blank" title="Estilomio.com">Estilomio.com</a>
                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Titulo</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Esto es una prueba.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
