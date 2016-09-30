@@ -468,3 +468,27 @@ width:100%;}
     color: #272325;
     font-size: 10px;
 }
+.fondoblanco{
+    background: #ffffff;
+}
+
+.imgsus2{
+    width:200px;
+    height: 30px;
+}
+.legal{
+    color: #272325;
+    font-size: 11px;
+    margin-top: 10px;
+    text-align: justify;
+}
+.legal1{
+    color: #272325;
+    font-size: 11px;
+}
+.ec-info{
+    border-right: 1px solid #464646;
+    margin-right: 0px;
+    min-height: 110px;
+    padding-right: 10px;
+}

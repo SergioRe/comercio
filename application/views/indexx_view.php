@@ -37,6 +37,11 @@
             padding-left: 26px;
             padding-right: 26px;
         }
+        .ec-gda {
+            background: rgba(0, 0, 0, 0) url("<?php echo base_url('assets/imagenes/logo_gda.png')?>") no-repeat scroll 0 52px;
+            padding: 62px 0 0 87px;
+            width: 230px;
+        }
     </style>
 </head>
 <body style="background: #eee;">
@@ -251,6 +256,73 @@
         <br><br><br><br><br><br>
         </div>
     </div>
+    <div class="container fondoblanco">
+        <div class="row">
+            <div class="col-lg-3">
+                Avance
+            </div>
+            <div class="col-lg-4">
+                Avance
+            </div>
+            <div class="col-lg-5">
+                Avance
+            </div>
+        </div>
+    </div>
+    <div class="container ec-apertura">
+        <br/>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="ec-info">
+                    <img class="imgsus2" src="<?php echo base_url('assets/imagenes/ec_logo.png')?>">
+                    <ul class="legal">
+                        <li itemtype="#" itemscope="">
+                            <large itemprop="copyrightHolder">
+                                <span itemprop="name">&copy; Empresa Editora El Comercio</span>
+                            </large>
+                        </li>
+                        <li>Jr. Miró Quesada #300 Lima 1 Perú</li>
+                        <li>Copyright&copy; Elcomercio.pe - Grupo El Comercio - Todos los derechos reservados.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="ec-info">
+                    <ul class="legal">
+                        <li>Director General: Francisco Miró Quesada Cantuarias</li>
+                        <li>Director Periodístico: Fernando Berckemeyer Olaechea</li>
+                        <li>Suscripciones: <a class="legal" href="#">suscriptores@comercio.com.pe</a></li>
+                        <li>Publicidad Online: <a class="legal" href="#">fonoavisos@comercio.com.pe</a></li>
+                        <li>Club El Comercio: <a class="legal" href="#">clubelcomercio@comercio.com.pe</a></li>
+                        <li><a class="legal" target="_blank" href="#">Compromiso de Autorregulación Comercial</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <ul class="legal">
+                            <li><a class="legal" href="#">Términos y condiciones de uso</a></li>
+                            <li><a class="legal" class="legal" target="_blank" href="#">Trabaja para Grupo El Comercio</a></li>
+                            <li><a class="legal" target="_blank" href="#">Libro de Reclamaciones</a></li>
+                            <li><a class="legal" target="_blank" href="#">Oficinas Concesionarias</a></li>
+                            <li><a class="legal" href="#">Principios Rectores</a></li>
+                            <li><a class="legal" href="#">Políticas de Privacidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ec-gda pull-left">
+                            <p class="legal1">
+                                Miembro de<br>
+                                Grupo de Diarios <br>América
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+    </div>
     <div class="container fondomostaza">
         <div class="row">
             <div class="col-lg-12">
@@ -259,27 +331,27 @@
                 </div><br>
                 <div class="ec-red-links">
                     <p class="textofoorter">
-                        <a class="colorletrafooter" href="http://peru21.pe/?ref=ecf" target="_blank" title="Diario Perú21">peru21.pe</a>
-                        •<a class="colorletrafooter" href="http://gestion.pe/?ref=ecf" target="_blank" title="Diario Gestión">gestion.pe</a>
-                        •<a class="colorletrafooter" href="http://depor.com/?ref=ecf" target="_blank" title="Depor.com">depor.com</a>
-                        •<a class="colorletrafooter" href="http://www.trome.pe/?ref=ecf" target="_blank" title="Diario Trome">trome.pe</a>
-                        •<a class="colorletrafooter" href="http://aptitus.com/?ref=ecf" target="_blank" title="Aptitus">aptitus.com</a>
-                        •<a class="colorletrafooter" href="http://neoauto.com/?ref=ecf" target="_blank" title="Neoauto">neoauto.com</a>
-                        •<a class="colorletrafooter" href="http://urbania.pe/?ref=ecf" target="_blank" title="Urbania">urbania.pe</a>
-                        •<a class="colorletrafooter" href="http://peru.com/?ref=ecf" target="_blank" title="peru.com">peru.com</a>
-                        •<a class="colorletrafooter" href="http://ofertop.pe/?ref=ecf" target="_blank" title="Ofertop">ofertop.pe</a>
-                        •<a class="colorletrafooter" href="http://publimetro.pe/?ref=ecf" target="_blank" title="Publimetro">publimetro.pe</a>
-                        •<a class="colorletrafooter" href="http://laprensa.pe/?ref=ecf" target="_blank" title="La Prensa">laprensa.pe</a>
-                        •<a class="colorletrafooter" class="last" href="http://gec.pe/?ref=ecf" target="_blank" title="GEC">gec.pe</a>
-                        •<a class="colorletrafooter" href="http://clubelcomercio.pe/?ref=ecf" target="_blank" title="Club El Comercio">Club El Comercio</a>
-                        •<a class="colorletrafooter" href="http://comprabien.com/?ref=ecf" target="_blank" title="CompraBien.com">comprabien.com</a>
-                        •<a class="colorletrafooter" href="http://perured.pe/?ref=ecf" target="_blank" title="PerúRed">Perured.pe</a>
-                        •<a class="colorletrafooter" href="http://shopin.pe/?ref=ecf" target="_blank" title="Shopin">Shopin.pe</a>
-                        •<a class="colorletrafooter" href="http://sepp.pe/?ref=ecf" target="_blank" title="Sepp">Sepp.pe</a>
-                        •<a class="colorletrafooter" href="http://clasificados.pe/?ref=ecf" target="_blank" title="Clasificados">clasificados.pe</a>
-                        •<a class="colorletrafooter" href="http://pagoefectivo.pe/?ref=ecf" target="_blank" title="Pagoefectivo">pagoefectivo.pe</a>
-                        •<a class="colorletrafooter" href="http://www.avansys.edu.pe/?ref=ecf" target="_blank" title="Avansys">avansys.edu.pe</a>
-                        •<a class="colorletrafooter" href="http://www.estilomio.com/?ref=ecf" target="_blank" title="Estilomio.com">Estilomio.com</a>
+                        <a class="colorletrafooter" href="#" target="_blank" title="Diario Perú21">peru21.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Diario Gestión">gestion.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Depor.com">depor.com</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Diario Trome">trome.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Aptitus">aptitus.com</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Neoauto">neoauto.com</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Urbania">urbania.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="peru.com">peru.com</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Ofertop">ofertop.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Publimetro">publimetro.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="La Prensa">laprensa.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="GEC">gec.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Club El Comercio">Club El Comercio</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="CompraBien.com">comprabien.com</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="PerúRed">Perured.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Shopin">Shopin.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Sepp">Sepp.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Clasificados">clasificados.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Pagoefectivo">pagoefectivo.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Avansys">avansys.edu.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Estilomio.com">Estilomio.com</a>
                     </p>
                 </div>
             </div>
