@@ -251,11 +251,14 @@ width:100%;}
 
 }
 
-
-@media (max-width: 320px) {
+.styloSignoMas{
+    background-color: #f77500;
+    background-image: none;
+    color: #fff;
+    font: 24px/35px arial;
+    text-align: center;
 }
-.ec-apertura{
-    background-color: #f7c600;
+@media (max-width: 320px) {
 }
 .buscar{
     font-size: 14px;
@@ -386,6 +389,11 @@ width:100%;}
 }
 .letra3{
     color: #1C1C1C;
+    font-size: 16px;
+}
+
+.letra4{
+    color: #FFFFFF;
 }
 .colorplay{
     background: black;
@@ -517,4 +525,18 @@ width:100%;}
 }
 .ec-clickcolor {
     background-color: #252525;
+}
+
+.stylosubmenu{
+    background-color: #fff !important;
+    height: 100%;
+    margin-top: -2px;
+    border-bottom: 2px solid #fff;
+}
+
+.tipoletrasub{
+    color: #898989;
+    font: 12px "prelobold";
+    margin: 0 10px;
+    text-transform: uppercase;
 }

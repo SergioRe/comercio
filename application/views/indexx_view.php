@@ -47,15 +47,27 @@
             padding-left: 5px;
             padding-right: 5px;
         }
+        .elecciones-flujos4{
+            background: #FFFFFF;
+            padding: 10px 0px 0;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 5px;
+            padding-right: 5px;
+            height: 35px;
+        }
         .ec-gda {
             background: rgba(0, 0, 0, 0) url("<?php echo base_url('assets/imagenes/logo_gda.png')?>") no-repeat scroll 0 52px;
             padding: 62px 0 0 87px;
             width: 230px;
         }
+        .ec-apertura{
+            background-image: url("<?php echo base_url('assets/imagenes/FondoPrincipal.jpg')?>");
+        }
     </style>
 </head>
 <body style="background: #eee;">
-    <div class="mainWrap">
+<!--    <div class="mainWrap">
         <a id="touch-menu" class="mobile-menu" href="#"><i class="icon-reorder"></i>Menu</a>
         <nav>
             <ul class="menu">
@@ -70,7 +82,7 @@
                 <li class="movil"><a href="#">Aptitus</a></li>
             </ul>
         </nav>
-    </div><!--end mainWrap-->
+    </div>end mainWrap-->
     <div class="container ec-apertura">
         <br/>
         <div class="row">
@@ -131,25 +143,64 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">POLITICA</b></a></li>
-                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">ECONOMIA</b></a></li>
-                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">OPINION</b></a></li>
-                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">SOCIEDAD</b></a></li>
-                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">MUNOD</b></a></li>
-                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">TECNO</b></a></li>
-                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">WUF</b></a></li>
-                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">LUCES</b></a></li>
-                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">TV</b></a></li>
-                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">DT</b></a></li>
+                    <li class="linea stylosubmenu"><a class="tipoletra" href="#"><b class="letra3">C</b></a></li>
+                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">SALUD</b></a></li>
+                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">INVESTIGACIÓN</b></a></li>
+                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">ENTREVISTAS</b></a></li>
+                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">VADEMECUM</b></a></li>
+                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">CURSOS</b></a></li>
+                    <li class="linea"><a class="tipoletra" href="#"><b class="letra3">RADIO</b></a></li>
                     <li class="colorplay">
                         <a class="tipoletra" target="_blank" href="<?= site_url('videos/index') ?>">
                             <b>PLAY</b>
+                        </a>
+                    </li>
+                    <li class="linea">
+                        <a class="tipoletra styloSignoMas" href="#">
+                            <b class="letra4">
+                                <span class="glyphicon .glyphicon-plus">+</span>
+                            </b>
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <div class="container ec-apertura">
+        <div class="row elecciones-flujos4">
+            <div class="col-lg-1">
+                <h2 class="tipoletrasub text-center"><b>DESTACADOS</b></h2>
+            </div>
+            <div class="col-lg-11">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+<!--                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>-->
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <h2 class="tipoletrasub text-center"><b>RUSIA 2018</b></h2>
+                        </div>
+                        <div class="item">
+                            <h2 class="tipoletrasub text-center"><b>PPK</b></h2>
+                        </div>
+                        <div class="item">
+                            <h2 class="tipoletrasub text-center"><b>FRAC</b></h2>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" style="font-size: 20px;top: 10px;" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" style="font-size: 20px;top: 10px;" aria-hidden="true"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container ec-apertura">
         <br/>
         <div class="row elecciones-flujos">
