@@ -95,7 +95,7 @@ p,div, span{line-height:1.3em;}
 }
  @media (min-width:768px){.mainWrap{width:768px;}}
  @media (min-width:992px){.mainWrap{width:970px}}
- @media (min-width:1200px){.mainWrap{width:1035px}}
+ @media (min-width:1200px){.mainWrap{width:1005px}}
  
 .title{margin:100px 0 20px 0;
 text-align:center;
@@ -114,7 +114,7 @@ background:#333;
         width: 1%;
         position: relative;
         z-index:100;
-        border-right: 1px solid #ccc;
+        /*border-right: 1px solid #ccc;*/
         text-align: left;
         text-align: center;
         display: table-cell;
@@ -125,7 +125,7 @@ background:#333;
         /*display: inline-block;*/
         position: relative;
         z-index:100;
-        border-right: 1px solid #ccc;
+        /*border-right: 1px solid #ccc;*/
         text-align: center;
         display: table-cell;
         width: 100%;
@@ -149,7 +149,7 @@ background:#333;
 }
 
 .menu li a:hover, .menu li:hover > a{color:#ffffff;
-background:#333;}
+background:#BDBDBD;}
 
 .menu ul {display: none;
 margin: 0;
@@ -253,10 +253,16 @@ width:100%;}
 
 .styloSignoMas{
     background-color: #f77500;
-    background-image: none;
     color: #fff;
-    font: 24px/35px arial;
-    text-align: center;
+    border-top: 3px solid #f77500;
+    height: 40px;
+    margin-top: -2px;
+}
+.styloSignoMas1{
+    background-color: #FFF;
+    color: #fff;
+    border-top: 2px solid #FFF;
+    height: 40px;
 }
 @media (max-width: 320px) {
 }
@@ -397,6 +403,9 @@ width:100%;}
 }
 .colorplay{
     background: black;
+    border-top: 3px solid black;
+    height: 40px;
+    
 }
 .colorletrablanco{
     background: #fff;
@@ -528,11 +537,10 @@ width:100%;}
 }
 
 .stylosubmenu{
-    background-color: #fff !important;
-    height: 100%;
-    margin-top: -2px;
-    border-bottom: 2px solid #fff;
-    /*margin-left: -30px;*/
+    background-color: #fff;
+    color: #fff;
+    border-top: 2px solid #f77500;
+    height: 40px;
 }
  @media (min-width:768px){.stylosubmenu{margin-left: 0px;}}
  @media (min-width:992px){.stylosubmenu{margin-left: -30px;}}
@@ -545,3 +553,11 @@ width:100%;}
     margin: 0 10px;
     text-transform: uppercase;
 }
+
+/*.anchostylomenu{
+    display: table-cell;
+    position: relative;
+    vertical-align: top;
+    width: auto;
+}*/
+

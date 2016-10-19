@@ -128,8 +128,26 @@
         </div>
         <br/>
     </div>
-    <nav class="navbar navbar-inverse ec-apertura" data-spy="affix" data-offset-top="197" style="border: 0px;margin-bottom: 0px;">
-        <!--<div class="container">-->
+<nav class="navbar navbar-inverse ec-apertura" data-spy="affix" data-offset-top="197" style="border: 0px;margin-bottom: 0px;">
+    <div class="mainWrap">
+        <a id="touch-menu" class="mobile-menu" href="#"><i class="icon-reorder"></i>Menu</a>
+        <nav style="background: #BDBDBD;height: 40px;">
+            <ul class="menu">
+                <li class="movil"><a class="styloSignoMas1" href="#"><b class="letra3">C</b></a></li>
+                <li class="movil"><a href="#"><b class="letra3">SALUD</b></a></li>
+                <li class="movil"><a href="#"><b class="letra3">INVESTIGACIÓN</b></a></li>
+                <li class="movil"><a href="#"><b class="letra3">ENTREVISTAS</b></a></li>
+                <li class="movil"><a href="#"><b class="letra3">VADEMECUM</b></a></li>
+                <li class="movil"><a href="#"><b class="letra3">CURSOS</b></a></li>
+                <li class="movil"><a href="#"><b class="letra3">RADIO</b></a></li>
+                <li class="movil"><a target="_blank" class="colorplay" href="<?= site_url('videos/index') ?>"><b class="letra4">PLAY</b></a></li>
+                <li class="movil"><a class="styloSignoMas" href="#"><b class="letra4">+</b></a></li>
+            </ul>
+        </nav>
+    </div>
+</nav>
+<!--    <nav class="navbar navbar-inverse ec-apertura" data-spy="affix" data-offset-top="197" style="border: 0px;margin-bottom: 0px;">
+        <div class="container">
             <div class="navbar-header" style="background: #BDBDBD;">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -144,12 +162,12 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background: #BDBDBD;">
                 <ul class="nav navbar-nav">
                     <li class="stylosubmenu"><a class="tipoletra" href="#"><b class="letra3">C</b></a></li>
-                    <li><a class="tipoletra" href="#"><b class="letra3">SALUD</b></a></li>
-                    <li><a class="tipoletra" href="#"><b class="letra3">INVESTIGACIÓN</b></a></li>
-                    <li><a class="tipoletra" href="#"><b class="letra3">ENTREVISTAS</b></a></li>
-                    <li><a class="tipoletra" href="#"><b class="letra3">VADEMECUM</b></a></li>
-                    <li><a class="tipoletra" href="#"><b class="letra3">CURSOS</b></a></li>
-                    <li><a class="tipoletra" href="#"><b class="letra3">RADIO</b></a></li>
+                    <li class=""><a class="tipoletra" href="#"><b class="letra3">SALUD</b></a></li>
+                    <li class=""><a class="tipoletra" href="#"><b class="letra3">INVESTIGACIÓN</b></a></li>
+                    <li class=""><a class="tipoletra" href="#"><b class="letra3">ENTREVISTAS</b></a></li>
+                    <li class=""><a class="tipoletra" href="#"><b class="letra3">VADEMECUM</b></a></li>
+                    <li class=""><a class="tipoletra" href="#"><b class="letra3">CURSOS</b></a></li>
+                    <li class=""><a class="tipoletra" href="#"><b class="letra3">RADIO</b></a></li>
                     <li class="colorplay">
                         <a class="tipoletra" target="_blank" href="<?= site_url('videos/index') ?>">
                             <b>PLAY</b>
@@ -164,8 +182,8 @@
                     </li>
                 </ul>
             </div>
-        <!--</div>-->
-    </nav>
+        </div>
+    </nav>-->
     <div class="container ec-apertura">
         <div class="row elecciones-flujos4">
             <div class="col-lg-1">
