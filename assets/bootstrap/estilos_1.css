@@ -148,9 +148,6 @@ background:#333;
    transition: all 0.2s ease-in-out 0s;
 }
 
-.menu li a:hover, .menu li:hover > a{color:#ffffff;
-background:#BDBDBD;}
-
 .menu ul {display: none;
 margin: 0;
 padding: 0;
@@ -262,7 +259,7 @@ width:100%;}
     background-color: #FFF;
     color: #fff;
     border-top: 2px solid #FFF;
-    height: 40px;
+    height: 39px;
 }
 @media (max-width: 320px) {
 }
@@ -419,7 +416,7 @@ width:100%;}
 .f-elecciones {
     float: left;
     height: 182px;
-    margin: 0 14px 14px 0;
+    margin: 0px 14px 14px 0px;
     width: 176px;
 }
 .linea{
@@ -493,6 +490,10 @@ width:100%;}
     width:200px;
     height: 30px;
 }
+.imgPublicidad{
+    width:100%;
+    height: 180px;
+}
 .legal{
     color: #272325;
     font-size: 11px;
@@ -553,11 +554,4 @@ width:100%;}
     margin: 0 10px;
     text-transform: uppercase;
 }
-
-/*.anchostylomenu{
-    display: table-cell;
-    position: relative;
-    vertical-align: top;
-    width: auto;
-}*/
 

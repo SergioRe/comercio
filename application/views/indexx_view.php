@@ -10,8 +10,11 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/estilos_1.css')?>" type="text/css" media="screen">
+    <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/style.css')?>" type="text/css" media="screen">
     <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css')?>" type="text/css" media="screen">
     <link rel="stylesheet" href="<?php echo base_url('assets/font-awesome/css/font-awesome.css')?>" >
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript" ></script>
     <script src="<?php echo base_url('assets/bootstrap/js/menu.js')?>" type="text/javascript"></script> 
     <link href="<?php echo base_url('assets/bootstrap/css/bootstrap-social.css')?>" rel="stylesheet">
@@ -19,8 +22,8 @@
     <style type="text/css">
         .elecciones-flujos{
             background-image: url("<?php echo base_url('assets/imagenes/bg_mod_elecciones.jpg')?>");
-            border-bottom: 2px solid #ffc905;
-            border-top: 2px solid #ffc905;
+            border-bottom: 0px solid #ffc905;
+            border-top: 0px solid #ffc905;
             padding: 14px 22px 0;
             margin-left: auto;
             margin-right: auto;
@@ -29,8 +32,8 @@
         }
         .elecciones-flujos2{
             background: #ffffff;
-            border-bottom: 2px solid #ffc905;
-            border-top: 2px solid #ffc905;
+            border-bottom: 0px solid #ffc905;
+            border-top: 0px solid #ffc905;
             padding: 14px 22px 0;
             margin-left: auto;
             margin-right: auto;
@@ -67,28 +70,15 @@
     </style>
 </head>
 <body style="background: #eee;">
-<!--    <div class="mainWrap">
-        <a id="touch-menu" class="mobile-menu" href="#"><i class="icon-reorder"></i>Menu</a>
-        <nav>
-            <ul class="menu">
-                <li class="movil"><a href="#">Viu!</a></li>
-                <li class="movil"><a href="#">¡Vamos!</a></li>
-                <li class="movil"><a href="#">Ruedas</a></li>
-                <li class="movil"><a href="#">MenúPerú</a></li>
-                <li class="movil"><a href="#">Casa</a></li>
-                <li class="movil"><a href="#">El Dominical</a></li>
-                <li class="movil"><a href="#">Urbania</a></li>
-                <li class="movil"><a href="#">Neoauto</a></li>
-                <li class="movil"><a href="#">Aptitus</a></li>
-            </ul>
-        </nav>
-    </div>end mainWrap-->
+    <div class="container ec-apertura"><br/>
+        <img class="imgPublicidad" src="<?php echo base_url('assets/imagenes/publicidadBanner.png')?>">
+    </div>
     <div class="container ec-apertura">
         <br/>
         <div class="row">
             <div class="col-lg-4">
-                <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">Ingresa</button>&nbsp;
-                <button type="button" class="btn btn-default btn-sm">Registrate</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-default btn-sm pull-left" data-toggle="modal" data-target="#myModal">Ingresa</button>
+                <button type="button" class="btn btn-default btn-sm">Registrate</button>
                 <button type="button" class="btn btn-default btn-sm">Suscríbete</button>
             </div>
             <div class="col-lg-4 text-center" style="top: 7px;">
@@ -108,19 +98,23 @@
                             <button type="submit" class="buscarbtn">
                                 <span class="glyphicon glyphicon-search"></span>
                             </button>
-                        </div>
-                        <div class="vg-social">
-                            <ul>
-                                <li class="fb">
-                                    <a class="btn btn-social-icon btn-facebook pull-right"><span class="fa fa-facebook"></span></a>
-                                </li>
-                                <li class="tw">
-                                    <a class="btn btn-social-icon btn-google pull-right"><span class="fa fa-google"></span></a>
-                                </li>
-                                <li class="gp">
-                                    <a class="btn btn-social-icon btn-twitter pull-right"><span class="fa fa-twitter"></span></a>
-                                </li>
-                            </ul>
+                        </div><br/><br>
+                        <div class="vg-social pull-right">
+                            <a class="btn azm-social azm-size-48 azm-r-square azm-rss" href="#">
+                                <i class="fa fa-rss"></i>
+                            </a>
+                            <a class="btn azm-social azm-size-48 azm-r-square azm-facebook" href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a class="btn azm-social azm-size-48 azm-r-square azm-twitter" href="#">
+                                <i class="fa fa-twitter"></i>
+                             </a>
+                            <a class="btn azm-social azm-size-48 azm-r-square azm-google-plus" href="#">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                            <a class="btn azm-social azm-size-48 azm-r-square azm-youtube-play" href="#">
+                                <i class="fa fa-youtube-play"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -128,62 +122,24 @@
         </div>
         <br/>
     </div>
-<nav class="navbar navbar-inverse ec-apertura" data-spy="affix" data-offset-top="197" style="border: 0px;margin-bottom: 0px;">
-    <div class="mainWrap">
-        <a id="touch-menu" class="mobile-menu" href="#"><i class="icon-reorder"></i>Menu</a>
-        <nav style="background: #BDBDBD;height: 40px;">
-            <ul class="menu">
-                <li class="movil"><a class="styloSignoMas1" href="#"><b class="letra3">C</b></a></li>
-                <li class="movil"><a href="#"><b class="letra3">SALUD</b></a></li>
-                <li class="movil"><a href="#"><b class="letra3">INVESTIGACIÓN</b></a></li>
-                <li class="movil"><a href="#"><b class="letra3">ENTREVISTAS</b></a></li>
-                <li class="movil"><a href="#"><b class="letra3">VADEMECUM</b></a></li>
-                <li class="movil"><a href="#"><b class="letra3">CURSOS</b></a></li>
-                <li class="movil"><a href="#"><b class="letra3">RADIO</b></a></li>
-                <li class="movil"><a target="_blank" class="colorplay" href="<?= site_url('videos/index') ?>"><b class="letra4">PLAY</b></a></li>
-                <li class="movil"><a class="styloSignoMas" href="#"><b class="letra4">+</b></a></li>
-            </ul>
-        </nav>
-    </div>
-</nav>
-<!--    <nav class="navbar navbar-inverse ec-apertura" data-spy="affix" data-offset-top="197" style="border: 0px;margin-bottom: 0px;">
-        <div class="container">
-            <div class="navbar-header" style="background: #BDBDBD;">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">
-                    <img class="imgsus1" src="<?php echo base_url('assets/imagenes/ec_logo.png')?>">
-                </a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background: #BDBDBD;">
-                <ul class="nav navbar-nav">
-                    <li class="stylosubmenu"><a class="tipoletra" href="#"><b class="letra3">C</b></a></li>
-                    <li class=""><a class="tipoletra" href="#"><b class="letra3">SALUD</b></a></li>
-                    <li class=""><a class="tipoletra" href="#"><b class="letra3">INVESTIGACIÓN</b></a></li>
-                    <li class=""><a class="tipoletra" href="#"><b class="letra3">ENTREVISTAS</b></a></li>
-                    <li class=""><a class="tipoletra" href="#"><b class="letra3">VADEMECUM</b></a></li>
-                    <li class=""><a class="tipoletra" href="#"><b class="letra3">CURSOS</b></a></li>
-                    <li class=""><a class="tipoletra" href="#"><b class="letra3">RADIO</b></a></li>
-                    <li class="colorplay">
-                        <a class="tipoletra" target="_blank" href="<?= site_url('videos/index') ?>">
-                            <b>PLAY</b>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="tipoletra styloSignoMas" href="#">
-                            <b class="letra4">
-                                <span class="glyphicon .glyphicon-plus">+</span>
-                            </b>
-                        </a>
-                    </li>
+    <nav class="navbar navbar-inverse ec-apertura" data-spy="affix" data-offset-top="197" style="border: 0px;margin-bottom: 0px;">
+        <div class="mainWrap">
+            <a id="touch-menu" class="mobile-menu" href="#"><i class="icon-reorder"></i>Menu</a>
+            <nav style="background: #BDBDBD;height: 40px;">
+                <ul class="menu">
+                    <li class="movil"><a class="styloSignoMas1" href="#"><b class="letra3">C</b></a></li>
+                    <li class="movil hoverli"><a href="#"><b class="letra3">SALUD</b></a></li>
+                    <li class="movil hoverli"><a href="#"><b class="letra3">INVESTIGACIÓN</b></a></li>
+                    <li class="movil hoverli"><a href="#"><b class="letra3">ENTREVISTAS</b></a></li>
+                    <li class="movil hoverli"><a href="#"><b class="letra3">VADEMECUM</b></a></li>
+                    <li class="movil hoverli"><a href="#"><b class="letra3">CURSOS</b></a></li>
+                    <li class="movil hoverli"><a href="#"><b class="letra3">RADIO</b></a></li>
+                    <li class="movil"><a target="_blank" class="colorplay" href="<?= site_url('videos/index') ?>"><b class="letra4">PLAY</b></a></li>
+                    <li class="movil"><a class="styloSignoMas" href="#"><b class="letra4">+</b></a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
-    </nav>-->
+    </nav>
     <div class="container ec-apertura">
         <div class="row elecciones-flujos4">
             <div class="col-lg-1">
@@ -430,7 +386,7 @@
         </div>
         <br/>
     </div>
-    <div class="container fondomostaza">
+    <div class="container fondomostaza ec-apertura">
         <div class="row">
             <div class="col-lg-12">
                 <div class="cnt-links">
