@@ -532,7 +532,12 @@ width:100%;}
     height: 100%;
     margin-top: -2px;
     border-bottom: 2px solid #fff;
+    /*margin-left: -30px;*/
 }
+ @media (min-width:768px){.stylosubmenu{margin-left: 0px;}}
+ @media (min-width:992px){.stylosubmenu{margin-left: -30px;}}
+ @media (min-width:1200px){.stylosubmenu{margin-left: -30px;}}
+
 
 .tipoletrasub{
     color: #898989;
