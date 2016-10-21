@@ -1,241 +1,463 @@
-<!doctype html>
-<html lang="es">
-    <head>
-        <meta meta charset="utf-8">
-        <meta meta http-equiv="X-UA-Compatible" content="IE=edge">
-	      <title>::: Noticias del Perú y el Mundo :::</title>
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-        <meta name="language" content="es" />
-        <meta name="bi3dPubDate" content="2016-09-21T23:08:31-05:00" />
-        <meta name="robots" content="index,follow"/>
-        <meta name='googlebot' content='index, follow' />
-        <meta name="organization" content="Empresa ...... S.A." />
-        <link rel="publisher" href=""/>
-        <meta name="locality" content="Lima, Peru" />
-        <meta property="fb:app_id" content="1667917060088448"/>
-        <!-- seo_metas_portadas -->
-        <link rel="stylesheet" href="<?php echo base_url('assets/style/styles.css')?>">
-        <link rel="stylesheet" href="<?php echo base_url('assets/style/base-ui.css')?>">
-        <link rel="stylesheet" href="<?php echo base_url('assets/style/carreraclaro_timer.css')?>">
-        <link rel="stylesheet" href="<?php echo base_url('assets/style/clasicoespanol.css')?>">
-        <link rel="stylesheet" href="<?php echo base_url('assets/style/ec.logo.css')?>">
-        <link rel="stylesheet" href="<?php echo base_url('assets/style/flash_elecciones.css')?>">
-        <link rel="stylesheet" href="<?php echo base_url('assets/style/mod.aec.css')?>">
-        <link rel="stylesheet" href="<?php echo base_url('assets/style/mod.champions.css')?>">
-        <link rel="stylesheet" href="<?php echo base_url('assets/style/mod.ecplay.css')?>">
-        <link rel="stylesheet" href="<?php echo base_url('assets/style/mod.eliminatorias.css')?>">
-        <link rel="stylesheet" href="<?php echo base_url('assets/style/mod.lifweek.block.css')?>">
-        <link rel="stylesheet" href="<?php echo base_url('assets/style/mod.lifweek.css')?>">
-        <link rel="stylesheet" href="<?php echo base_url('assets/style/widget_suplementos.css')?>">
-    <!--bluekai--> 
-        <nav class="ec-marcas">
-            <ul>
-                <li><a href="" >Novedades!</a></li>
-                <li><a href="" >¡Vamos!</a></li>
-                <li><a href="" >Ruedas &amp; Tuercas</a></li>
-                <li><a href="" >MenúPerú</a></li>
-                <li><a href="" >Casa y Más</a></li>
-                <li><a href="" target="_blank" >El Dominical</a></li>
-                <li><a href="" target="_blank" >Urbania</a></li>
-                <li><a href="" target="_blank" >Neoauto</a></li>
-                <li><a href="" >Aptitus</a></li>
-            </ul>
-        </nav>	
-	<div class="ec-apertura">
-	<!--links toma de canal
-			  <div class="ads-980x180">
-        <script type="text/javascript">eplAD4M("Top");</script><noscript>
-        <a href="" target="_blank"><img width="960" height="90"  alt="" src="" border=0></a></noscript>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>::: Inicio</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/estilos_1.css')?>" type="text/css" media="screen">
+    <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/style.css')?>" type="text/css" media="screen">
+    <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css')?>" type="text/css" media="screen">
+    <link rel="stylesheet" href="<?php echo base_url('assets/font-awesome/css/font-awesome.css')?>" >
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript" ></script>
+    <script src="<?php echo base_url('assets/bootstrap/js/menu.js')?>" type="text/javascript"></script>
+    <script src="<?php echo base_url('assets/bootstrap/js/funciones.js')?>" type="text/javascript"></script>
+    <link href="<?php echo base_url('assets/bootstrap/css/bootstrap-social.css')?>" rel="stylesheet">
+    <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js')?>" type="text/javascript"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/js/bootstrap-dialog.min.js"></script>
+    <style type="text/css">
+        .elecciones-flujos{
+            background-image: url("<?php echo base_url('assets/imagenes/bg_mod_elecciones.jpg')?>");
+            border-bottom: 0px solid #ffc905;
+            border-top: 0px solid #ffc905;
+            padding: 14px 22px 0;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 26px;
+            padding-right: 26px;
+        }
+        .elecciones-flujos2{
+            background: #ffffff;
+            border-bottom: 0px solid #ffc905;
+            border-top: 0px solid #ffc905;
+            padding: 14px 22px 0;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 26px;
+            padding-right: 26px;
+        }
+        .elecciones-flujos3{
+            background: #252525;
+            border-bottom: 2px solid #252525;
+            border-top: 2px solid #252525;
+            padding: 14px 22px 0;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .elecciones-flujos4{
+            background: #FFFFFF;
+            padding: 10px 0px 0;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 5px;
+            padding-right: 5px;
+            height: 35px;
+        }
+        .ec-gda {
+            background: rgba(0, 0, 0, 0) url("<?php echo base_url('assets/imagenes/logo_gda.png')?>") no-repeat scroll 0 52px;
+            padding: 62px 0 0 87px;
+            width: 230px;
+        }
+        .ec-apertura{
+            background-image: url("<?php echo base_url('assets/imagenes/FondoPrincipal.jpg')?>");
+        }
+    </style>
+</head>
+<body style="background: #eee;">
+    <script type='text/javascript'>
+        $(document).ready(function() {
+            var alerta = '<?php echo $alerta; ?>';
+            if(alerta === 'N'){
+                $("#myModal").modal("show");
+                alertas('DANGER','ATENCIÓN','Usuario o contraseña incorrecta.');
+                return false;
+            }
+        });
+    </script>
+    <div class="container ec-apertura"><br/>
+        <img class="imgPublicidad" src="<?php echo base_url('assets/imagenes/publicidadBanner.png')?>">
     </div>
-    <div class="ads-zocalo1"><script type="text/javascript">eplAD4M("Zocalo1");</script></div>
-    <div class="ads-zocalo2"><script type="text/javascript">eplAD4M("Zocalo2");</script></div>      -->  
-<header id="ec-header">
-    <div class="ec-u-opts">
-        <ul>
-            <li id="user-info" class="u-login">
-                <div class="u-links">
-                    <a href="#" class="go-login" >Ingresa</a>
-                    <a href="#" class="go-registrar" >Regístrate</a>
-                </div>							
-            </li>
-            <li class="u-suscribir">
-                <a href="&amp;" class="go-suscribir" target="_blank" >Suscríbete</a>
-            </li>
-                <li class="u-fecha-clima">22 de Septiembre del 2016</li>
-                <li class="u-buscar">
-                <form method="get" action="" onSubmit="gec.fn.buscar(this,event);">
-                    <input type="text" name="b" placeholder="Buscar">
-                    <button type="submit">&#xf002;</button>
-                </form>
-            </li>
-        </ul>
-    </div>
-    <div class="ec-logo-slinks">
-        <!--<a href="" class="go-suscriptores" target="_blank">Club Suscriptores</a>-->
-        <h1><a href="" >Empresa AAA</a></h1>
-        <div class="social-links">
-          <ul>
-            <li class="rss"><a href="" target="_blank" >&#xf09e;</a></li>
-            <li class="fb"><a href="" target="_blank" >&#xf09a;</a></li>
-            <li class="tw"><a href="" >&#xf099;</a></li>
-            <li class="gp"><a href="" target="_blank" >&#xf0d5;</a></li>
-            <li class="yt"><a href="" target="_blank" >&#xf16a;</a></li>
-          </ul>
+    <div class="container ec-apertura">
+        <br/>
+        <div class="row">
+            <div class="col-lg-4 text-left">
+                <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">Ingresa</button>
+                <button type="button" class="btn btn-default btn-sm">Registrate</button>
+                <button type="button" class="btn btn-default btn-sm">Suscríbete</button>
+            </div>
+            <div class="col-lg-4 text-center" style="top: 7px;">
+                <?php echo $fecha;?>
+                <br/><br/>
+                <img class="imgsus" src="<?php echo base_url('assets/imagenes/ec_logo.png')?>">
+                <br/><br/>
+            </div>
+            <div class="col-lg-4" style="top: 3px;">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="<?php echo base_url('assets/imagenes/btn_suscriptores.png')?>">
+                    </div>
+                    <div class="col-lg-6 pull-left">
+                        <div class="input-group">
+                            <input type="text" class="buscar" placeholder="Buscar"/>
+                            <button type="submit" class="buscarbtn">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </div><br/><br>
+                        <div class="vg-social pull-right">
+                            <a class="btn azm-social azm-size-48 azm-r-square azm-rss" href="#">
+                                <i class="fa fa-rss"></i>
+                            </a>
+                            <a class="btn azm-social azm-size-48 azm-r-square azm-facebook" href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a class="btn azm-social azm-size-48 azm-r-square azm-twitter" href="#">
+                                <i class="fa fa-twitter"></i>
+                             </a>
+                            <a class="btn azm-social azm-size-48 azm-r-square azm-google-plus" href="#">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                            <a class="btn azm-social azm-size-48 azm-r-square azm-youtube-play" href="#">
+                                <i class="fa fa-youtube-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <br/>
     </div>
-</header>
-        <div class="ec-nav" id="ec-nav">
-          <div class="ec-menu-fixed">
-             <nav id="ec-menu">
-                <h2 class="ec-logo">
-                  <a href="&amp;ft=menu_nav" >Empresa AAA</a>
-                </h2>
-                <ul id="ec-menu-items">
-                  <li class="m-home">
-<!--                    <a  class="&amp;ft=menu_nav" >Inicio</a>-->
-                  </li>
-                  <li class="m-politica ">
-                    <a  href="&amp;ft=menu_nav" >Política</a>
-                  </li>
-                  <li class="m-gastronomia ">
-                    <a  href="&amp;ft=menu_nav" >Economía</a>
-                  </li>
-                  <li class="opinion ">
-                    <a  href="&amp;ft=menu_nav" >Opinión</a>
-                  </li>
-                  <li class="peru ">
-                    <a  href="&amp;ft=menu_nav" >Sociedad</a>
-                  </li>
-                  <li class="m-mundo ">
-                    <a  href="&amp;ft=menu_nav" >Mundo</a>
-                  </li>
-                  <li class="tecno ">
-                    <a  href="&amp;ft=menu_nav" >Tecno</a>
-                  </li>
-                  <li class="m-ciencias last-type">
-                    <a  href="&amp;ft=menu_nav" >Ciencias</a>
-                  </li>
-                  <li class="m-luces sb-item">
-                    <a href="" >Luces</a>
-                  </li>
-                  <li class="m-tvmas sb-item">
-                    <a href="" >TV+</a>
-                  </li>
-                  <li class="m-dt sb-item">
-                    <a href="" >DT</a>
-                  </li>
-                  <li class="m-ecplay">
-                    <a href="&amp;ft=menu_follow">Play</a>
-                  </li>
-                  <li class="m-secciones">
-                    <a data-target="#m-subsecciones"  onclick="gec.fn.dd(this,event)" href="#Más+" >+</a>
-                  </li>
+    <nav class="navbar navbar-inverse ec-apertura" data-spy="affix" data-offset-top="197" style="border: 0px;margin-bottom: 0px;">
+        <div class="mainWrap">
+            <a id="touch-menu" class="mobile-menu" href="#"><i class="icon-reorder"></i>Menu</a>
+            <nav style="background: #BDBDBD;height: 40px;">
+                <ul class="menu">
+                    <li class="movil"><a class="styloSignoMas1" href="#"><b class="letra3">C</b></a></li>
+                    <li class="movil hoverli"><a href="#"><b class="letra3">SALUD</b></a></li>
+                    <li class="movil hoverli"><a href="#"><b class="letra3">INVESTIGACIÓN</b></a></li>
+                    <li class="movil hoverli"><a href="#"><b class="letra3">ENTREVISTAS</b></a></li>
+                    <li class="movil hoverli"><a href="#"><b class="letra3">VADEMECUM</b></a></li>
+                    <li class="movil hoverli"><a href="#"><b class="letra3">CURSOS</b></a></li>
+                    <li class="movil hoverli"><a href="#"><b class="letra3">RADIO</b></a></li>
+                    <li class="movil"><a target="_blank" class="colorplay" href="<?= site_url('videos/index') ?>"><b class="letra4">PLAY</b></a></li>
+                    <li class="movil"><a class="styloSignoMas" href="#"><b class="letra4">+</b></a></li>
                 </ul>
             </nav>
-          </div>
         </div>
-</header>        
-      <div class="ec-click">
-          <h3>Click Aquí</h3>
-            <div class="ui-orbit sl-click orbit-ed">
-            <div class="ui-content">
-            <div class="ui-inner" style="width: 300%;">                
-            <div class="ui-item ui-active" style="width: 33.3333%; margin-right: 0%;">
-          <figure>
-            <a href="" class="img">
-              <img src="" width="940" height="525" alt="¿Qué tendencias influyen en el consumidor de ropa masculina?">
-            </a>           
-            <figcaption>
-              <h2><a href="">¿Qué tendencias y Novedades para Caballeros?</a></h2>
-            </figcaption>
-          </figure>
-        <div class="ec-share">
-          <ul class="ui-shcount" data-url="">
-            <li class="fb">
-              <a href="" data-send="false" data-layout="button_count" data-width="110" data-show-faces="false" target="_blank" onclick="gec.fn.popup(this,event)"><i></i> Me gusta
-              </a> 
-              <span><i></i> 
-                <span data-counter="fb">0</span>
-              </span>
-              </li>
-                <li class="tw">
-                  <a href="" data-lang="es" data-related="" data-hashtags="" data-dnt="true" target="_blank" onclick="gec.fn.popup(this,event)"><i></i> Twittear
-                  </a>
-                <span style="display: none;"><i></i> 
-                  <span data-counter="tw">0</span>
-                </span>
-            </li>
-          </ul>
+    </nav>
+    <div class="container ec-apertura">
+        <div class="row elecciones-flujos4">
+            <div class="col-lg-1">
+                <h2 class="tipoletrasub text-center"><b>DESTACADOS</b></h2>
+            </div>
+            <div class="col-lg-11">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+<!--                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>-->
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <h2 class="tipoletrasub text-center"><b>RUSIA 2018</b></h2>
+                        </div>
+                        <div class="item">
+                            <h2 class="tipoletrasub text-center"><b>PPK</b></h2>
+                        </div>
+                        <div class="item">
+                            <h2 class="tipoletrasub text-center"><b>FRAC</b></h2>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" style="font-size: 20px;top: 10px;" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" style="font-size: 20px;top: 10px;" aria-hidden="true"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-        <div class="ui-item" style="width: 33.3333%; margin-right: 0%;">
-            <figure>
-              <a href="" class="img">
-                <img src="" width="940" height="525" alt="Pokémon Go: las evoluciones que están esperando los fans">
-              </a>
-              <figcaption>
-                <h2><a href="">Pokémon Go: las evoluciones que están esperando los fans</a></h2>       
-              </figcaption>
-            </figure>
-        <div class="ec-share">
-          <ul class="ui-shcount" data-url="">
-            <li class="fb">
-                <a href="" data-send="false" data-layout="button_count" data-width="110" data-show-faces="false" target="_blank" onclick="gec.fn.popup(this,event)"><i></i> Me gusta</a>
-                <span><i></i> <span data-counter="fb">0</span></span>
-            </li>
-            <li class="tw">
-              <a href="" data-lang="es" data-related="" data-hashtags="" data-dnt="true" target="_blank" onclick="gec.fn.popup(this,event)"><i></i> Twittear</a> <span style="display: none;"><i></i> 
-              <span data-counter="tw">0</span></span>
-            </li>
-          </ul>
+    </div>
+    <div class="container ec-apertura">
+        <br/>
+        <div class="row elecciones-flujos">
+            <!--<div class="col-lg-3">-->
+                <div class="thumbnail f-elecciones">
+                    <img src="<?php echo base_url('assets/imagenes/opinion.jpg')?>" alt="imagen" style="position: relative;">
+                    <button type="button" class="btn btn-sm botonencimaimg">
+                       OPINIÓN
+                    </button>
+                    </a>
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="coloreleciones">
+                                <b>Donec nec justo eget felis facilisis fermentum.Aliquam porttitor.</b>
+                            </a>
+                        </p>
+                    </div>
+                 </div>
+<!--            </div>
+            <div class="col-lg-3">-->
+                <div class="thumbnail  f-elecciones">
+                    <img src="<?php echo base_url('assets/imagenes/mundo.jpg')?>" alt="imagen" style="position: relative;">
+                    <button type="button" class="btn btn-sm botonencimaimg">
+                       MUNDO
+                    </button>
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="coloreleciones">
+                                <b>Donec nec justo eget felis facilisis fermentum.Aliquam porttitor.</b>
+                            </a>
+                        </p>
+                    </div>
+                 </div>
+<!--            </div>
+            <div class="col-lg-3">-->
+                <div class="thumbnail  f-elecciones">
+                    <img src="<?php echo base_url('assets/imagenes/opinion2.jpg')?>" alt="imagen" style="position: relative;">
+                    <button type="button" class="btn btn-sm botonencimaimg">
+                       OPINIÓN
+                    </button>
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="coloreleciones">
+                                <b>Donec nec justo eget felis facilisis fermentum.Aliquam porttitor.</b>
+                            </a>
+                        </p>
+                    </div>
+                 </div>
+<!--            </div>
+            <div class="col-lg-3">-->
+                <div class="thumbnail  f-elecciones">
+                    <img src="<?php echo base_url('assets/imagenes/mundodos.jpg')?>" alt="imagen" style="position: relative;">
+                    <button type="button" class="btn btn-sm botonencimaimg">
+                       MUNDO
+                    </button>
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="coloreleciones">
+                                <b>Donec nec justo eget felis facilisis fermentum.Aliquam porttitor.</b>
+                            </a>
+                        </p>
+                    </div>
+                 </div>
+                 <div class="thumbnail  f-elecciones">
+                    <img src="<?php echo base_url('assets/imagenes/politica.jpg')?>" alt="imagen" style="position: relative;">
+                    <button type="button" class="btn btn-sm botonencimaimg">
+                       POLÍTICA
+                    </button>
+                    <div class="caption">
+                        <p>
+                            <a href="#" class="coloreleciones">
+                                <b>Donec nec justo eget felis facilisis fermentum.Aliquam porttitor.</b>
+                            </a>
+                        </p>
+                    </div>
+                 </div>
+            <!--</div>-->
         </div>
-      </div>             
-      <div class="ui-arrows">
-                      <a href="#prev" class="ui-prev"></a>
-                      <a href="#next" class="ui-next"></a>
-      </div>
-      <footer>     
-      <div class="footer-cols">
-        <div class="info-site ec-info">
-          <h2><a href="/"><img alt="" width="180" height="30"></a></h2>
-            <ul class="legal">
-              <li itemtype="http://schema.org/CreativeWork" itemscope="">
-                <large itemprop="copyrightHolder">
-                  <span itemprop="name">© Empresa Editora El Comercio</span>
-                </large>
-              </li>
-              <li>Jr. Avenida Avenida #300 Lima, Perú</li>
-              <li>Copyright© Empresa AAA - Empresa AAA - Todos los derechos reservados.</li>
-            </ul>
+    </div>
+    <div class="container ec-apertura">
+        <div class="row elecciones-flujos2">
+        <div class="row">
+            <div class="col-lg-4">
+                <img class="imagenelecciones" src="<?php echo base_url('assets/imagenes/tres.jpg')?>" alt="imagen">
+            </div>
+            <div class="col-lg-4">
+                <ul class="media-list main-list item_noticiax2">
+                    <li class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="<?php echo base_url('assets/imagenes/uno.jpg')?>" alt="imagen">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading colorblancoletra">Lorem ipsum dolor asit amet</h4>
+                            <p class="by-author colorblancoletra">By Jhon Doe</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <ul class="media-list main-list item_noticiax2">
+                    <li class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="<?php echo base_url('assets/imagenes/dos.jpg')?>" alt="imagen">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading colorblancoletra">Lorem ipsum dolor asit amet</h4>
+                            <p class="by-author colorblancoletra">By Jhon Doe</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-      <div class="ec-mails">
-        <ul>
-          <li>Director General: Pablo Pablo Pablo</li>
-          <li>Director Periodístico: Perico Olaechea</li>
-          <li>Suscripciones: <a href="mailto:suscriptores@comercio.com.pe">suscriptores@EmpresaAAA.com.pe</a></li>
-          <li>Club Empresa AAA: <a href="mailto:clubelcomercio@comercio.com.pe">EmpresaAAA@....com.pe</a></li>
-          <li><a class="last" target="_blank" href="">Compromiso de Autorregulación Comercial</a></li>
-        </ul>
-      </div>
-      <div class="ec-terminos">
-        <ul>
-          <li><a href="">Términos y condiciones de uso</a></li>
-          <li><a target="_blank" href="">Trabaja para Grupo El Comercio</a></li>
-          <li><a target="_blank" href="">Libro de Reclamaciones</a></li>
-          <li><a target="_blank" href="">Oficinas Concesionarias</a></li>
-          <li><a href="">Principios Rectores</a></li>
-          <li><a href="">Políticas de Privacidad</a></li>
-        </ul>
-      </div>
-      <div class="ec-gda">
-          <p>Miembro de<br>
-            Grupo de Diarios América
-          </p>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br>
         </div>
-        <div class="clear"></div>
-      </div>
-    </footer>       
-  </body>
+    </div>
+    <div class="container fondoblanco">
+        <br>
+        <div class="row elecciones-flujos3">
+            <div class="col-lg-12">
+                <div class="ec-click1">
+                    <h3 class="letraclip">Click!</h3>
+                </div>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+<!--                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>-->
+                    </ol>
+                    <div class="carousel-inner ec-clickcolor" role="listbox">
+                        <div class="item active">
+                            <img src="<?php echo base_url('assets/imagenes/slaideruno.jpg')?>" alt="Chania" width="460" height="345">
+                            <h2 class="slaiderletra text-center">PPK y sus ministros en sesión de gimnasia con Vania Masías</h2>
+                        </div>
+                        <div class="item">
+                            <img src="<?php echo base_url('assets/imagenes/eslaiderdos.jpg')?>" alt="Flower" width="460" height="345">
+                            <h2 class="slaiderletra text-center">Ruta por algunos de los pueblos y ciudades más bellos de Italia</h2>
+                        </div>
+                        <div class="item">
+                            <img src="<?php echo base_url('assets/imagenes/eslaidertres.jpg')?>" alt="Flower" width="460" height="345">
+                            <h2 class="slaiderletra text-center">Ex Combate Ximena Hoyos luce orgullosa su nuevo físico</h2>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
+                </div>
+                <br/>
+            </div>
+        </div>
+        <br/>
+    </div>
+    <div class="container ec-apertura">
+        <br/>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="ec-info">
+                    <img class="imgsus2" src="<?php echo base_url('assets/imagenes/ec_logo.png')?>">
+                    <ul class="legal">
+                        <li itemtype="#" itemscope="">
+                            <large itemprop="copyrightHolder">
+                                <span itemprop="name">&copy; Empresa Editora El Comercio</span>
+                            </large>
+                        </li>
+                        <li>Jr. Miró Quesada #300 Lima 1 Perú</li>
+                        <li>Copyright&copy; Elcomercio.pe - Grupo El Comercio - Todos los derechos reservados.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="ec-info">
+                    <ul class="legal">
+                        <li>Director General: Francisco Miró Quesada Cantuarias</li>
+                        <li>Director Periodístico: Fernando Berckemeyer Olaechea</li>
+                        <li>Suscripciones: <a class="legal" href="#">suscriptores@comercio.com.pe</a></li>
+                        <li>Publicidad Online: <a class="legal" href="#">fonoavisos@comercio.com.pe</a></li>
+                        <li>Club El Comercio: <a class="legal" href="#">clubelcomercio@comercio.com.pe</a></li>
+                        <li><a class="legal" target="_blank" href="#">Compromiso de Autorregulación Comercial</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <ul class="legal">
+                            <li><a class="legal" href="#">Términos y condiciones de uso</a></li>
+                            <li><a class="legal" class="legal" target="_blank" href="#">Trabaja para Grupo El Comercio</a></li>
+                            <li><a class="legal" target="_blank" href="#">Libro de Reclamaciones</a></li>
+                            <li><a class="legal" target="_blank" href="#">Oficinas Concesionarias</a></li>
+                            <li><a class="legal" href="#">Principios Rectores</a></li>
+                            <li><a class="legal" href="#">Políticas de Privacidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ec-gda pull-left">
+                            <p class="legal1">
+                                Miembro de<br>
+                                Grupo de Diarios <br>América
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+    </div>
+    <div class="container fondomostaza ec-apertura">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="cnt-links">
+                    <div class="t-red">Red el Comercio</div>
+                </div><br>
+                <div class="ec-red-links">
+                    <p class="textofoorter">
+                        <a class="colorletrafooter" href="#" target="_blank" title="Diario Perú21">peru21.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Diario Gestión">gestion.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Depor.com">depor.com</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Diario Trome">trome.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Aptitus">aptitus.com</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Neoauto">neoauto.com</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Urbania">urbania.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="peru.com">peru.com</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Ofertop">ofertop.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Publimetro">publimetro.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="La Prensa">laprensa.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="GEC">gec.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Club El Comercio">Club El Comercio</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="CompraBien.com">comprabien.com</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="PerúRed">Perured.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Shopin">Shopin.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Sepp">Sepp.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Clasificados">clasificados.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Pagoefectivo">pagoefectivo.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Avansys">avansys.edu.pe</a>
+                        •<a class="colorletrafooter" href="#" target="_blank" title="Estilomio.com">Estilomio.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Comercio</h4>
+                    <span class="textoaliniado">Inicia sesión y podrás interactuar con nuestro portal, participar de nuestras 
+                        promociones y sorteos.</span>
+                </div>
+                <div class="modal-body">
+                    <form method="post" class="form-signin" action="" onsubmit="return validar()">
+                        <span id="reauth-email" class="reauth-email"></span>
+                        <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Correo Electronico" maxlength="40" /><br/>
+                        <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Contraseña" maxlength="10" /><br/>
+                        <input class="btn btn-sm btn-primary btn-block btn-signin" type="submit" value="INICIAR SESÍON"/><br/>
+                        <!--<button class="btn btn-sm btn-primary btn-block btn-signin" type="submit">INICIAR SESÍON</button><br/>-->
+                        <a href="#" class="text-center">Olvidé mi contraseña</a><span class="clearfix"></span><br/>
+                        <label class="pull-left">
+                            ¿Aún no tienes una cuenta?
+                        </label>
+                        <a href="#" class="pull-right btn btn-sm btn-warning">Regístrate</a><span class="clearfix"></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
 </html>

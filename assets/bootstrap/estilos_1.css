@@ -555,3 +555,11 @@ width:100%;}
     text-transform: uppercase;
 }
 
+.textoaliniado{
+    text-align: justify;
+}
+
+.alerta-dialog .modal-dialog {
+    width: 220px;
+}
+
