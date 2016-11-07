@@ -284,6 +284,7 @@ width:100%;}
 .imgsus{
     width:100%;
     max-width:230px;
+    height: 50px;
 }
 
 .imgsus1{
@@ -392,7 +393,7 @@ width:100%;}
 }
 .letra3{
     color: #1C1C1C;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .letra4{
@@ -411,6 +412,7 @@ width:100%;}
 .coloreleciones{
     color: #262626;
     font: 15px/1.15 "glosabold";
+    text-decoration: inherit;
 }
 
 .f-elecciones {
@@ -439,8 +441,8 @@ width:100%;}
     top: 77px;
     background-color: #ffc905;
     font: 11px/17px 'prelobold';
-    left: 0;
-    width: 70px;
+    width: 125px;
+    left: 0px;
 }
 .item_noticiax2{
     background: #19171b none repeat scroll 0 0;
@@ -481,6 +483,9 @@ width:100%;}
 .colorletrafooter{
     color: #272325;
     font-size: 10px;
+}
+.aliniado{
+    text-align: left;
 }
 .fondoblanco{
     background: #ffffff;
@@ -563,3 +568,73 @@ width:100%;}
     width: 220px;
 }
 
+div.dataTables_info {
+    padding-top: 8px;
+    text-align: left;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.colormenu {
+    background: #bdbdbd none repeat scroll 0 0;
+    height: 40px;
+}
+
+@media (max-width:768px){ 
+    .colormenu {
+        background: #bdbdbd none repeat scroll 0 0;
+        height: 0px;
+    }
+}
+
+.btn-inverse {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #363636;
+  *background-color: #222222;
+  background-image: -moz-linear-gradient(top, #444444, #222222);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#444444), to(#222222));
+  background-image: -webkit-linear-gradient(top, #444444, #222222);
+  background-image: -o-linear-gradient(top, #444444, #222222);
+  background-image: linear-gradient(to bottom, #444444, #222222);
+  background-repeat: repeat-x;
+  border-color: #222222 #222222 #000000;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff222222', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+.btn-inverse:hover,
+.btn-inverse:focus,
+.btn-inverse:active,
+.btn-inverse.active,
+.btn-inverse.disabled,
+.btn-inverse[disabled] {
+  color: #ffffff;
+  background-color: #222222;
+  *background-color: #151515;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+             box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+
+.btn-inverse:active,
+.btn-inverse.active {
+  background-color: #080808 \9;
+}
+
+.btn-inverse.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.sw-v1 .pid-user-caption {
+    font-size: 14px;
+}
+
+.peruid-link {
+    background-color: inherit;
+    color: #4d4d4d;
+    font-size: 15px;
+}

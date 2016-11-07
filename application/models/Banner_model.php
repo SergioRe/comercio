@@ -1,36 +1,17 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Usuarios_model extends CI_Model {
-    var $table = 'usuarios';
-    var $column_order = array('IdUsu', 'NomCompUsu', 'ApellidosUsu', 'DniUsu', 'CorreoUsu', 'PassUsu', 'TipoUsu');
-    var $column_search = array('IdUsu', 'NomCompUsu', 'ApellidosUsu', 'DniUsu', 'CorreoUsu', 'PassUsu', 'TipoUsu');
-    var $order = array('IdUsu' => 'desc');
+class Banner_model extends CI_Model {
+    var $table = 'banner';
+    var $column_order = array('IdBanner', 'NomBanner', 'EstadoBanner');
+    var $column_search = array('IdBanner', 'NomBanner', 'EstadoBanner');
+    var $order = array('IdBanner' => 'desc');
     
     public function __construct(){
         parent::__construct();
         $this->load->database();
     }
     
-    public function login($datos){
-        $this->db->select('*');
-        $this->db->from($this->table);
-        $this->db->where('CorreoUsu', $datos['inputEmail']);
-        $this->db->where('PassUsu', $datos['inputPassword']);
-        $query = $this->db->get();
-        $data = $query->result_array();
-        return $data;
-    }
-
-    public function existeCorreo($CorreoUsu){
-        $this->db->select('*');
-        $this->db->from($this->table);
-        $this->db->where('CorreoUsu', $CorreoUsu);
-        $query = $this->db->get();
-        $data = $query->result_array();
-        return $data;
-    }
-
     public function get_datatables(){
         $this->_get_datatables_query();
         if($_POST['length'] != -1)
@@ -75,9 +56,18 @@ class Usuarios_model extends CI_Model {
         return $this->db->count_all_results();
     }
 
-    public function get_by_id($IdUsu){
+    public function obtenerBannerActivo(){
+        $this->db->select('*');
         $this->db->from($this->table);
-        $this->db->where('IdUsu',$IdUsu);
+        $this->db->where('EstadoBanner', 'A');
+        $query = $this->db->get();
+        $data = $query->result_array();
+        return $data;
+    }
+
+    public function get_by_id($IdBanner){
+        $this->db->from($this->table);
+        $this->db->where('IdBanner',$IdBanner);
         $query = $this->db->get();
         $data = $query->result_array();
         return $data;
@@ -87,8 +77,8 @@ class Usuarios_model extends CI_Model {
         try {
             switch ($crud) {
                 case 'update':
-                    $this->db->where('IdUsu', $data['IdUsu']);
-                    unset($data['IdUsu']);
+                    $this->db->where('IdBanner', $data['IdBanner']);
+                    unset($data['IdBanner']);
                     $this->db->update($this->table , $data);
                     break;
                 case 'add':

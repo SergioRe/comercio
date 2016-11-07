@@ -11,10 +11,13 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css')?>" type="text/css" media="screen">
     <link rel="stylesheet" href="<?php echo base_url('assets/font-awesome/css/font-awesome.css')?>" >
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/ext-4.2.0/resources/css/ext-all.css')?>" type="text/css" media="screen">
 
+    <script src="<?php echo base_url('assets/ext-4.2.0/ext-all.js')?>" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript" ></script>
     <script src="<?php echo base_url('assets/bootstrap/js/menu.js')?>" type="text/javascript"></script>
     <script src="<?php echo base_url('assets/bootstrap/js/funciones.js')?>" type="text/javascript"></script>
+    <script src="<?php echo base_url('assets/bootstrap/js/inicio.js')?>" type="text/javascript"></script>
     <link href="<?php echo base_url('assets/bootstrap/css/bootstrap-social.css')?>" rel="stylesheet">
     <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js')?>" type="text/javascript"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css" />
@@ -75,21 +78,41 @@
             var alerta = '<?php echo $alerta; ?>';
             if(alerta === 'N'){
                 $("#myModal").modal("show");
-                alertas('DANGER','ATENCIÓN','Usuario o contraseña incorrecta.');
+                alertas('DANGER','ATENCIÓN','El usuario o contraseña incorrecta.');
                 return false;
             }
         });
     </script>
     <div class="container ec-apertura"><br/>
-        <img class="imgPublicidad" src="<?php echo base_url('assets/imagenes/publicidadBanner.png')?>">
+        <?php
+        foreach ($banner as $value) {
+        $imagenurl = base_url('assets/imagenes/'.$value['NomBanner']);
+        ?>
+            <img class="imgPublicidad" src="<?php echo $imagenurl;?>" >
+        <?php  
+        }
+        ?>
     </div>
     <div class="container ec-apertura">
         <br/>
         <div class="row">
-            <div class="col-lg-4 text-left">
-                <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">Ingresa</button>
-                <button type="button" class="btn btn-default btn-sm">Registrate</button>
-                <button type="button" class="btn btn-default btn-sm">Suscríbete</button>
+            <div class="col-lg-4 text-left" id="logeo">
+                <?php
+                if($login == 'No'){
+                ?>
+                    <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">Ingresa</button>
+                    <button type="button" class="btn btn-default btn-sm" onclick="registrarme();">Registrate</button>
+                    <button type="button" class="btn btn-default btn-sm">Suscríbete</button>
+                <?php    
+                }else if($login == 'Si'){
+                ?>
+                    <span class="pid-user-caption">&nbsp;Bienvenido(a),</span>
+                    <a class="peruid-link" href="#"><?php echo $NomCompUsu;?></a>&nbsp;
+                    <a href="<?= site_url('inicio/cerrarsession') ?>"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></a>
+                    <button type="button" class="btn btn-default btn-sm">Suscríbete</button>
+                <?php
+                }
+                ?>
             </div>
             <div class="col-lg-4 text-center" style="top: 7px;">
                 <?php echo $fecha;?>
@@ -135,15 +158,16 @@
     <nav class="navbar navbar-inverse ec-apertura" data-spy="affix" data-offset-top="197" style="border: 0px;margin-bottom: 0px;">
         <div class="mainWrap">
             <a id="touch-menu" class="mobile-menu" href="#"><i class="icon-reorder"></i>Menu</a>
-            <nav style="background: #BDBDBD;height: 40px;">
+            <nav class="colormenu">
                 <ul class="menu">
                     <li class="movil"><a class="styloSignoMas1" href="#"><b class="letra3">C</b></a></li>
-                    <li class="movil hoverli"><a href="#"><b class="letra3">SALUD</b></a></li>
-                    <li class="movil hoverli"><a href="#"><b class="letra3">INVESTIGACIÓN</b></a></li>
-                    <li class="movil hoverli"><a href="#"><b class="letra3">ENTREVISTAS</b></a></li>
-                    <li class="movil hoverli"><a href="#"><b class="letra3">VADEMECUM</b></a></li>
-                    <li class="movil hoverli"><a href="#"><b class="letra3">CURSOS</b></a></li>
-                    <li class="movil hoverli"><a href="#"><b class="letra3">RADIO</b></a></li>
+                    <?php
+                    foreach ($menu as $value) {
+                    ?>
+                    <li class="movil hoverli"><a target="_blank" href="<?= site_url($value['UrlMenu']) ?>"><b class="letra3"><?php echo $value['NomMenu']; ?></b></a></li>
+                    <?php
+                    }
+                    ?>
                     <li class="movil"><a target="_blank" class="colorplay" href="<?= site_url('videos/index') ?>"><b class="letra4">PLAY</b></a></li>
                     <li class="movil"><a class="styloSignoMas" href="#"><b class="letra4">+</b></a></li>
                 </ul>
@@ -188,80 +212,24 @@
     <div class="container ec-apertura">
         <br/>
         <div class="row elecciones-flujos">
-            <!--<div class="col-lg-3">-->
+            <?php
+            foreach ($videos as $value) {
+            ?>
                 <div class="thumbnail f-elecciones">
-                    <img src="<?php echo base_url('assets/imagenes/opinion.jpg')?>" alt="imagen" style="position: relative;">
-                    <button type="button" class="btn btn-sm botonencimaimg">
-                       OPINIÓN
-                    </button>
+                    <img src="<?php echo base_url('assets/imagenes/'.$value['ImagenVideo'])?>" alt="imagen" style="position: relative;height:100px;">
+                    <a href="#" class="btn btn-sm botonencimaimg"><?php echo $value['NomMenu'];?></a>
                     </a>
                     <div class="caption">
                         <p>
                             <a href="#" class="coloreleciones">
-                                <b>Donec nec justo eget felis facilisis fermentum.Aliquam porttitor.</b>
+                                <b><?php echo $value['TituloVideo'];?></b>
                             </a>
                         </p>
                     </div>
-                 </div>
-<!--            </div>
-            <div class="col-lg-3">-->
-                <div class="thumbnail  f-elecciones">
-                    <img src="<?php echo base_url('assets/imagenes/mundo.jpg')?>" alt="imagen" style="position: relative;">
-                    <button type="button" class="btn btn-sm botonencimaimg">
-                       MUNDO
-                    </button>
-                    <div class="caption">
-                        <p>
-                            <a href="#" class="coloreleciones">
-                                <b>Donec nec justo eget felis facilisis fermentum.Aliquam porttitor.</b>
-                            </a>
-                        </p>
-                    </div>
-                 </div>
-<!--            </div>
-            <div class="col-lg-3">-->
-                <div class="thumbnail  f-elecciones">
-                    <img src="<?php echo base_url('assets/imagenes/opinion2.jpg')?>" alt="imagen" style="position: relative;">
-                    <button type="button" class="btn btn-sm botonencimaimg">
-                       OPINIÓN
-                    </button>
-                    <div class="caption">
-                        <p>
-                            <a href="#" class="coloreleciones">
-                                <b>Donec nec justo eget felis facilisis fermentum.Aliquam porttitor.</b>
-                            </a>
-                        </p>
-                    </div>
-                 </div>
-<!--            </div>
-            <div class="col-lg-3">-->
-                <div class="thumbnail  f-elecciones">
-                    <img src="<?php echo base_url('assets/imagenes/mundodos.jpg')?>" alt="imagen" style="position: relative;">
-                    <button type="button" class="btn btn-sm botonencimaimg">
-                       MUNDO
-                    </button>
-                    <div class="caption">
-                        <p>
-                            <a href="#" class="coloreleciones">
-                                <b>Donec nec justo eget felis facilisis fermentum.Aliquam porttitor.</b>
-                            </a>
-                        </p>
-                    </div>
-                 </div>
-                 <div class="thumbnail  f-elecciones">
-                    <img src="<?php echo base_url('assets/imagenes/politica.jpg')?>" alt="imagen" style="position: relative;">
-                    <button type="button" class="btn btn-sm botonencimaimg">
-                       POLÍTICA
-                    </button>
-                    <div class="caption">
-                        <p>
-                            <a href="#" class="coloreleciones">
-                                <b>Donec nec justo eget felis facilisis fermentum.Aliquam porttitor.</b>
-                            </a>
-                        </p>
-                    </div>
-                 </div>
-            <!--</div>-->
+                </div>
+            <?php
+            }
+            ?>
         </div>
     </div>
     <div class="container ec-apertura">
@@ -278,7 +246,6 @@
                         </a>
                         <div class="media-body">
                             <h4 class="media-heading colorblancoletra">Lorem ipsum dolor asit amet</h4>
-                            <p class="by-author colorblancoletra">By Jhon Doe</p>
                         </div>
                     </li>
                 </ul>
@@ -291,7 +258,6 @@
                         </a>
                         <div class="media-body">
                             <h4 class="media-heading colorblancoletra">Lorem ipsum dolor asit amet</h4>
-                            <p class="by-author colorblancoletra">By Jhon Doe</p>
                         </div>
                     </li>
                 </ul>
@@ -449,12 +415,87 @@
                         <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Contraseña" maxlength="10" /><br/>
                         <input class="btn btn-sm btn-primary btn-block btn-signin" type="submit" value="INICIAR SESÍON"/><br/>
                         <!--<button class="btn btn-sm btn-primary btn-block btn-signin" type="submit">INICIAR SESÍON</button><br/>-->
-                        <a href="#" class="text-center">Olvidé mi contraseña</a><span class="clearfix"></span><br/>
+                        <a href="#" onclick="recuperar_pass();" class="text-center">Olvidé mi contraseña</a><span class="clearfix"></span><br/>
                         <label class="pull-left">
                             ¿Aún no tienes una cuenta?
                         </label>
-                        <a href="#" class="pull-right btn btn-sm btn-warning">Regístrate</a><span class="clearfix"></span>
+                        <a href="#" onclick="myModalRegistro();" class="pull-right btn btn-sm btn-warning">Regístrate</a><span class="clearfix"></span>
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModalRecuperarPass" class="modal fade bd-example-modal-sm" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Restablece tu contraseña</h4>
+                    <span class="textoaliniado">Ingresa el correo electrónico con el que te registraste.</span>
+                </div>
+                <div class="modal-body">
+                    <form method="post" class="form-signin">
+                        <span id="reauth-email" class="reauth-email"></span>
+                        <input type="email" id="inputEmail1" name="inputEmail1" class="form-control" placeholder="Correo Electrínico" maxlength="40" /><br/>
+                        <input class="btn btn-sm btn-warning btn-block btn-signin" onclick="enviar_pass();" type="button" value="ENVIAR"/><br/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModalRegistro" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Sé parte de nuestra comunidad y podrás interactuar con nuestro portal, participar de nuestras promociones y sorteos.</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form" id="formusuario" name="formusuario">
+                        <div class="form-group">
+                            <label for="ejemplo_email_3" class="col-lg-4 control-label">Nombres: </label>
+                            <div class="col-lg-7">
+                                <input type="text" class="form-control" id="NomCompUsu" maxlength='50' name="NomCompUsu" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="ejemplo_email_3" class="col-lg-4 control-label">Apellidos: </label>
+                            <div class="col-lg-7">
+                                <input type="text" class="form-control" id="ApellidosUsu" maxlength='50' name="ApellidosUsu" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="ejemplo_email_3" class="col-lg-4 control-label">DNI: </label>
+                            <div class="col-lg-7">
+                                <input type="text" class="form-control" maxlength='8' id="DniUsu" name="DniUsu" onkeypress="return validarNumeros(event)" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="ejemplo_email_3" class="col-lg-4 control-label">Correo: </label>
+                            <div class="col-lg-7">
+                                <input type="text" class="form-control" maxlength='40' id="CorreoUsu" name="CorreoUsu" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="ejemplo_email_3" class="col-lg-4 control-label">Contraseña: </label>
+                            <div class="col-lg-7">
+                                <input type="password" class="form-control" maxlength='10' id="PassUsu" name="PassUsu" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label><input type="checkbox" id="SuscribirmeUsu" name="SuscribirmeUsu" />Deseo suscribirme al newsletter</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" onclick="registrar_usuario();" class="btn btn-sm btn-warning">Registrarme</button>
                 </div>
             </div>
         </div>
