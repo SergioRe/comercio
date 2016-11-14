@@ -44,15 +44,16 @@ class Videos extends CI_Controller {
                 $list = $this->videos->get_datatables();
                 $no = $_POST['start'];
                 foreach ($list as $videos) {
-                    $colorMostrar = (($videos->MostrarVideo == 'S')?'success':'inverse');
+                    $colorMostrarVideo = (($videos->MostrarVideo == 'S')?'success':'inverse');
+                    $colordestacado = (($videos->destacado == 'S')?'success':'inverse');
                     $no++;
                     $row = array();
                     $row[] = $videos->IdVideo;
                     $row[] = $videos->NomMenu;
                     $row[] = '<p class="aliniado">'.$videos->TituloVideo.'</p>';
-                    $row[] = '<button type="button" class="btn btn-'.$colorMostrar.' btn-sm" onclick="mostrar_video('."'".$videos->IdVideo."'".','."'".$videos->MostrarVideo."'".');">'.(($videos->MostrarVideo == 'S')?'Si':'No').'</button>';
+                    $row[] = '<button type="button" class="btn btn-'.$colorMostrarVideo.' btn-sm" onclick="mostrar_video('."'".$videos->IdVideo."'".','."'".$videos->MostrarVideo."'".');">'.(($videos->MostrarVideo == 'S')?'Si':'No').'</button>';
                     $row[] = '<img style="width:100%;height:50px;" src="'.$urlContorlador.$videos->ImagenVideo.'">';
-                    $row[] = (($videos->destacado == 'S')?'Si':'No');
+                    $row[] = '<button type="button" class="btn btn-'.$colordestacado.' btn-sm" onclick="destacado_video('."'".$videos->IdVideo."'".','."'".$videos->destacado."'".');">'.(($videos->destacado == 'S')?'Si':'No').'</button>';
                     $row[] = '<center><a class="btn btn-sm btn-primary" href="javascript:void(0)" title="Editar" onclick="edit_video('."'".$videos->IdVideo."'".')"><i class="glyphicon glyphicon-pencil"></i></a>';
                     $data[] = $row;
                 }
@@ -70,6 +71,7 @@ class Videos extends CI_Controller {
                 $data['IdMenu'] = $this->input->post('IdMenu');
                 $data['TituloVideo'] = $this->input->post('TituloVideo');
                 $data['destacado'] = $this->input->post('destacado');
+                $data['DescriocionVideo'] = $this->input->post('DescriocionVideo');
                 if(!empty($_FILES)){
                     if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
                         if(move_uploaded_file($_FILES['archivo']['tmp_name'],'assets/imagenes/'.$_FILES['archivo']['name'])){
@@ -78,6 +80,9 @@ class Videos extends CI_Controller {
                         }
                     }
                 }
+                date_default_timezone_set('America/Lima');
+                $fecha = date('Y-m-d H:i:s');
+                $data['HoraVideo'] = $fecha;
                 $data['respuesta'] = $this->videos->crud($data,'update');
                 echo json_encode(array('msj'=>$data['respuesta']));
                 break;
@@ -86,6 +91,7 @@ class Videos extends CI_Controller {
                 $data['IdMenu'] = $this->input->post('IdMenu');
                 $data['TituloVideo'] = $this->input->post('TituloVideo');
                 $data['destacado'] = $this->input->post('destacado');
+                $data['DescriocionVideo'] = $this->input->post('DescriocionVideo');
                 $data['MostrarVideo'] = 'N';
                 if(!empty($_FILES)){
                     if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
@@ -95,24 +101,52 @@ class Videos extends CI_Controller {
                         }
                     }
                 }
+                date_default_timezone_set('America/Lima');
+                $fecha = date('Y-m-d H:i:s') ;
+                $data['HoraVideo'] = $fecha;
                 $data['respuesta'] = $this->videos->crud($data,'add');
                 echo json_encode(array('msj'=>$data['respuesta']));
                 break;
             case 'validar':
                 $data = array();
                 $datos = $this->videos->validarMostrarVideos();
-                $cantidad = count($datos);
+                $igualClavePk = '';
+                foreach ($datos as $valor):
+                    if($valor['IdVideo'] == $_POST['IdVideo']){
+                        $igualClavePk = 'Si';
+                    }
+                endforeach;
                 $_POST['MostrarVideo'] = (($_POST['MostrarVideo'] == 'S')?'N':'S');
-                if($datos[0]['IdVideo'] == $_POST['IdVideo']){
+                if(count($datos) < 5){
                     $data['respuesta'] = $this->videos->crud($_POST,'update');
                     echo json_encode(array('msj'=>$data['respuesta']));
-                }else if($datos[0]['IdVideo'] !== $_POST['IdVideo'] && $cantidad>=5){
-                    echo json_encode(array('msj'=>'mostrarActivo'));
+                }else if($igualClavePk == 'Si'){
+                    $data['respuesta'] = $this->videos->crud($_POST,'update');
+                    echo json_encode(array('msj'=>$data['respuesta']));
                 }else{
+                    echo json_encode(array('msj'=>'mostrarActivo'));
+                }
+            break;
+            case 'destacado':
+                $data = array();
+                $datos = $this->videos->listarVideosDestacados();
+                $igualClavePk = '';
+                foreach ($datos as $valor):
+                    if($valor['IdVideo'] == $_POST['IdVideo']){
+                        $igualClavePk = 'Si';
+                    }
+                endforeach;
+                $_POST['destacado'] = (($_POST['destacado'] == 'S')?'N':'S');
+                if(count($datos) < 16){
                     $data['respuesta'] = $this->videos->crud($_POST,'update');
                     echo json_encode(array('msj'=>$data['respuesta']));
+                }else if($igualClavePk == 'Si'){
+                    $data['respuesta'] = $this->videos->crud($_POST,'update');
+                    echo json_encode(array('msj'=>$data['respuesta']));
+                }else{
+                    echo json_encode(array('msj'=>'mostrarActivo'));
                 }
-            break;    
+                break;
         endswitch;
     }
 

@@ -104,6 +104,11 @@ function problemas2(){
     Ext.getBody().mask("Problemas en el servidor.Presione F5 para refrescar la página.");
 }
 
+function problemas3(){
+    $('#myModalRecuperarPass').modal('hide');
+    Ext.getBody().mask("Problemas en el servidor.Presione F5 para refrescar la página.");
+}
+
 function problemas(){
     alertas('DANGER','ATENCIÓN','Problemas en el servidor.Presione F5 para refrescar la página.');
 //    Ext.getBody().unmask();

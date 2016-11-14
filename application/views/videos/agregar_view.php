@@ -23,12 +23,18 @@
                              </select>
                         </div>
                     </div>
-                     <div class="form-group">
-						 <label for="ejemplo_email_3" class="col-lg-4 control-label">Título del Vídeo: </label>
-						 <div class="col-lg-7">
-						 	<textarea class="form-control" rows="2" id="TituloVideo" maxlength="300" name="TituloVideo"></textarea>
+                    <div class="form-group">
+			<label for="ejemplo_email_3" class="col-lg-4 control-label">Título del Vídeo: </label>
+			<div class="col-lg-7">
+                            <textarea class="form-control" rows="2" id="TituloVideo" maxlength="300" name="TituloVideo"></textarea>
                         </div>
-					</div>
+                    </div>
+                    <div class="form-group">
+			<label for="ejemplo_email_3" class="col-lg-4 control-label">Descripcion del Vídeo: </label>
+			<div class="col-lg-7">
+                            <textarea class="form-control" rows="3" id="DescriocionVideo" maxlength="300" name="DescriocionVideo"></textarea>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label for="ejemplo_email_3" class="col-lg-4 control-label">Imagen Video: </label>
                         <div class="col-lg-7">

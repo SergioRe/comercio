@@ -33,11 +33,17 @@
                         </div>
                     </div>
                      <div class="form-group">
-						 <label for="ejemplo_email_3" class="col-lg-4 control-label">Título del Vídeo: </label>
-						 <div class="col-lg-7">
-						 	<textarea class="form-control" rows="2" id="TituloVideo" maxlength="300" name="TituloVideo"><?php echo $value['TituloVideo'];?></textarea>
+			<label for="ejemplo_email_3" class="col-lg-4 control-label">Título del Vídeo: </label>
+			<div class="col-lg-7">
+                            <textarea class="form-control" rows="2" id="TituloVideo" maxlength="300" name="TituloVideo"><?php echo $value['TituloVideo'];?></textarea>
                         </div>
-					</div>
+                    </div>
+                    <div class="form-group">
+			<label for="ejemplo_email_3" class="col-lg-4 control-label">Descripcion del Vídeo: </label>
+			<div class="col-lg-7">
+                            <textarea class="form-control" rows="3" id="DescriocionVideo" maxlength="300" name="DescriocionVideo"><?php echo $value['DescriocionVideo'];?></textarea>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label for="ejemplo_email_3" class="col-lg-4 control-label">Imagen Video: </label>
                         <div class="col-lg-7">

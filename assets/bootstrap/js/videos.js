@@ -258,6 +258,51 @@ function agregar_video(){
     return false;
 }
 
+function destacado_video(IdVideo,destacado){
+    var ruta = base_url + '/' + pathArray[1] + '/index.php/videos/json/destacado';
+    $.ajax({
+        url: ruta,
+        type: 'POST',
+        data: {IdVideo:IdVideo,destacado:destacado},
+        dataType: "JSON",
+        //beforeSend:cargando2,
+        success:function(result){
+            Ext.getBody().unmask();
+            $('#myModal').modal('hide');
+            switch(result.msj){
+                case 'Si':
+                    Ext.Msg.show({
+                        title: 'ATENCIÓN',
+                        msg: 'Proceso realizado correctamente.',
+                        buttons: Ext.Msg.OK,
+                        icon: Ext.Msg.INFO
+                    });
+                    break;
+                case 'mostrarActivo':
+                    Ext.Msg.show({
+                        title: 'ATENCIÓN',
+                        msg: 'No pueden haber mas de 15 Videos Destacados.',
+                        buttons: Ext.Msg.OK,
+                        icon: Ext.Msg.INFO
+                    });
+                    break;
+                default:
+                    Ext.Msg.show({
+                        title: 'ATENCIÓN',
+                        msg: 'ERROR: '+result.msj,
+                        buttons: Ext.Msg.OK,
+                        icon: Ext.Msg.ERROR
+                    });
+                    break;        
+            }
+            reload_table();
+        },
+        timeout:40000//,
+        //error: problemas1
+    });
+    return false;
+}
+
 function mostrar_video(IdVideo,MostrarVideo){
     var ruta = base_url + '/' + pathArray[1] + '/index.php/videos/json/validar';
     $.ajax({

@@ -76,6 +76,25 @@ class Videos_model extends CI_Model {
         return $data;
     }
 
+    public function listarVideosDestacados(){
+        $this->db->from($this->table);
+        $this->db->join('menu','menu.IdMenu = videos.IdMenu');
+        $this->db->where('destacado','S');
+        $this->db->order_by("HoraVideo", "desc");
+        $query = $this->db->get();
+        $data = $query->result_array();
+        return $data;
+    }
+    
+    public function listarVideosTodos(){
+        $this->db->from($this->table);
+        $this->db->join('menu','menu.IdMenu = videos.IdMenu');
+        $this->db->order_by("HoraVideo", "desc");
+        $query = $this->db->get();
+        $data = $query->result_array();
+        return $data;
+    }
+
     public function validarMostrarVideos(){
         $this->db->from($this->table);
         $this->db->where('MostrarVideo','S');

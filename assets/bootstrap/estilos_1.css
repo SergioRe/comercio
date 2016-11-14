@@ -433,6 +433,12 @@ width:100%;}
     width: 100%;
     height: 200px;
 }
+
+.colorblanco1{
+    color: #ffffff;
+    width: 100%;
+}
+
 .colorblancoletra{
     color: #ffffff;
 }
@@ -444,6 +450,60 @@ width:100%;}
     width: 125px;
     left: 0px;
 }
+
+.botonencimaimgcero{
+    position: absolute;
+    top: 0px;
+    background-color: #ffc905;
+    font: 11px/17px 'prelobold';
+    width: 125px;
+    left: 15px;
+}
+
+.botonencimaimguno{
+    position: absolute;
+    top: 160px;
+    background-color: #ffc905;
+    font: 11px/17px 'prelobold';
+    width: 125px;
+    left: 0px;
+}
+
+.botonencimaimgdos{
+    position: absolute;
+    top: 0px;
+    background-color: #ffc905;
+    font: 11px/17px 'prelobold';
+    width: 125px;
+    left: 0px;
+}
+
+.botonencimaimgtres{
+    position: absolute;
+    top: 160px;
+    background-color: #ffc905;
+    font: 11px/17px 'prelobold';
+    width: 125px;
+    left: 0px;
+}
+
+.botonencimaimgcuatro{
+    position: absolute;
+    top: 74px;
+    background-color: #ffc905;
+    font: 11px/17px 'prelobold';
+    width: 125px;
+    left: 0px;
+}
+
+.bordernoticia{
+    border-right: 1px solid #ccc8ba;
+    font-family: "arial";
+    margin-right: 8px;
+    padding-right: 8px;
+    width: 105px;
+}
+
 .item_noticiax2{
     background: #19171b none repeat scroll 0 0;
     float: left;
@@ -451,7 +511,7 @@ width:100%;}
     padding: 4px;
 }
 .imagenelecciones{
-    height: 112px;
+    height: 107px;
     width: 195px;
     margin-bottom: 12px;
 }
@@ -632,9 +692,62 @@ div.dataTables_info {
 .sw-v1 .pid-user-caption {
     font-size: 14px;
 }
-
+.botonencimaimg{
+    position: absolute;
+    top: 75px;
+    background-color: #ffc905;
+    font: 11px/17px 'prelobold';
+    width: 125px;
+    left: 0px;
+}
 .peruid-link {
     background-color: inherit;
     color: #4d4d4d;
     font-size: 15px;
+}
+
+.videogrande{
+    height: 366px;
+}
+
+.coloreleciones1{
+    color: #FFFFFF;
+    font-size: 24px;
+    text-decoration: inherit;
+    text-align: justify;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.coloreleciones2{
+    color: #FFFFFF;
+    font-size: 15px;
+    text-decoration: inherit;
+    text-align: justify;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+.videograndecolor{
+    background: #4d4d4d;
+}
+
+.botonencimaimg1{
+    position: absolute;
+    top: 165px;
+    background-color: #ffc905;
+    font: 11px;
+    width: 125px;
+    left: 0px;
+}
+
+.colordescropcion{
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.imagengrande{
+    border: 0 none;
 }

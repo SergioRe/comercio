@@ -14,6 +14,7 @@ class Inicio extends CI_Controller {
     public function index(){
         $this->load->helper('url');
         $data = array();
+        date_default_timezone_set('America/Lima');
         $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
         $fecha = date('d')." de ".$meses[date('n')-1]. " del ".date('Y') ;
         $data['fecha'] = $fecha;
@@ -21,6 +22,8 @@ class Inicio extends CI_Controller {
         $banner = $this->banner->obtenerBannerActivo();
         $data['menu']  = $this->menu->obtenerListaMenu();
         $data['videos']  = $this->videos->mostarVideos();
+        $data['destacado'] = $this->videos->listarVideosDestacados();
+        $data['videostodos'] = $this->videos->listarVideosTodos();
         $data['banner'] = $banner;
         $data['login'] = 'No';
         if(count($_POST) ==  0){
@@ -79,12 +82,33 @@ class Inicio extends CI_Controller {
                 $existeCorreo = $this->usuarios->existeCorreo($_POST['CorreoUsu']);
                 $datos = count($existeCorreo);
                 if($datos > 0){
-                    
+                    $data['respuesta'] = $this->envioCorreo($_POST['CorreoUsu']);
+                    echo json_encode(array('msj'=>$data['respuesta']));
                 }else{
                     $data['respuesta'] = 'correoNoExiste';
                     echo json_encode(array('msj'=>$data['respuesta']));
                 }
                 break;
         endswitch;
+    }
+
+    public function envioCorreo($correo){
+        $name = 'renato';
+        $email_address = $correo;
+        $phone = '1234';
+        $message = 'Prueba Prueba Prueba Prueba';
+        $email_body= "<b>El siguiente cliente le a enviado un mensaje:</b><br/>";
+        $email_body.= "<b>El usuario:</b> $name<br/>";
+        $email_body.= "<b>Correo Electrónico: </b>$email_address<br/>";
+        $email_body.= "<b>Numero Teléfono: </b>$phone<br/>";
+        $email_body.= "<b>Ha recibido el siguiente mensaje:<b/><br/>";
+        $email_body.= "$message";
+        $titulo = "A recibido un nuevo correo de: $email_address";
+        $headers = "MIME-Version: 1.0\r\n"; 
+        $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+        $headers .= "From: Mundo kids Play $email_address\r\n";
+        $to = "renato.mpisconte@gmail.com";
+        $bool = mail($to,$titulo,$email_body,$headers);
+        return 'Si';
     }
 }
