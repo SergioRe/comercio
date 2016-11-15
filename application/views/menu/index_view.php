@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/ext-4.2.0/resources/css/ext-all.css')?>" type="text/css" media="screen">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="<?php echo base_url('assets/datatables/css/dataTables.bootstrap.css')?>" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/admin.css')?>" type="text/css" media="screen">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript" ></script>
     <script src="<?php echo base_url('assets/bootstrap/js/menu.js')?>" type="text/javascript"></script>

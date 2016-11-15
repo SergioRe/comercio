@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Usuarios</title>
+    <title>Radio</title>
     <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/estilos_1.css')?>" type="text/css" media="screen">
     <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/style.css')?>" type="text/css" media="screen">
     <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css')?>" type="text/css" media="screen">
@@ -16,7 +16,7 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript" ></script>
     <script src="<?php echo base_url('assets/bootstrap/js/menu.js')?>" type="text/javascript"></script>
-    <script src="<?php echo base_url('assets/bootstrap/js/usuarios.js')?>" type="text/javascript"></script>
+    <script src="<?php echo base_url('assets/bootstrap/js/radio.js')?>" type="text/javascript"></script>
     <script src="<?php echo base_url('assets/bootstrap/js/funciones.js')?>" type="text/javascript"></script>
     <link href="<?php echo base_url('assets/bootstrap/css/bootstrap-social.css')?>" rel="stylesheet">
     <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js')?>" type="text/javascript"></script>
@@ -32,25 +32,23 @@
             <br><br><br><br>
             <div class="row" style="background-color: #FFFFFF;text-align: left;">
                 <div class="col-lg-6">
-                    <h4><b style="color: #31708f;">Mantenimiento Usuarios</b></h4>
+                    <h4><b style="color: #31708f;">Mantenimiento Radio</b></h4>
                 </div>
                 <div class="col-lg-6" style="text-align: right;">
-                    <button type="button" class="btn btn-success btn-sm" id="btn-create" onclick="agregar_usuario_modal();">
+                    <!--button type="button" class="btn btn-success btn-sm" id="btn-create" onclick="agregar_video_modal();">
                         <span class="glyphicon glyphicon-plus-sign"></span> <b>Agregar</b> 
-                    </button>
+                    </button-->
                 </div>
             </div><br>
             <div class="col-lg-12">
-                <table id="tableusuarios" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                <table id="tableradio" class="table table-striped table-bordered" cellspacing="0" width="100%">
                     <thead>
                         <tr>
                             <th class="text-center"><b>Código</b></th>
-                            <th class="text-center"><b>Nombres</b></th>
-                            <th class="text-center"><b>Apellidos</b></th>
-                            <th class="text-center"><b>DNI</b></th>
-                            <th class="text-center"><b>Correo</b></th>
-                            <th class="text-center"><b>Tipo Usuario</b></th>
-                            <th class="text-center"><b>Editar</b></th>
+                            <th class="text-center"><b>Nom. Menu</b></th>
+                            <th class="text-center"><b>Titulo</b></th>
+                            <th class="text-center"><b>Imagen</b></th>
+                            <th class="text-center"><b>Destacado</b></th>
                         </tr>
                     </thead>
                     <tbody>

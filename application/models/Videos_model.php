@@ -33,6 +33,7 @@ class Videos_model extends CI_Model {
     private function _get_datatables_query(){
         $this->db->from('videos');
         $this->db->join('menu','menu.IdMenu = videos.IdMenu');
+        //$this->db->join('categoria','categoria.IdVideo = videos.IdVideo');
         $i = 0;
         foreach ($this->column_search as $item){
             if($_POST['search']['value']){
@@ -85,7 +86,17 @@ class Videos_model extends CI_Model {
         $data = $query->result_array();
         return $data;
     }
-    
+
+    public function listarVideosDestacadosPalabra(){
+        $this->db->select('PalabraVideo');
+        $this->db->from($this->table);
+        $this->db->where('destacado','S');
+        $this->db->order_by("HoraVideo", "asc");
+        $query = $this->db->get();
+        $data = $query->result_array();
+        return $data;
+    }
+
     public function listarVideosTodos(){
         $this->db->from($this->table);
         $this->db->join('menu','menu.IdMenu = videos.IdMenu');
@@ -108,11 +119,14 @@ class Videos_model extends CI_Model {
             switch ($crud) {
                 case 'update':
                     $this->db->where('IdVideo', $data['IdVideo']);
+                    $pkIdVideo = $data['IdVideo'];
                     unset($data['IdVideo']);
                     $this->db->update($this->table , $data);
                     break;
                 case 'add':
                     $this->db->insert($this->table , $data);
+                    $this->db->insert('categoria' , 
+                        array('IdMenu' => $data['IdMenu'],'DestacadoCategoria' => 'N','IdVideo' => $pkIdVideo));
                     break;
             }
             return 'Si';

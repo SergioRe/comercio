@@ -32,15 +32,15 @@
                              </select>
                         </div>
                     </div>
-                     <div class="form-group">
-			<label for="ejemplo_email_3" class="col-lg-4 control-label">Título del Vídeo: </label>
-			<div class="col-lg-7">
+                    <div class="form-group">
+			             <label for="ejemplo_email_3" class="col-lg-4 control-label">Título del Vídeo: </label>
+			             <div class="col-lg-7">
                             <textarea class="form-control" rows="2" id="TituloVideo" maxlength="300" name="TituloVideo"><?php echo $value['TituloVideo'];?></textarea>
                         </div>
                     </div>
                     <div class="form-group">
-			<label for="ejemplo_email_3" class="col-lg-4 control-label">Descripcion del Vídeo: </label>
-			<div class="col-lg-7">
+			             <label for="ejemplo_email_3" class="col-lg-4 control-label">Descripcion del Vídeo: </label>
+			             <div class="col-lg-7">
                             <textarea class="form-control" rows="3" id="DescriocionVideo" maxlength="300" name="DescriocionVideo"><?php echo $value['DescriocionVideo'];?></textarea>
                         </div>
                     </div>
@@ -52,6 +52,13 @@
                         </div>
                     </div>
                     <div class="form-group">
+                         <label for="ejemplo_email_3" class="col-lg-4 control-label">Palabra Destacado: </label>
+                         <div class="col-lg-7">
+                            <input type="text" class="form-control" maxlength="30" id="PalabraVideo" name="PalabraVideo" value="<?php echo $value['PalabraVideo'];?>" />
+                        </div>
+                    </div>
+                    <input type="hidden" name="destacado" id="destacado" value='N' />
+                    <!--div class="form-group">
                         <label for="ejemplo_email_3" class="col-lg-4 control-label">Destacado: </label>
                         <div class="col-lg-7">
                             <select id="destacado" name="destacado" class="form-control">
@@ -60,7 +67,7 @@
                                 <option value="N" <?php echo (($value['destacado'] == 'N')?'selected':'');?>>No</option>
                             </select>
                         </div>
-                    </div>
+                    </div-->
                 	<?php
                 	}
                 	?>

@@ -1,0 +1,22 @@
+ALTER TABLE `videos` ADD `PalabraVideo` VARCHAR(30) NOT NULL AFTER `HoraVideo`;
+
+UPDATE `videos` SET `PalabraVideo` = 'Prueba01' WHERE `videos`.`IdVideo` = 0000000001;
+UPDATE `videos` SET `PalabraVideo` = 'Prueba02' WHERE `videos`.`IdVideo` = 0000000002;
+UPDATE `videos` SET `PalabraVideo` = 'Prueba03' WHERE `videos`.`IdVideo` = 0000000003;
+UPDATE `videos` SET `PalabraVideo` = 'Prueba04' WHERE `videos`.`IdVideo` = 0000000004;
+UPDATE `videos` SET `PalabraVideo` = 'Prueba05' WHERE `videos`.`IdVideo` = 0000000005;
+UPDATE `videos` SET `PalabraVideo` = 'Prueba06' WHERE `videos`.`IdVideo` = 0000000006;
+UPDATE `videos` SET `PalabraVideo` = 'Prueba07' WHERE `videos`.`IdVideo` = 0000000007;
+UPDATE `videos` SET `PalabraVideo` = 'Prueba08' WHERE `videos`.`IdVideo` = 0000000008;
+UPDATE `videos` SET `PalabraVideo` = 'Prueba09' WHERE `videos`.`IdVideo` = 0000000009;
+UPDATE `videos` SET `PalabraVideo` = 'Prueba10' WHERE `videos`.`IdVideo` = 0000000010;
+UPDATE `videos` SET `PalabraVideo` = 'Prueba11' WHERE `videos`.`IdVideo` = 0000000011;
+UPDATE `videos` SET `PalabraVideo` = 'Prueba12' WHERE `videos`.`IdVideo` = 0000000012;
+UPDATE `videos` SET `PalabraVideo` = 'Prueba13' WHERE `videos`.`IdVideo` = 0000000013;
+UPDATE `videos` SET `PalabraVideo` = 'Prueba14' WHERE `videos`.`IdVideo` = 0000000014;
+UPDATE `videos` SET `PalabraVideo` = 'Prueba15' WHERE `videos`.`IdVideo` = 0000000015;
+UPDATE `videos` SET `PalabraVideo` = 'Prueba16' WHERE `videos`.`IdVideo` = 0000000016;
+UPDATE `videos` SET `PalabraVideo` = 'Prueba17' WHERE `videos`.`IdVideo` = 0000000017;
+UPDATE `videos` SET `PalabraVideo` = 'Prueba18' WHERE `videos`.`IdVideo` = 0000000018;
+UPDATE `videos` SET `PalabraVideo` = 'Prueba19' WHERE `videos`.`IdVideo` = 0000000019;
+UPDATE `videos` SET `PalabraVideo` = 'Prueba20' WHERE `videos`.`IdVideo` = 0000000020;

@@ -24,8 +24,10 @@ class Inicio extends CI_Controller {
         $data['videos']  = $this->videos->mostarVideos();
         $data['destacado'] = $this->videos->listarVideosDestacados();
         $data['videostodos'] = $this->videos->listarVideosTodos();
+        $data['videospalabra'] = $this->videos->listarVideosDestacadosPalabra();
         $data['banner'] = $banner;
         $data['login'] = 'No';
+        $data['videospalabrafiltro'] = 'Todos';
         if(count($_POST) ==  0){
             $this->load->view('index_view',$data);
         }else{

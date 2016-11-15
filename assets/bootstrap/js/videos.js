@@ -265,7 +265,7 @@ function destacado_video(IdVideo,destacado){
         type: 'POST',
         data: {IdVideo:IdVideo,destacado:destacado},
         dataType: "JSON",
-        //beforeSend:cargando2,
+        beforeSend:cargando2,
         success:function(result){
             Ext.getBody().unmask();
             $('#myModal').modal('hide');
@@ -281,7 +281,7 @@ function destacado_video(IdVideo,destacado){
                 case 'mostrarActivo':
                     Ext.Msg.show({
                         title: 'ATENCIÓN',
-                        msg: 'No pueden haber mas de 15 Videos Destacados.',
+                        msg: 'No pueden haber mas de 16 Videos Destacados.',
                         buttons: Ext.Msg.OK,
                         icon: Ext.Msg.INFO
                     });
@@ -297,8 +297,8 @@ function destacado_video(IdVideo,destacado){
             }
             reload_table();
         },
-        timeout:40000//,
-        //error: problemas1
+        timeout:40000,
+        error: problemas1
     });
     return false;
 }
