@@ -62,13 +62,17 @@ class Categoria_model extends CI_Model {
         return $this->db->count_all_results();
     }
 
-    public function listaCategoriaPorMenu($IdMenu){
-        $this->db->select('categoria.IdCategoria, categoria.DestacadoCategoria, menu.NomMenu,videos.TituloVideo,videos.ImagenVideo,videos.IdVideo,videos.PalabraVideo,videos.DescriocionVideo');
+    public function listaCategoriaPorMenu($IdMenu,$flag=false){
+        $this->db->select('categoria.IdCategoria, categoria.DestacadoCategoria, menu.NomMenu,videos.TituloVideo,videos.ImagenVideo,videos.IdVideo,videos.PalabraVideo,videos.DescriocionVideo,videos.HoraVideo');
         $this->db->from('categoria');
         $this->db->join('menu','menu.IdMenu = categoria.IdMenu');
         $this->db->join('videos','videos.IdVideo = categoria.IdVideo');
         $this->db->where('categoria.IdMenu',$IdMenu);
-        $this->db->where('categoria.DestacadoCategoria','S');
+        if($flag == true){
+            $this->db->order_by("videos.HoraVideo", "asc");
+        }else{
+            $this->db->where('categoria.DestacadoCategoria','S');
+        }
         $query = $this->db->get();
         $data = $query->result_array();
         return $data;

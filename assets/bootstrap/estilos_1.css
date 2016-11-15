@@ -751,3 +751,20 @@ div.dataTables_info {
 .imagengrande{
     border: 0 none;
 }
+
+.cnt-flujos{
+    border: 2px solid #a1a5a8;
+}
+
+.captionn{
+    margin: 0 auto 10px;
+    position: relative;
+}
+
+.figcaptiones{
+    background-color: rgba(255, 255, 255, 0.7);
+    bottom: 0;
+    padding: 12px 10px;
+    position: absolute;
+    width: 100%;
+}

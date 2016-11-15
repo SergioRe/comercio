@@ -23,7 +23,17 @@ class Investigacion extends CI_Controller {
         $banner = $this->banner->obtenerBannerActivo();
         $data['menu']  = $this->menu->obtenerListaMenu();
         $data['videos']  = $this->videos->mostarVideos();
-        $data['videostodos'] = $this->videos->listarVideosTodos();
+        $data['videostodos'] = $this->categoria->listaCategoriaPorMenu($IdMenu,true);
+        $numero = count($data['videostodos']);
+        $numeroFinal = '';
+        if ($numero%2==0){
+            $numeroFinal = $numero/2;
+        }else{
+            $numeroFinal = ($numero+1)/2;
+        }
+        $particionVideos = array_chunk($data['videostodos'], $numeroFinal);
+        $data['videostodosuno'] = $particionVideos[0];
+        $data['videostodosdos'] = $particionVideos[1];
         $data['videospalabra'] = $this->categoria->listaCategoriaPorMenu($IdMenu);
         $data['banner'] = $banner;
         $data['login'] = 'No';

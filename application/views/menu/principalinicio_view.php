@@ -85,7 +85,7 @@ $(document).ready(function() {
 	    <a id="touch-menu" class="mobile-menu" href="#"><i class="icon-reorder"></i>Menu</a>
 	    <nav class="colormenu">
 	        <ul class="menu">
-	            <li class="movil"><a class="styloSignoMas1" href="#"><b class="letra3">C</b></a></li>
+	            <li class="movil"><a class="styloSignoMas1" href="<?= site_url('inicio/index') ?>"><b class="letra3">C</b></a></li>
 	            <?php
 	            foreach ($menu as $value) {
 	            ?>

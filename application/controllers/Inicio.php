@@ -9,6 +9,7 @@ class Inicio extends CI_Controller {
         $this->load->model('banner_model','banner');
         $this->load->model('menu_model','menu');
         $this->load->model('videos_model','videos');
+        $this->load->model('categoria_model','categoria');
     }
 
     public function index(){
@@ -18,6 +19,8 @@ class Inicio extends CI_Controller {
         $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
         $fecha = date('d')." de ".$meses[date('n')-1]. " del ".date('Y') ;
         $data['fecha'] = $fecha;
+        $IdMenu = '0000000001';//Salud
+        $IdMenuCursos = '0000000005';
         $data['alerta'] = "S";
         $banner = $this->banner->obtenerBannerActivo();
         $data['menu']  = $this->menu->obtenerListaMenu();
@@ -25,6 +28,9 @@ class Inicio extends CI_Controller {
         $data['destacado'] = $this->videos->listarVideosDestacados();
         $data['videostodos'] = $this->videos->listarVideosTodos();
         $data['videospalabra'] = $this->videos->listarVideosDestacadosPalabra();
+        $data['saludocho'] = $this->categoria->listaCategoriaPorMenu($IdMenu);
+        //echo '<pre>';print_r($data['saludocho']);exit;
+        $data['cursosocho'] = $this->categoria->listaCategoriaPorMenu($IdMenuCursos);
         $data['banner'] = $banner;
         $data['login'] = 'No';
         $data['videospalabrafiltro'] = 'Todos';
@@ -97,20 +103,27 @@ class Inicio extends CI_Controller {
     public function envioCorreo($correo){
         $name = 'renato';
         $email_address = $correo;
-        $phone = '1234';
-        $message = 'Prueba Prueba Prueba Prueba';
-        $email_body= "<b>El siguiente cliente le a enviado un mensaje:</b><br/>";
-        $email_body.= "<b>El usuario:</b> $name<br/>";
-        $email_body.= "<b>Correo Electrónico: </b>$email_address<br/>";
-        $email_body.= "<b>Numero Teléfono: </b>$phone<br/>";
-        $email_body.= "<b>Ha recibido el siguiente mensaje:<b/><br/>";
-        $email_body.= "$message";
-        $titulo = "A recibido un nuevo correo de: $email_address";
-        $headers = "MIME-Version: 1.0\r\n"; 
-        $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
-        $headers .= "From: Mundo kids Play $email_address\r\n";
-        $to = "renato.mpisconte@gmail.com";
-        $bool = mail($to,$titulo,$email_body,$headers);
-        return 'Si';
+        $password = $this->generateRandomString();
+        $actualizarpass = $this->usuarios->updatepass($_POST['CorreoUsu'],$password);
+        if($actualizarpass == 'Si'){
+            $message = 'Restauracion de contraseña';
+            $email_body= "<b>Se actualizo su contraseña:</b><br/>";
+            $email_body.= "<b>Usuario:</b> $correo<br/>";
+            $email_body.= "<b>Contraseña: </b>$password <br/>";
+            $titulo = "Restauración de contraseña";
+            $headers = "MIME-Version: 1.0\r\n"; 
+            $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+            $headers .= "From: ABC Farmacia e Investigación <renato.mpisconte@gmail.com.com>\r\n";
+            $to = $correo;
+            $bool = mail($to,$titulo,$email_body,$headers);
+            return 'Si';
+        }else{
+            return 'ERROR';
+        }
+        
+    }
+
+    public function generateRandomString($length = 10) { 
+        return substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length); 
     }
 }

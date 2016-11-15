@@ -4,7 +4,6 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>::: Inicio</title>
-    
     <?php require_once(APPPATH."views/menu/stilosscript_view.php"); ?>
 </head>
 <body style="background: #eee;">
@@ -281,33 +280,197 @@
     </div>
     <div class="container fondoblanco">
         <div class="row">
-            <div class="col-lg-4"><br/>
-                <h3 class='pull-left' style='font: 17px/17px "preloblack";font-weight: bold;color: #4d4d4d; margin: 0 0 10px;text-transform: uppercase;'>Último minuto</h3>
-                <br/><br/><div class='pull-left' style="font:consolas;font-size:11px; background-color:#eee; padding:1em;width:100%;border:0px;"></div><br/><br/>
-                <div style="height:1000px;overflow-x: hidden;">
-                <?php foreach ($videostodos as $valor): ?>
-                <table style="width: 100%;">
-                    <tr>
-                        <td style="border-top: 1px solid #ccc8ba;border-right: 1px solid #ccc8ba;width: 50%;text-align: left;"><?php echo $valor['HoraVideo'];?></td>
-                        <td style="border-top: 1px solid #ccc8ba;width: 50%;">&nbsp;<?php echo $valor['NomMenu'];?></td>
-                    </tr>
-                </table>
-                <table style="width: 100%;">
-                    <tr>
-                        <td style="text-align: justify;width: 100%;font-weight: bold;"><?php echo $valor['TituloVideo'];?></td>
-                    </tr>
-                </table>
-                <table style="width: 100%;">
-                    <tr>
-                        <td><img src="<?php echo base_url('assets/imagenes/'.$valor['ImagenVideo'])?>" alt="imagen" style="width: 95%;height: 100px;"></td>
-                        <td style="text-align: justify;width: 50%;"><?php echo $valor['DescriocionVideo'];?></td>
-                    </tr>
-                </table><br/>
-                <?php endforeach; ?>
+            <div class="col-lg-9"><br/>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h3 class='pull-left' style='font: 17px/17px "preloblack";font-weight: bold;color: #4d4d4d; margin: 0 0 10px;text-transform: uppercase;'>Último minuto</h3>
+                        <br/><br/><div class='pull-left' style="font:consolas;font-size:11px; background-color:#eee; padding:1em;width:100%;border:0px;"></div><br/><br/>
+                        <div style="height:1990px;overflow-x: hidden;">
+                        <?php foreach ($videostodos as $valor): ?>
+                        <table style="width: 100%;">
+                            <tr>
+                                <td style="border-top: 1px solid #ccc8ba;border-right: 1px solid #ccc8ba;width: 50%;text-align: left;"><?php echo $valor['HoraVideo'];?></td>
+                                <td style="border-top: 1px solid #ccc8ba;width: 50%;">&nbsp;<?php echo $valor['NomMenu'];?></td>
+                            </tr>
+                        </table>
+                        <table style="width: 100%;">
+                            <tr>
+                                <td style="text-align: justify;width: 100%;font-weight: bold;"><?php echo $valor['TituloVideo'];?></td>
+                            </tr>
+                        </table>
+                        <table style="width: 100%;">
+                            <tr>
+                                <td><img src="<?php echo base_url('assets/imagenes/'.$valor['ImagenVideo'])?>" alt="imagen" style="width: 95%;height: 100px;"></td>
+                                <td style="text-align: justify;width: 50%;"><?php echo $valor['DescriocionVideo'];?></td>
+                            </tr>
+                        </table><br/>
+                        <?php endforeach; ?>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+
+                                <div class="item active">
+                                    <img src="<?php echo base_url('assets/imagenes/176x99.jpg')?>" alt="Chania" width="460" height="345">
+                                    <div class="carousel-caption">
+                                        <h3>Chania</h3>
+                                        <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <img src="<?php echo base_url('assets/imagenes/176x999.jpg')?>" alt="Chania" width="460" height="345">
+                                    <div class="carousel-caption">
+                                        <h3>Chania</h3>
+                                        <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                                    </div>
+                                </div>
+                            
+                                <div class="item">
+                                    <img src="<?php echo base_url('assets/imagenes/176x99sss.jpg')?>" alt="Flower" width="460" height="345">
+                                    <div class="carousel-caption">
+                                        <h3>Flowers</h3>
+                                        <p>Beatiful flowers in Kolymbari, Crete.</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <img src="<?php echo base_url('assets/imagenes/176x99ssss.jpg')?>" alt="Flower" width="460" height="345">
+                                    <div class="carousel-caption">
+                                        <h3>Flowers</h3>
+                                        <p>Beatiful flowers in Kolymbari, Crete.</p>
+                                    </div>
+                                </div>
+                          
+                            </div>
+
+                            <!-- Left and right controls -->
+                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="background:#b10101;height: 50px;top: 201px;width: 179px;">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="background:#b10101;height: 50px;top: 201px;width: 179px;">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div><br/><br/><br/><br/>
+                        <div class="cnt-flujos">
+                            <h3 class="captionn">
+                                <a href="#"><b>Salud</b></a>
+                            </h3>
+                            <?php
+                            foreach ($saludocho as $valorsalud){ ?>
+                            <table style="width: 330px;margin-left:12px;">
+                                <tr>
+                                    <td style="text-align: justify;width: 100%;font-weight: bold;border-top: 2px solid #a1a5a8;"><?php echo $valorsalud['PalabraVideo'];?></td>
+                                </tr>
+                            </table>
+                            <table style='margin-right:12px;'>
+                                <tr>
+                                    <td><img src="<?php echo base_url('assets/imagenes/'.$valorsalud['ImagenVideo'])?>" alt="imagen" style="width: 85%;height: 100px;"></td>
+                                    <td style="text-align: justify;width: 50%;font-weight: bold;"><h4><?php echo $valorsalud['TituloVideo'];?></h4></td>
+                                </tr>
+                            </table>
+                            <br/>
+                            <?php } ?>
+                        </div><br/>
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                                <li data-target="#myCarousel" data-slide-to="3"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+
+                                <div class="item active">
+                                    <img src="<?php echo base_url('assets/imagenes/176x99.jpg')?>" alt="Chania" width="460" height="345">
+                                    <div class="carousel-caption">
+                                        <h3>Chania</h3>
+                                        <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <img src="<?php echo base_url('assets/imagenes/176x999.jpg')?>" alt="Chania" width="460" height="345">
+                                    <div class="carousel-caption">
+                                        <h3>Chania</h3>
+                                        <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                                    </div>
+                                </div>
+                            
+                                <div class="item">
+                                    <img src="<?php echo base_url('assets/imagenes/176x99sss.jpg')?>" alt="Flower" width="460" height="345">
+                                    <div class="carousel-caption">
+                                        <h3>Flowers</h3>
+                                        <p>Beatiful flowers in Kolymbari, Crete.</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <img src="<?php echo base_url('assets/imagenes/176x99ssss.jpg')?>" alt="Flower" width="460" height="345">
+                                    <div class="carousel-caption">
+                                        <h3>Flowers</h3>
+                                        <p>Beatiful flowers in Kolymbari, Crete.</p>
+                                    </div>
+                                </div>
+                          
+                            </div>
+
+                            <!-- Left and right controls -->
+                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div><br/>
+                        <img src="<?php echo base_url('assets/imagenes/propaganda1.jpg')?>" alt="Flower" width="100%" height="200">
+                        <br/><br/>
+                        <h3 style="background-position: 5px -108px;height:34px;background:red;width:100%;">
+                            <a class="img" style="color:#ffffff;" href="#">Ruedas</a>
+                        </h3>
+                        <img src="<?php echo base_url('assets/imagenes/propaganda3.jpg')?>" alt="Flower" width="100%" height="200">
+                        <figcaption class='figcaptiones'>
+                            <h3><a href="#" >Las bellas chicas de la CCTC</a></h3>
+                        </figcaption>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-4">d</div>
-            <div class="col-lg-4">d</div>
+            <div class="col-lg-3"><br/>
+                <h3 style="background-position: 5px -108px;height:34px;background:red;width:100%;">
+                    <a class="img" style="color:#ffffff;" href="#">Jubílate del estres</a>
+                </h3>
+                <img src="<?php echo base_url('assets/imagenes/publicidad4.jpg')?>" alt="Flower" width="100%" height="200">
+                <br/><br/>
+                <div class="cnt-flujos">
+                    <h3 class="captionn">
+                        <a href="#"><b>Cursos</b></a>
+                    </h3>
+                    <?php foreach ($cursosocho as $valueocho): ?>
+                    <table style="width: 200px;margin-left:12px;">
+                        <tr>
+                            <td style="text-align: justify;width: 100%;font-weight: bold;border-top: 2px solid #a1a5a8;"><?php echo $valueocho['TituloVideo'];?></td>
+                        </tr>
+                    </table>
+                    <table style="width:200px;margin-left:12px;margin-right:12px;">
+                        <tr>
+                            <td><img src="<?php echo base_url('assets/imagenes/'.$valueocho['ImagenVideo'])?>" alt="imagen" style="width: 100%;height: 100px;"></td>
+                        </tr>
+                    </table>
+                    <br/>
+                    <?php endforeach; ?>
+                </div><br/>
+
+            </div>
         </div>
     </div>
     <div class="container fondoblanco">

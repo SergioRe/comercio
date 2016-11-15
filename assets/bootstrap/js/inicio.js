@@ -134,7 +134,7 @@ function enviar_pass(){
                 case 'Si':
                     Ext.Msg.show({
                         title: 'ATENCIÓN',
-                        msg: 'Proceso realizado correctamente.',
+                        msg: 'Proceso realizado correctamente. Se envio su contraseña a su correo electronico.',
                         buttons: Ext.Msg.OK,
                         icon: Ext.Msg.INFO
                     });
