@@ -62,7 +62,7 @@
                             <div class="form-group">
                                 <label for="ejemplo_email_3" class="col-lg-4 control-label">Video: </label>
                                 <div class="col-lg-7">
-                                    <iframe class="youtube-player" type="text/html" style="width:100%;height:150px;" src="http://www.youtube.com/embed/<?php echo $value['ImagenVideo'];?>" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                    <iframe class="youtube-player" type="text/html" style="width:100%;height:150px;" src="http://www.youtube.com/embed/<?php echo $value['ImagenVideo'];?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" frameborder=”0″ allowfullscreen></iframe>
                                     <input type="text" class="form-control" maxlength="100" value="<?php echo $value['ImagenVideo'];?>" id="ImagenVideo" name="ImagenVideo" placeholder="Ingrese el ID del video" />
                                </div>
                             </div>

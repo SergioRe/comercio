@@ -142,7 +142,22 @@
                         </table>
                         <table style="width: 100%;">
                             <tr>
-                                <td><img src="<?php echo base_url('assets/imagenes/'.$valor1['ImagenVideo'])?>" alt="imagen" style="width: 95%;height: 110px;"></td>
+                                <td>
+                                    <?php
+                                if($valor1['flag'] == 'I'){
+                                ?>
+                                <img src="<?php echo base_url('assets/imagenes/'.$valor1['ImagenVideo'])?>" alt="imagen" style="width: 95%;height: 110px;">
+                                <?php
+                                }else{
+                                    $url1 = "http://www.youtube.com/embed/".$valor1['ImagenVideo'];
+                                ?>
+                                <iframe class="youtube-player" type="text/html" style="width: 95%;height: 110px;" 
+                                        src="<?php echo $url1;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen>
+                                </iframe>
+                                <?php
+                                }
+                                ?>
+                                </td>
                                 <td style="text-align: justify;width: 50%;height: 110px;"><?php echo $valor1['DescriocionVideo'];?></td>
                             </tr>
                         </table><br/>
@@ -165,7 +180,22 @@
                         </table>
                         <table style="width: 100%;">
                             <tr>
-                                <td><img src="<?php echo base_url('assets/imagenes/'.$valor2['ImagenVideo'])?>" alt="imagen" style="width: 95%;height: 110px;"></td>
+                                <td>
+                                <?php
+                                if($valor2['flag'] == 'I'){
+                                ?>
+                                <img src="<?php echo base_url('assets/imagenes/'.$valor2['ImagenVideo'])?>" alt="imagen" style="width: 95%;height: 110px;">
+                                <?php
+                                }else{
+                                    $url2 = "http://www.youtube.com/embed/".$valor2['ImagenVideo'];
+                                ?>
+                                <iframe class="youtube-player" type="text/html" style="width: 95%;height: 110px;" 
+                                        src="<?php echo $url2;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen>
+                                </iframe>
+                                <?php
+                                }
+                                ?>
+                                </td>
                                 <td style="text-align: justify;width: 50%;height: 110px;"><?php echo $valor2['DescriocionVideo'];?></td>
                             </tr>
                         </table><br/>

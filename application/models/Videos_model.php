@@ -123,12 +123,27 @@ class Videos_model extends CI_Model {
                     $this->db->update($this->table , $data);
                     break;
                 case 'add':
-                    //echo '<PRE>';print_r($data);exit;
                     $this->db->insert($this->table , $data);
-//                    $this->db->insert('categoria' , 
-//                        array('IdMenu' => $data['IdMenu'],'DestacadoCategoria' => 'N','IdVideo' => $pkIdVideo));
                     break;
             }
+            return 'Si';
+        }catch (Exception $e) {
+            return 'Excepción capturada: '.  $e->getMessage(). "\n";
+        }
+    }
+    
+    public function procesarVideos(){
+        try {
+            $this->db->query("INSERT INTO `categoria`(`IdMenu`, `DestacadoCategoria`, `IdVideo`)
+                SELECT 
+                (CASE WHEN `V`.`IdVideo` = `C`.`IdVideo` THEN '1' ELSE `V`.`IdMenu` END) as 'IdMenu', 
+                'N',
+                (CASE WHEN `V`.`IdVideo` = `C`.`IdVideo` THEN '1' ELSE `V`.`IdVideo` END) as 'IdVideo' 
+                FROM `videos` AS `V` 
+                LEFT JOIN `categoria` AS `C` on `C`.`IdVideo` = `V`.`IdVideo` 
+                WHERE 
+                (CASE WHEN `V`.`IdVideo` = `C`.`IdVideo` THEN '1' ELSE `V`.`IdMenu` END) != '1'
+                AND (CASE WHEN `V`.`IdVideo` = `C`.`IdVideo` THEN '1' ELSE `V`.`IdVideo` END) != '1'");
             return 'Si';
         }catch (Exception $e) {
             return 'Excepción capturada: '.  $e->getMessage(). "\n";

@@ -55,7 +55,7 @@ class Videos extends CI_Controller {
                     if($videos->flag === 'I'){
                         $row[] = '<img style="width:100%;height:50px;" src="'.$urlContorlador.$videos->ImagenVideo.'">';
                     }else{
-                        $row[] = '<iframe class="youtube-player" type="text/html" style="width:100%;height:100px;" src="http://www.youtube.com/embed/'.$videos->ImagenVideo.'" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+                        $row[] = '<iframe class="youtube-player" type="text/html" style="width:100%;height:100px;" src="http://www.youtube.com/embed/'.$videos->ImagenVideo.'?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>';
                     }
                     $row[] = '<button type="button" class="btn btn-'.$colordestacado.' btn-sm" onclick="destacado_video('."'".$videos->IdVideo."'".','."'".$videos->destacado."'".');">'.(($videos->destacado == 'S')?'Si':'No').'</button>';
                     $row[] = '<center><a class="btn btn-sm btn-primary" href="javascript:void(0)" title="Editar" onclick="edit_video('."'".$videos->IdVideo."'".')"><i class="glyphicon glyphicon-pencil"></i></a>';
@@ -155,6 +155,10 @@ class Videos extends CI_Controller {
                 }else{
                     echo json_encode(array('msj'=>'mostrarActivo'));
                 }
+                break;
+            case 'procesar':
+                $data['respuesta'] = $this->videos->procesarVideos();
+                echo json_encode(array('msj'=>$data['respuesta']));
                 break;
         endswitch;
     }

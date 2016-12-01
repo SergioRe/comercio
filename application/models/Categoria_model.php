@@ -22,7 +22,7 @@ class Categoria_model extends CI_Model {
     }
 
     private function _get_datatables_query($IdMenu){
-		$this->db->select('categoria.IdCategoria, categoria.DestacadoCategoria, menu.NomMenu,videos.TituloVideo,videos.ImagenVideo,videos.IdVideo');
+	$this->db->select('categoria.IdCategoria, categoria.DestacadoCategoria, menu.NomMenu,videos.TituloVideo,videos.ImagenVideo,videos.IdVideo');
         $this->db->from('categoria');
         $this->db->join('menu','menu.IdMenu = categoria.IdMenu');
         $this->db->join('videos','videos.IdVideo = categoria.IdVideo');
@@ -63,7 +63,7 @@ class Categoria_model extends CI_Model {
     }
 
     public function listaCategoriaPorMenu($IdMenu,$flag=false){
-        $this->db->select('categoria.IdCategoria, categoria.DestacadoCategoria, menu.NomMenu,videos.TituloVideo,videos.ImagenVideo,videos.IdVideo,videos.PalabraVideo,videos.DescriocionVideo,videos.HoraVideo');
+        $this->db->select('categoria.IdCategoria, categoria.DestacadoCategoria, menu.NomMenu,videos.TituloVideo,videos.ImagenVideo,videos.IdVideo,videos.PalabraVideo,videos.DescriocionVideo,videos.HoraVideo,videos.flag');
         $this->db->from('categoria');
         $this->db->join('menu','menu.IdMenu = categoria.IdMenu');
         $this->db->join('videos','videos.IdVideo = categoria.IdVideo');

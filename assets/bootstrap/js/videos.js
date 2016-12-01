@@ -272,7 +272,7 @@ function agregar_video(){
         cache: false,
         contentType: false,
         processData: false,
-        //beforeSend:cargando2,
+        beforeSend:cargando2,
         success:function(result){
             Ext.getBody().unmask();
             $('#myModal').modal('hide');
@@ -293,8 +293,8 @@ function agregar_video(){
             }
             reload_table();
         },
-        timeout:40000//,
-        //error: problemas1
+        timeout:40000,
+        error: problemas1
     });
     return false;
 }
@@ -381,6 +381,36 @@ function mostrar_video(IdVideo,MostrarVideo){
                     });
                     break;        
             }
+            reload_table();
+        },
+        timeout:40000,
+        error: problemas1
+    });
+    return false;
+}
+
+function procesar_videos(){
+    var ruta = base_url + '/' + pathArray[1] + '/index.php/videos/json/procesar';
+    $.ajax({
+        url: ruta,
+        type: 'POST',
+        dataType: "JSON",
+        beforeSend:cargando2,
+        success:function(result){
+            Ext.getBody().unmask();
+            $('#myModal').modal('hide');
+            var msg = 'ERROR: '+result.msj;
+            var icon = 'Ext.Msg.ERROR';
+            if(result.msj === 'Si'){
+                msg = 'Proceso realizado correctamente.';
+                icon = 'Ext.Msg.INFO';
+            }
+            Ext.Msg.show({
+                title: 'ATENCIÓN',
+                msg: msg,
+                buttons: Ext.Msg.OK,
+                icon: icon
+            });
             reload_table();
         },
         timeout:40000,

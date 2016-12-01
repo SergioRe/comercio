@@ -35,6 +35,9 @@
                     <h4><b style="color: #31708f;">Mantenimiento Videos</b></h4>
                 </div>
                 <div class="col-lg-6" style="text-align: right;">
+                    <button type="button" class="btn btn-default btn-sm" id="btn-create" onclick="procesar_videos();">
+                        <span class="glyphicon glyphicon-wrench"></span> <b>Procesar Videos</b>
+                    </button>
                     <button type="button" class="btn btn-success btn-sm" id="btn-create" onclick="agregar_video_modal();">
                         <span class="glyphicon glyphicon-plus-sign"></span> <b>Agregar</b> 
                     </button>
