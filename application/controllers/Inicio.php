@@ -105,21 +105,17 @@ class Inicio extends CI_Controller {
         $email_address = $correo;
         $password = $this->generateRandomString();
         $actualizarpass = $this->usuarios->updatepass($_POST['CorreoUsu'],$password);
-        if($actualizarpass == 'Si'){
-            $message = 'Restauracion de contraseña';
-            $email_body= "<b>Se actualizo su contraseña:</b><br/>";
-            $email_body.= "<b>Usuario:</b> $correo<br/>";
-            $email_body.= "<b>Contraseña: </b>$password <br/>";
-            $titulo = "Restauración de contraseña";
-            $headers = "MIME-Version: 1.0\r\n"; 
-            $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
-            $headers .= "From: ABC Farmacia e Investigación <renato.mpisconte@gmail.com.com>\r\n";
-            $to = $correo;
-            $bool = mail($to,$titulo,$email_body,$headers);
-            return 'Si';
-        }else{
-            return 'ERROR';
-        }
+        $message = 'Restauracion de contraseña';
+        $email_body= "<b>Se actualizo su contraseña:</b><br/>";
+        $email_body.= "<b>Usuario:</b> $correo<br/>";
+        $email_body.= "<b>Contraseña: </b>$password <br/>";
+        $titulo = "Restauración de contraseña";
+        $headers = "MIME-Version: 1.0\r\n"; 
+        $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+        $headers .= "From: ABC Farmacia e Investigación <renato.mpisconte@gmail.com.com>\r\n";
+        $to = $correo;
+        $bool = mail($to,$titulo,$email_body,$headers);
+        return 'Si';
         
     }
 

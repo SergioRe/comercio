@@ -119,14 +119,14 @@ class Videos_model extends CI_Model {
             switch ($crud) {
                 case 'update':
                     $this->db->where('IdVideo', $data['IdVideo']);
-                    $pkIdVideo = $data['IdVideo'];
                     unset($data['IdVideo']);
                     $this->db->update($this->table , $data);
                     break;
                 case 'add':
+                    //echo '<PRE>';print_r($data);exit;
                     $this->db->insert($this->table , $data);
-                    $this->db->insert('categoria' , 
-                        array('IdMenu' => $data['IdMenu'],'DestacadoCategoria' => 'N','IdVideo' => $pkIdVideo));
+//                    $this->db->insert('categoria' , 
+//                        array('IdMenu' => $data['IdMenu'],'DestacadoCategoria' => 'N','IdVideo' => $pkIdVideo));
                     break;
             }
             return 'Si';

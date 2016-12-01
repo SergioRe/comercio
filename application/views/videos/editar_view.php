@@ -44,13 +44,32 @@
                             <textarea class="form-control" rows="3" id="DescriocionVideo" maxlength="300" name="DescriocionVideo"><?php echo $value['DescriocionVideo'];?></textarea>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="ejemplo_email_3" class="col-lg-4 control-label">Imagen Video: </label>
-                        <div class="col-lg-7">
-                            <img class="imgPublicidad" style="height:60px;" src="<?php echo base_url('assets/imagenes/'.$value['ImagenVideo'])?>" ><br/><br/>
-                            <input name="archivo" type="file" id="archivo" />
-                        </div>
-                    </div>
+                    <?php
+                    switch ($value['flag']):
+                        case 'I':
+                            ?>
+                            <div class="form-group">
+                                <label for="ejemplo_email_3" class="col-lg-4 control-label">Imagen: </label>
+                                <div class="col-lg-7">
+                                    <img class="imgPublicidad" style="height:60px;" src="<?php echo base_url('assets/imagenes/'.$value['ImagenVideo'])?>" ><br/><br/>
+                                    <input name="archivo" type="file" id="archivo" />
+                                </div>
+                            </div>
+                            <?php
+                            break;
+                        case 'V':
+                            ?>
+                            <div class="form-group">
+                                <label for="ejemplo_email_3" class="col-lg-4 control-label">Video: </label>
+                                <div class="col-lg-7">
+                                    <iframe class="youtube-player" type="text/html" style="width:100%;height:150px;" src="http://www.youtube.com/embed/<?php echo $value['ImagenVideo'];?>" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                    <input type="text" class="form-control" maxlength="100" value="<?php echo $value['ImagenVideo'];?>" id="ImagenVideo" name="ImagenVideo" placeholder="Ingrese el ID del video" />
+                               </div>
+                            </div>
+                            <?php
+                            break;
+                    endswitch;
+                    ?>
                     <div class="form-group">
                          <label for="ejemplo_email_3" class="col-lg-4 control-label">Palabra Destacado: </label>
                          <div class="col-lg-7">

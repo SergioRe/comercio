@@ -36,7 +36,23 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="ejemplo_email_3" class="col-lg-4 control-label">Imagen Video: </label>
+                        <label for="ejemplo_email_3" class="col-lg-4 control-label">Seleccione Imagen/Video </label>
+                        <div class="col-lg-7">
+                            <select id="flag" name="flag" class="form-control" onchange="seleccionarvideoimagen(this.value);">
+                                <option value="">Seleecione</option>
+                                <option value="I">Imagen</option>
+                                <option value="V">Video</option>
+                             </select>
+                        </div>
+                    </div>
+                    <div class="form-group" id="video" style="display:none;">
+                         <label for="ejemplo_email_3" class="col-lg-4 control-label">Video: </label>
+                         <div class="col-lg-7">
+                             <input type="text" class="form-control" maxlength="100" id="ImagenVideo" name="ImagenVideo" placeholder="Ingrese el ID del video" />
+                        </div>
+                    </div>
+                    <div class="form-group" id="imagen" style="display:none;">
+                        <label for="ejemplo_email_3" class="col-lg-4 control-label">Imagen: </label>
                         <div class="col-lg-7">
                             <input name="archivo" type="file" id="archivo" />
                         </div>
@@ -48,16 +64,6 @@
                         </div>
                     </div>
                     <input type="hidden" name="destacado" id="destacado" value='N' />
-                    <!--div class="form-group">
-                        <label for="ejemplo_email_3" class="col-lg-4 control-label">Destacado: </label>
-                        <div class="col-lg-7">
-                            <select id="destacado" name="destacado" class="form-control">
-                                <option value="">Seleecione</option>
-                                <option value="S">Si</option>
-                                <option value="N">No</option>
-                            </select>
-                        </div>
-                    </div-->
                 </form>
             </div>
             <div class="modal-footer">

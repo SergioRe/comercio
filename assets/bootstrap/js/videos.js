@@ -57,6 +57,24 @@ function edit_video(IdVideo){
     });
 }
 
+function seleccionarvideoimagen(valor){
+    switch (valor){
+        case 'I':
+            $('#imagen').css('display','block');
+            $('#video').css('display','none');
+            break;
+        case 'V':
+            $('#video').css('display','block');
+            $('#imagen').css('display','none');
+            break;
+        default :
+            $('#imagen').css('display','none');
+            $('#video').css('display','none');
+            break;
+    }
+            
+}
+
 function reload_table(){
     table.ajax.reload(null,false);
 }
@@ -187,6 +205,8 @@ function agregar_video(){
     var TituloVideo = $('#TituloVideo').val();
     var archivo = $('#archivo').val();
     var destacado = $('#destacado').val();
+    var flag = $('#flag').val();
+    var ImagenVideo = $('#ImagenVideo').val();
     if(IdMenu === ''){
         Ext.Msg.show({
             title: '¡ATENCIÓN!',
@@ -205,14 +225,35 @@ function agregar_video(){
         });
         return false;
     }
-    if(archivo === ''){
+    if(flag === ''){
         Ext.Msg.show({
             title: '¡ATENCIÓN!',
-            msg: 'Debe seleccionar una Imagen.',
+            msg: 'Debe seleccionar una Imagen o Video.',
             buttons: Ext.Msg.OK,
             icon: Ext.Msg.WARNING
         });
         return false;
+    }
+    if(flag === 'I'){
+        if(archivo === ''){
+            Ext.Msg.show({
+                title: '¡ATENCIÓN!',
+                msg: 'Debe seleccionar una Imagen.',
+                buttons: Ext.Msg.OK,
+                icon: Ext.Msg.WARNING
+            });
+            return false;
+        }else{
+            if(ImagenVideo === ''){
+                Ext.Msg.show({
+                    title: '¡ATENCIÓN!',
+                    msg: 'Debe seleccionar una Imagen.',
+                    buttons: Ext.Msg.OK,
+                    icon: Ext.Msg.WARNING
+                });
+                return false;
+            }
+        }
     }
     if(destacado === ''){
         Ext.Msg.show({
@@ -231,7 +272,7 @@ function agregar_video(){
         cache: false,
         contentType: false,
         processData: false,
-        beforeSend:cargando2,
+        //beforeSend:cargando2,
         success:function(result){
             Ext.getBody().unmask();
             $('#myModal').modal('hide');
@@ -252,8 +293,8 @@ function agregar_video(){
             }
             reload_table();
         },
-        timeout:40000,
-        error: problemas1
+        timeout:40000//,
+        //error: problemas1
     });
     return false;
 }

@@ -52,7 +52,11 @@ class Videos extends CI_Controller {
                     $row[] = $videos->NomMenu;
                     $row[] = '<p class="aliniado">'.$videos->TituloVideo.'</p>';
                     $row[] = '<button type="button" class="btn btn-'.$colorMostrarVideo.' btn-sm" onclick="mostrar_video('."'".$videos->IdVideo."'".','."'".$videos->MostrarVideo."'".');">'.(($videos->MostrarVideo == 'S')?'Si':'No').'</button>';
-                    $row[] = '<img style="width:100%;height:50px;" src="'.$urlContorlador.$videos->ImagenVideo.'">';
+                    if($videos->flag === 'I'){
+                        $row[] = '<img style="width:100%;height:50px;" src="'.$urlContorlador.$videos->ImagenVideo.'">';
+                    }else{
+                        $row[] = '<iframe class="youtube-player" type="text/html" style="width:100%;height:100px;" src="http://www.youtube.com/embed/'.$videos->ImagenVideo.'" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+                    }
                     $row[] = '<button type="button" class="btn btn-'.$colordestacado.' btn-sm" onclick="destacado_video('."'".$videos->IdVideo."'".','."'".$videos->destacado."'".');">'.(($videos->destacado == 'S')?'Si':'No').'</button>';
                     $row[] = '<center><a class="btn btn-sm btn-primary" href="javascript:void(0)" title="Editar" onclick="edit_video('."'".$videos->IdVideo."'".')"><i class="glyphicon glyphicon-pencil"></i></a>';
                     $data[] = $row;
@@ -72,11 +76,14 @@ class Videos extends CI_Controller {
                 $data['TituloVideo'] = $this->input->post('TituloVideo');
                 $data['destacado'] = $this->input->post('destacado');
                 $data['DescriocionVideo'] = $this->input->post('DescriocionVideo');
+                $data['flag'] = 'V';
+                $data['ImagenVideo'] = $this->input->post('ImagenVideo');
                 if(!empty($_FILES)){
                     if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
                         if(move_uploaded_file($_FILES['archivo']['tmp_name'],'assets/imagenes/'.$_FILES['archivo']['name'])){
                             $foto=$_FILES['archivo']['name'];
                             $data['ImagenVideo'] = $foto;
+                            $data['flag'] = 'I';
                         }
                     }
                 }
@@ -93,6 +100,8 @@ class Videos extends CI_Controller {
                 $data['destacado'] = $this->input->post('destacado');
                 $data['DescriocionVideo'] = $this->input->post('DescriocionVideo');
                 $data['MostrarVideo'] = 'N';
+                $data['flag'] = $this->input->post('flag');
+                $data['ImagenVideo'] = $this->input->post('ImagenVideo');
                 if(!empty($_FILES)){
                     if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
                         if(move_uploaded_file($_FILES['archivo']['tmp_name'],'assets/imagenes/'.$_FILES['archivo']['name'])){

@@ -48,7 +48,7 @@
                             <th class="text-center"><b>Nom. Menu</b></th>
                             <th class="text-center"><b>Titulo</b></th>
                             <th class="text-center"><b>Mostrar</b></th>
-                            <th class="text-center"><b>Imagen</b></th>
+                            <th class="text-center"><b>Imagen/Video</b></th>
                             <th class="text-center"><b>Destacado</b></th>
                             <th class="text-center"><b>Editar</b></th>
                         </tr>
