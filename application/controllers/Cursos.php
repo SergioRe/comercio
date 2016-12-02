@@ -130,7 +130,11 @@ class Cursos extends CI_Controller {
                     $row[] = $categoria->IdCategoria;
                     $row[] = $categoria->NomMenu;
                     $row[] = '<p class="aliniado">'.$categoria->TituloVideo.'</p>';
-                    $row[] = '<img style="width:100%;height:50px;" src="'.$urlContorlador.$categoria->ImagenVideo.'">';
+                    if($categoria->flag === 'I'){
+                        $row[] = '<img style="width:100%;height:50px;" src="'.$urlContorlador.$categoria->ImagenVideo.'">';
+                    }else{
+                        $row[] = '<iframe class="youtube-player" type="text/html" style="width:100%;height:100px;" src="http://www.youtube.com/embed/'.$categoria->ImagenVideo.'?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>';
+                    }
                     $row[] = '<button type="button" class="btn btn-'.$colordestacado.' btn-sm" onclick="destacado_salud('."'".$categoria->IdCategoria."'".','."'".$categoria->IdVideo."'".','."'".$categoria->DestacadoCategoria."'".');">'.(($categoria->DestacadoCategoria == 'S')?'Si':'No').'</button>';
                     $data[] = $row;
                 }

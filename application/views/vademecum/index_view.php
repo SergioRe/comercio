@@ -16,8 +16,19 @@
 		                <ul class="media-list main-list item_noticiax2">
 		                    <li class="media">
 		                    <a class="pull-left" href="#">
-		                        <img class="media-object" style='width:450px;height:350px;' src="<?php echo base_url('assets/imagenes/'.$videospalabra[0]['ImagenVideo'])?>" alt="imagen">
-		                        <a href="#" class="btn btn-sm botonencimaimgcero"><?php echo $videospalabra[0]['NomMenu'];?></a>
+		                        <?php
+                                        if($videospalabra[0]['flag'] == 'I'){
+                                        ?>
+                                        <img class="media-object" style='width:450px;height:350px;' src="<?php echo base_url('assets/imagenes/'.$videospalabra[0]['ImagenVideo'])?>" alt="imagen">
+                                        <?php
+                                        }else{
+                                        $url = "http://www.youtube.com/embed/".$videospalabra[0]['ImagenVideo'];    
+                                        ?>
+                                        <iframe class="youtube-player" type="text/html" style="width:450px;height:350px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                        <?php
+                                        }
+                                        ?>
+                                        <a href="#" class="btn btn-sm botonencimaimgcero"><?php echo $videospalabra[0]['NomMenu'];?></a>
 		                    </a>
 		                    <div class="media-body">
 		                        <h2 class="media-heading colorblancoletra"><?php echo $videospalabra[0]['TituloVideo'];?></h2>
@@ -36,8 +47,19 @@
 		                                <h3 class="coloreleciones1"><?php echo $videospalabra[1]['TituloVideo'];?></h3>
 		                                    <p class="colordescropcion"><?php echo $videospalabra[1]['DescriocionVideo'];?></p>
 		                            </div>
-		                            <img src="<?php echo base_url('assets/imagenes/'.$videospalabra[1]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 188px;" class="imagengrande">
-		                            <a href="#" class="btn btn-sm botonencimaimguno"><?php echo $videospalabra[1]['NomMenu'];?></a>
+		                            <?php
+                                            if($videospalabra[1]['flag'] == 'I'){
+                                            ?>
+                                            <img src="<?php echo base_url('assets/imagenes/'.$videospalabra[1]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 188px;" class="imagengrande">
+                                            <?php
+                                            }else{
+                                            $url = "http://www.youtube.com/embed/".$videospalabra[1]['ImagenVideo'];  
+                                            ?>
+                                            <iframe class="youtube-player" type="text/html" width="100%" style="height: 188px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                            <?php
+                                            }
+                                            ?>
+                                            <a href="#" class="btn btn-sm botonencimaimguno"><?php echo $videospalabra[1]['NomMenu'];?></a>
 		                        </div>
 		                    </div>
 		                </div>
@@ -52,8 +74,19 @@
 		                                        <!--p class="colordescropcion">Donec nec justo eget felis facilisis fermentum. 
 		                                           Aliquam porttitor mauris sit amet orci.</p-->
 		                                </div>
-		                                <img src="<?php echo base_url('assets/imagenes/'.$videospalabra[2]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
-		                                <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $videospalabra[2]['NomMenu'];?></a>
+		                                <?php
+                                                if($videospalabra[2]['flag'] == 'I'){
+                                                ?>
+                                                <img src="<?php echo base_url('assets/imagenes/'.$videospalabra[2]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
+                                                <?php
+                                                }else{
+                                                $url = "http://www.youtube.com/embed/".$videospalabra[2]['ImagenVideo'];  
+                                                ?>
+                                                <iframe class="youtube-player" type="text/html" width="100%" style="height: 96px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                                <?php
+                                                }
+                                                ?>
+                                                <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $videospalabra[2]['NomMenu'];?></a>
 		                            </div>
 		                        </div><br/>
 		                        <div style="height: 170px;" class="videograndecolor">
@@ -63,8 +96,19 @@
 		                                        <!--p class="colordescropcion">Donec nec justo eget felis facilisis fermentum. 
 		                                           Aliquam porttitor mauris sit amet orci.</p-->
 		                                </div>
-		                                <img src="<?php echo base_url('assets/imagenes/'.$videospalabra[3]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
-		                                <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $videospalabra[3]['NomMenu'];?></a>
+		                                <?php
+                                                if($videospalabra[3]['flag'] == 'I'){
+                                                ?>
+                                                <img src="<?php echo base_url('assets/imagenes/'.$videospalabra[3]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
+                                                <?php
+                                                }else{
+                                                $url = "http://www.youtube.com/embed/".$videospalabra[3]['ImagenVideo'];  
+                                                ?>
+                                                <iframe class="youtube-player" type="text/html" width="100%" style="height: 96px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                                <?php
+                                                }
+                                                ?>
+                                                <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $videospalabra[3]['NomMenu'];?></a>
 		                            </div>
 		                        </div>
 		                    </div>
@@ -78,8 +122,19 @@
 		                                                <!--p class="colordescropcion">Donec nec justo eget felis facilisis fermentum. 
 		                                                   Aliquam porttitor mauris sit amet orci.</p-->
 		                                        </div>
-		                                        <img src="<?php echo base_url('assets/imagenes/'.$videospalabra[4]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
-		                                        <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $videospalabra[4]['NomMenu'];?></a>
+		                                        <?php
+                                                        if($videospalabra[4]['flag'] == 'I'){
+                                                        ?>
+                                                        <img src="<?php echo base_url('assets/imagenes/'.$videospalabra[4]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
+                                                        <?php
+                                                        }else{
+                                                        $url = "http://www.youtube.com/embed/".$videospalabra[4]['ImagenVideo'];  
+                                                        ?>
+                                                        <iframe class="youtube-player" type="text/html" width="100%" style="height: 96px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                                        <?php
+                                                        }
+                                                        ?>
+                                                        <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $videospalabra[4]['NomMenu'];?></a>
 		                                    </div>
 		                                </div><br/>
 		                                <div style="height: 170px;" class="videograndecolor">
@@ -89,8 +144,19 @@
 		                                                <!--p class="colordescropcion">Donec nec justo eget felis facilisis fermentum. 
 		                                                   Aliquam porttitor mauris sit amet orci.</p-->
 		                                        </div>
-		                                        <img src="<?php echo base_url('assets/imagenes/'.$videospalabra[5]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
-		                                        <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $videospalabra[5]['NomMenu'];?></a>
+		                                        <?php
+                                                        if($videospalabra[5]['flag'] == 'I'){
+                                                        ?>
+                                                        <img src="<?php echo base_url('assets/imagenes/'.$videospalabra[5]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
+                                                        <?php
+                                                        }else{
+                                                        $url = "http://www.youtube.com/embed/".$videospalabra[5]['ImagenVideo'];  
+                                                        ?>
+                                                        <iframe class="youtube-player" type="text/html" width="100%" style="height: 96px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                                        <?php
+                                                        }
+                                                        ?>
+                                                        <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $videospalabra[5]['NomMenu'];?></a>
 		                                    </div>
 		                                </div>
 		                            </div>
@@ -102,8 +168,19 @@
 		                                                <!--p class="colordescropcion">Donec nec justo eget felis facilisis fermentum. 
 		                                                   Aliquam porttitor mauris sit amet orci.</p-->
 		                                        </div>
-		                                        <img src="<?php echo base_url('assets/imagenes/'.$videospalabra[6]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
-		                                        <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $videospalabra[6]['NomMenu'];?></a>
+		                                        <?php
+                                                        if($videospalabra[6]['flag'] == 'I'){
+                                                        ?>
+                                                        <img src="<?php echo base_url('assets/imagenes/'.$videospalabra[6]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
+                                                        <?php
+                                                        }else{
+                                                        $url = "http://www.youtube.com/embed/".$videospalabra[6]['ImagenVideo'];  
+                                                        ?>
+                                                        <iframe class="youtube-player" type="text/html" width="100%" style="height: 96px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                                        <?php
+                                                        }
+                                                        ?>
+                                                        <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $videospalabra[6]['NomMenu'];?></a>
 		                                    </div>
 		                                </div><br/>
 		                                <div style="height: 170px;" class="videograndecolor">
@@ -113,8 +190,19 @@
 		                                                <!--p class="colordescropcion">Donec nec justo eget felis facilisis fermentum. 
 		                                                   Aliquam porttitor mauris sit amet orci.</p-->
 		                                        </div>
-		                                        <img src="<?php echo base_url('assets/imagenes/'.$videospalabra[7]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
-		                                        <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $videospalabra[7]['NomMenu'];?></a>
+		                                        <?php
+                                                        if($videospalabra[7]['flag'] == 'I'){
+                                                        ?>
+                                                        <img src="<?php echo base_url('assets/imagenes/'.$videospalabra[7]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
+                                                        <?php
+                                                        }else{
+                                                        $url = "http://www.youtube.com/embed/".$videospalabra[7]['ImagenVideo'];  
+                                                        ?>
+                                                        <iframe class="youtube-player" type="text/html" width="100%" style="height: 96px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                                        <?php
+                                                        }
+                                                        ?>
+                                                        <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $videospalabra[7]['NomMenu'];?></a>
 		                                    </div>
 		                                </div>
 		                            </div>
@@ -143,7 +231,7 @@
                         <table style="width: 100%;">
                             <tr>
                                 <td>
-                                    <?php
+                                <?php
                                 if($valor1['flag'] == 'I'){
                                 ?>
                                 <img src="<?php echo base_url('assets/imagenes/'.$valor1['ImagenVideo'])?>" alt="imagen" style="width: 95%;height: 110px;">
