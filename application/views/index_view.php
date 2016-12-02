@@ -15,7 +15,18 @@
             foreach ($videos as $value) {
             ?>
                 <div class="thumbnail f-elecciones">
+                    <?php
+                    if($value['flag'] == 'I'){
+                    ?>
                     <img src="<?php echo base_url('assets/imagenes/'.$value['ImagenVideo'])?>" alt="imagen" style="position: relative;height:100px;">
+                    <?php
+                    }else{
+                    $url = "http://www.youtube.com/embed/".$value['ImagenVideo'];     
+                    ?>
+                    <iframe class="youtube-player" type="text/html" style="position: relative;height:100px;width:176px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                    <?php
+                    }
+                    ?>
                     <a href="#" class="btn btn-sm botonencimaimg"><?php echo $value['NomMenu'];?></a>
                     </a>
                     <div class="caption">
@@ -33,41 +44,23 @@
     </div>
     <div class="container ec-apertura">
         <div class="row elecciones-flujos2">
-            <!--div class="row elecciones-flujos2">
-                <div class="col-lg-4">
-                    <img class="imagenelecciones" src="<?php echo base_url('assets/imagenes/tres.jpg')?>" alt="imagen">
-                </div>
-                <div class="col-lg-4">
-                    <ul class="media-list main-list item_noticiax2">
-                        <li class="media">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="<?php echo base_url('assets/imagenes/uno.jpg')?>" alt="imagen">
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading colorblancoletra">Lorem ipsum dolor asit amet</h4>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-4">
-                    <ul class="media-list main-list item_noticiax2">
-                        <li class="media">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="<?php echo base_url('assets/imagenes/dos.jpg')?>" alt="imagen">
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading colorblancoletra">Lorem ipsum dolor asit amet</h4>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div-->
         <div class="row"  style="margin-left: -25px;margin-right:-25px;">
             <div class="col-lg-12">
                 <ul class="media-list main-list item_noticiax2">
                     <li class="media">
                     <a class="pull-left" href="#">
+                        <?php
+                        if($destacado[0]['flag'] == 'I'){
+                        ?>
                         <img class="media-object" style='width:450px;height:350px;' src="<?php echo base_url('assets/imagenes/'.$destacado[0]['ImagenVideo'])?>" alt="imagen">
+                        <?php
+                        }else{
+                        $url = "http://www.youtube.com/embed/".$destacado[0]['ImagenVideo'];     
+                        ?>
+                        <iframe class="youtube-player" type="text/html" style="width:450px;height:350px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                        <?php
+                        }
+                        ?>
                         <a href="#" class="btn btn-sm botonencimaimgcero"><?php echo $destacado[0]['NomMenu'];?></a>
                     </a>
                     <div class="media-body">
@@ -87,7 +80,19 @@
                                 <h3 class="coloreleciones1"><?php echo $destacado[1]['TituloVideo'];?></h3>
                                     <p class="colordescropcion"><?php echo $destacado[1]['DescriocionVideo'];?></p>
                             </div>
+                            <?php
+                            if($destacado[1]['flag'] == 'I'){
+                            ?>
                             <img src="<?php echo base_url('assets/imagenes/'.$destacado[1]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 188px;" class="imagengrande">
+                            <?php
+                            }else{
+                            $url = "http://www.youtube.com/embed/".$destacado[1]['ImagenVideo'];
+                            echo $url;
+                            ?>
+                            <iframe class="youtube-player" type="text/html" width="100%" style="height:188px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                            <?php
+                            }
+                            ?>
                             <a href="#" class="btn btn-sm botonencimaimguno"><?php echo $destacado[1]['NomMenu'];?></a>
                         </div>
                     </div>
@@ -95,7 +100,19 @@
                 <div class="row">
                     <div style="height: 170px;" class="videograndecolor">
                         <div class="thumbnail" style="height: 170px;">
+                            <?php
+                            if($destacado[2]['flag'] == 'I'){
+                            ?>
                             <img src="<?php echo base_url('assets/imagenes/'.$destacado[2]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 170px;">
+                            <?php
+                            }else{
+                            $url = "http://www.youtube.com/embed/".$destacado[2]['ImagenVideo'];
+                            echo $url;
+                            ?>
+                            <iframe class="youtube-player" type="text/html" width="100%" style="height:170px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                            <?php
+                            }
+                            ?>
                             <a href="#" class="btn btn-sm botonencimaimgdos"><?php echo $destacado[2]['NomMenu'];?></a>
                         </div>
                     </div>
@@ -107,7 +124,19 @@
                                 <h3 class="coloreleciones1"><?php echo $destacado[3]['TituloVideo'];?></h3>
                                     <p class="colordescropcion"><?php echo $destacado[3]['DescriocionVideo'];?></p>
                             </div>
+                            <?php
+                            if($destacado[3]['flag'] == 'I'){
+                            ?>
                             <img src="<?php echo base_url('assets/imagenes/'.$destacado[3]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 188px;" class="imagengrande">
+                            <?php
+                            }else{
+                            $url = "http://www.youtube.com/embed/".$destacado[3]['ImagenVideo'];
+                            echo $url;
+                            ?>
+                            <iframe class="youtube-player" type="text/html" width="100%" style="height:188px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                            <?php
+                            }
+                            ?>
                             <a href="#" class="btn btn-sm botonencimaimgtres"><?php echo $destacado[3]['NomMenu'];?></a>
                         </div>
                     </div>
@@ -123,7 +152,19 @@
                                         <!--p class="colordescropcion">Donec nec justo eget felis facilisis fermentum. 
                                            Aliquam porttitor mauris sit amet orci.</p-->
                                 </div>
+                                <?php
+                                if($destacado[4]['flag'] == 'I'){
+                                ?>
                                 <img src="<?php echo base_url('assets/imagenes/'.$destacado[4]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
+                                <?php
+                                }else{
+                                $url = "http://www.youtube.com/embed/".$destacado[4]['ImagenVideo'];
+                                echo $url;
+                                ?>
+                                <iframe class="youtube-player" type="text/html" width="100%" style="height:96px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                <?php
+                                }
+                                ?>
                                 <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $destacado[4]['NomMenu'];?></a>
                             </div>
                         </div><br/>
@@ -134,7 +175,19 @@
                                         <!--p class="colordescropcion">Donec nec justo eget felis facilisis fermentum. 
                                            Aliquam porttitor mauris sit amet orci.</p-->
                                 </div>
+                                <?php
+                                if($destacado[5]['flag'] == 'I'){
+                                ?>
                                 <img src="<?php echo base_url('assets/imagenes/'.$destacado[5]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
+                                <?php
+                                }else{
+                                $url = "http://www.youtube.com/embed/".$destacado[5]['ImagenVideo'];
+                                echo $url;
+                                ?>
+                                <iframe class="youtube-player" type="text/html" width="100%" style="height:96px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                <?php
+                                }
+                                ?>
                                 <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $destacado[5]['NomMenu'];?></a>
                             </div>
                         </div><br/>
@@ -145,7 +198,19 @@
                                         <!--p class="colordescropcion">Donec nec justo eget felis facilisis fermentum. 
                                            Aliquam porttitor mauris sit amet orci.</p-->
                                 </div>
+                                <?php
+                                if($destacado[6]['flag'] == 'I'){
+                                ?>
                                 <img src="<?php echo base_url('assets/imagenes/'.$destacado[6]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
+                                <?php
+                                }else{
+                                $url = "http://www.youtube.com/embed/".$destacado[6]['ImagenVideo'];
+                                echo $url;
+                                ?>
+                                <iframe class="youtube-player" type="text/html" width="100%" style="height:96px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                <?php
+                                }
+                                ?>
                                 <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $destacado[6]['NomMenu'];?></a>
                             </div>
                         </div><br/>
@@ -156,7 +221,19 @@
                                         <!--p class="colordescropcion">Donec nec justo eget felis facilisis fermentum. 
                                            Aliquam porttitor mauris sit amet orci.</p-->
                                 </div>
+                                <?php
+                                if($destacado[7]['flag'] == 'I'){
+                                ?>
                                 <img src="<?php echo base_url('assets/imagenes/'.$destacado[7]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
+                                <?php
+                                }else{
+                                $url = "http://www.youtube.com/embed/".$destacado[7]['ImagenVideo'];
+                                echo $url;
+                                ?>
+                                <iframe class="youtube-player" type="text/html" width="100%" style="height:96px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                <?php
+                                }
+                                ?>
                                 <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $destacado[7]['NomMenu'];?></a>
                             </div>
                         </div><br/>
@@ -167,7 +244,19 @@
                                         <!--p class="colordescropcion">Donec nec justo eget felis facilisis fermentum. 
                                            Aliquam porttitor mauris sit amet orci.</p-->
                                 </div>
+                                <?php
+                                if($destacado[8]['flag'] == 'I'){
+                                ?>
                                 <img src="<?php echo base_url('assets/imagenes/'.$destacado[8]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
+                                <?php
+                                }else{
+                                $url = "http://www.youtube.com/embed/".$destacado[8]['ImagenVideo'];
+                                echo $url;
+                                ?>
+                                <iframe class="youtube-player" type="text/html" width="100%" style="height:96px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                <?php
+                                }
+                                ?>
                                 <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $destacado[8]['NomMenu'];?></a>
                             </div>
                         </div>
@@ -182,7 +271,19 @@
                                                 <!--p class="colordescropcion">Donec nec justo eget felis facilisis fermentum. 
                                                    Aliquam porttitor mauris sit amet orci.</p-->
                                         </div>
+                                        <?php
+                                        if($destacado[9]['flag'] == 'I'){
+                                        ?>
                                         <img src="<?php echo base_url('assets/imagenes/'.$destacado[9]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
+                                        <?php
+                                        }else{
+                                        $url = "http://www.youtube.com/embed/".$destacado[9]['ImagenVideo'];
+                                        echo $url;
+                                        ?>
+                                        <iframe class="youtube-player" type="text/html" width="100%" style="height:96px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                        <?php
+                                        }
+                                        ?>
                                         <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $destacado[9]['NomMenu'];?></a>
                                     </div>
                                 </div>
@@ -195,7 +296,19 @@
                                                 <!--p class="colordescropcion">Donec nec justo eget felis facilisis fermentum. 
                                                    Aliquam porttitor mauris sit amet orci.</p-->
                                         </div>
+                                        <?php
+                                        if($destacado[10]['flag'] == 'I'){
+                                        ?>
                                         <img src="<?php echo base_url('assets/imagenes/'.$destacado[10]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
+                                        <?php
+                                        }else{
+                                        $url = "http://www.youtube.com/embed/".$destacado[10]['ImagenVideo'];
+                                        echo $url;
+                                        ?>
+                                        <iframe class="youtube-player" type="text/html" width="100%" style="height:96px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                        <?php
+                                        }
+                                        ?>
                                         <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $destacado[10]['NomMenu'];?></a>
                                     </div>
                                 </div>
@@ -209,7 +322,19 @@
                                             <h3 class="coloreleciones1"><?php echo $destacado[11]['TituloVideo'];?></h3>
                                                 <p class="colordescropcion"><?php echo $destacado[11]['DescriocionVideo'];?></p>
                                         </div>
+                                        <?php
+                                        if($destacado[11]['flag'] == 'I'){
+                                        ?>
                                         <img src="<?php echo base_url('assets/imagenes/'.$destacado[11]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 188px;" class="imagengrande">
+                                        <?php
+                                        }else{
+                                        $url = "http://www.youtube.com/embed/".$destacado[11]['ImagenVideo'];
+                                        echo $url;
+                                        ?>
+                                        <iframe class="youtube-player" type="text/html" width="100%" style="height:188px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                        <?php
+                                        }
+                                        ?>
                                         <a href="#" class="btn btn-sm botonencimaimgtres"><?php echo $destacado[11]['NomMenu'];?></a>
                                     </div>
                                 </div>
@@ -224,7 +349,19 @@
                                                 <!--p class="colordescropcion">Donec nec justo eget felis facilisis fermentum. 
                                                    Aliquam porttitor mauris sit amet orci.</p-->
                                         </div>
+                                        <?php
+                                        if($destacado[12]['flag'] == 'I'){
+                                        ?>
                                         <img src="<?php echo base_url('assets/imagenes/'.$destacado[12]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
+                                        <?php
+                                        }else{
+                                        $url = "http://www.youtube.com/embed/".$destacado[12]['ImagenVideo'];
+                                        echo $url;
+                                        ?>
+                                        <iframe class="youtube-player" type="text/html" width="100%" style="height:96px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                        <?php
+                                        }
+                                        ?>
                                         <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $destacado[12]['NomMenu'];?></a>
                                     </div>
                                 </div>
@@ -237,7 +374,19 @@
                                                 <!--p class="colordescropcion">Donec nec justo eget felis facilisis fermentum. 
                                                    Aliquam porttitor mauris sit amet orci.</p-->
                                         </div>
+                                        <?php
+                                        if($destacado[13]['flag'] == 'I'){
+                                        ?>
                                         <img src="<?php echo base_url('assets/imagenes/'.$destacado[13]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
+                                        <?php
+                                        }else{
+                                        $url = "http://www.youtube.com/embed/".$destacado[13]['ImagenVideo'];
+                                        echo $url;
+                                        ?>
+                                        <iframe class="youtube-player" type="text/html" width="100%" style="height:96px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                        <?php
+                                        }
+                                        ?>
                                         <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $destacado[13]['NomMenu'];?></a>
                                     </div>
                                 </div>
@@ -252,7 +401,19 @@
                                                 <!--p class="colordescropcion">Donec nec justo eget felis facilisis fermentum. 
                                                    Aliquam porttitor mauris sit amet orci.</p-->
                                         </div>
+                                        <?php
+                                        if($destacado[14]['flag'] == 'I'){
+                                        ?>
                                         <img src="<?php echo base_url('assets/imagenes/'.$destacado[14]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
+                                        <?php
+                                        }else{
+                                        $url = "http://www.youtube.com/embed/".$destacado[14]['ImagenVideo'];
+                                        echo $url;
+                                        ?>
+                                        <iframe class="youtube-player" type="text/html" width="100%" style="height:96px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                        <?php
+                                        }
+                                        ?>
                                         <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $destacado[14]['NomMenu'];?></a>
                                     </div>
                                 </div>
@@ -265,7 +426,19 @@
                                                 <!--p class="colordescropcion">Donec nec justo eget felis facilisis fermentum. 
                                                    Aliquam porttitor mauris sit amet orci.</p-->
                                         </div>
+                                        <?php
+                                        if($destacado[15]['flag'] == 'I'){
+                                        ?>
                                         <img src="<?php echo base_url('assets/imagenes/'.$destacado[15]['ImagenVideo'])?>" alt="imagen" width="100%" style="height: 96px;">
+                                        <?php
+                                        }else{
+                                        $url = "http://www.youtube.com/embed/".$destacado[15]['ImagenVideo'];
+                                        echo $url;
+                                        ?>
+                                        <iframe class="youtube-player" type="text/html" width="100%" style="height:96px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                        <?php
+                                        }
+                                        ?>
                                         <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $destacado[15]['NomMenu'];?></a>
                                     </div>
                                 </div>
@@ -285,7 +458,7 @@
                     <div class="col-lg-6">
                         <h3 class='pull-left' style='font: 17px/17px "preloblack";font-weight: bold;color: #4d4d4d; margin: 0 0 10px;text-transform: uppercase;'>Último minuto</h3>
                         <br/><br/><div class='pull-left' style="font:consolas;font-size:11px; background-color:#eee; padding:1em;width:100%;border:0px;"></div><br/><br/>
-                        <div style="height:1990px;overflow-x: hidden;">
+                        <div style="height:2246px;overflow-x: hidden;">
                         <?php foreach ($videostodos as $valor): ?>
                         <table style="width: 100%;">
                             <tr>
@@ -300,7 +473,21 @@
                         </table>
                         <table style="width: 100%;">
                             <tr>
-                                <td><img src="<?php echo base_url('assets/imagenes/'.$valor['ImagenVideo'])?>" alt="imagen" style="width: 95%;height: 100px;"></td>
+                                <td>
+                                    <?php
+                                    if($valor['flag'] == 'I'){
+                                    ?>
+                                    <img src="<?php echo base_url('assets/imagenes/'.$valor['ImagenVideo'])?>" alt="imagen" style="width: 95%;height: 100px;">
+                                    <?php
+                                    }else{
+                                    $url = "http://www.youtube.com/embed/".$valor['ImagenVideo'];
+                                    echo $url;
+                                    ?>
+                                    <iframe class="youtube-player" type="text/html" style="width: 95%;height: 100px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                    <?php
+                                    }
+                                    ?>
+                                </td>
                                 <td style="text-align: justify;width: 50%;"><?php echo $valor['DescriocionVideo'];?></td>
                             </tr>
                         </table><br/>
@@ -370,7 +557,21 @@
                             </table>
                             <table style='margin-right:12px;'>
                                 <tr>
-                                    <td><img src="<?php echo base_url('assets/imagenes/'.$valorsalud['ImagenVideo'])?>" alt="imagen" style="width: 85%;height: 100px;"></td>
+                                    <td>
+                                        <?php
+                                        if($valorsalud['flag'] == 'I'){
+                                        ?>
+                                        <img src="<?php echo base_url('assets/imagenes/'.$valorsalud['ImagenVideo'])?>" alt="imagen" style="width: 85%;height: 100px;">
+                                        <?php
+                                        }else{
+                                        $url = "http://www.youtube.com/embed/".$valorsalud['ImagenVideo'];
+                                        echo $url;
+                                        ?>
+                                        <iframe class="youtube-player" type="text/html" style="width: 85%;height: 100px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                        <?php
+                                        }
+                                        ?>
+                                    </td>
                                     <td style="text-align: justify;width: 50%;font-weight: bold;"><h4><?php echo $valorsalud['TituloVideo'];?></h4></td>
                                 </tr>
                             </table>
@@ -463,7 +664,21 @@
                     </table>
                     <table style="width:200px;margin-left:12px;margin-right:12px;">
                         <tr>
-                            <td><img src="<?php echo base_url('assets/imagenes/'.$valueocho['ImagenVideo'])?>" alt="imagen" style="width: 100%;height: 100px;"></td>
+                            <td>
+                                <?php
+                                if($valueocho['flag'] == 'I'){
+                                ?>
+                                <img src="<?php echo base_url('assets/imagenes/'.$valueocho['ImagenVideo'])?>" alt="imagen" style="width: 100%;height: 100px;">
+                                <?php
+                                }else{
+                                $url = "http://www.youtube.com/embed/".$valueocho['ImagenVideo'];
+                                echo $url;
+                                ?>
+                                <iframe class="youtube-player" type="text/html" style="width: 100%;height: 100px;" src="<?php echo $url;?>?rel=0&showinfo=0&controls=1&autoplay=0&start=120" allowfullscreen frameborder=”0″ allowfullscreen></iframe>
+                                <?php
+                                }
+                                ?>
+                            </td>
                         </tr>
                     </table>
                     <br/>
