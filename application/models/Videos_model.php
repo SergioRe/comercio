@@ -76,6 +76,16 @@ class Videos_model extends CI_Model {
         $data = $query->result_array();
         return $data;
     }
+    
+    public function videosOcho(){
+        $this->db->from($this->table);
+        $this->db->join('menu','menu.IdMenu = videos.IdMenu');
+        $this->db->where('flag','V');
+        $this->db->limit(7);
+        $query = $this->db->get();
+        $data = $query->result_array();
+        return $data;
+    }
 
     public function listarVideosDestacados(){
         $this->db->from($this->table);

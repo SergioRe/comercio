@@ -14,6 +14,7 @@ class Videos extends CI_Controller {
         $data = array();
         $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
         $fecha = date('d')." de ".$meses[date('n')-1]. " del ".date('Y') ;
+        $data['topOchoVideos'] = $this->videos->videosOcho();
         $data['fecha'] = $fecha;
         $this->load->view('videos/index_view',$data);
     }

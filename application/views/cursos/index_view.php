@@ -17,6 +17,7 @@
 		                    <li class="media">
 		                    <a class="pull-left" href="#">
 		                        <?php
+                                        if(isset($videospalabra[0])){
                                         if($videospalabra[0]['flag'] == 'I'){
                                         ?>
                                         <img class="media-object" style='width:450px;height:350px;' src="<?php echo base_url('assets/imagenes/'.$videospalabra[0]['ImagenVideo'])?>" alt="imagen">
@@ -29,10 +30,19 @@
                                         }
                                         ?>
                                         <a href="#" class="btn btn-sm botonencimaimgcero"><?php echo $videospalabra[0]['NomMenu'];?></a>
+                                        <?php
+                                        }
+                                        ?>
 		                    </a>
 		                    <div class="media-body">
+                                        <?php
+                                        if(isset($videospalabra[0])){
+                                        ?>
 		                        <h2 class="media-heading colorblancoletra"><?php echo $videospalabra[0]['TituloVideo'];?></h2>
 		                        <h4 class='colorblanco1'><?php echo $videospalabra[0]['DescriocionVideo'];?></h4>
+                                        <?php
+                                        }
+                                        ?>
 		                    </div>
 		                    </li>
 		                </ul>
@@ -42,6 +52,9 @@
 		            <div class="col-lg-4">
 		                <div class="row">
 		                    <div style="height: 356px;width:100%;" class="videograndecolor">
+                                        <?php
+                                        if(isset($videospalabra[1])){
+                                        ?>
 		                        <div class="thumbnail" style="height: 357px;">
 		                            <div class="caption videograndecolor" style="height: 168px;">
 		                                <h3 class="coloreleciones1"><?php echo $videospalabra[1]['TituloVideo'];?></h3>
@@ -61,12 +74,18 @@
                                             ?>
                                             <a href="#" class="btn btn-sm botonencimaimguno"><?php echo $videospalabra[1]['NomMenu'];?></a>
 		                        </div>
+                                        <?php
+                                        }
+                                        ?>
 		                    </div>
 		                </div>
 		            </div>
 		            <div class="col-lg-8">
 		                <div class="row">
 		                    <div class="col-lg-4" style="height: 356px;">
+                                        <?php
+                                        if(isset($videospalabra[2])){
+                                        ?>
 		                        <div style="height: 170px;" class="videograndecolor">
 		                            <div class="thumbnail" style="height: 170px;">
 		                                <div class="caption videograndecolor" style="height: 74px;">
@@ -88,8 +107,14 @@
                                                 ?>
                                                 <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $videospalabra[2]['NomMenu'];?></a>
 		                            </div>
-		                        </div><br/>
+		                        </div>
+                                        <?php
+                                        }
+                                        ?><br/>
 		                        <div style="height: 170px;" class="videograndecolor">
+                                            <?php
+                                            if(isset($videospalabra[3])){
+                                            ?>
 		                            <div class="thumbnail" style="height: 170px;">
 		                                <div class="caption videograndecolor" style="height: 74px;">
 		                                    <h3 class="coloreleciones2"><?php echo $videospalabra[3]['TituloVideo'];?></h3>
@@ -110,11 +135,17 @@
                                                 ?>
                                                 <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $videospalabra[3]['NomMenu'];?></a>
 		                            </div>
+                                            <?php
+                                            }
+                                            ?>
 		                        </div>
 		                    </div>
 		                    <div class="col-lg-8" style="height: 170px;">
 		                        <div class="row" style="height: 170px;">
 		                            <div class="col-lg-6" style="height: 170px;">
+                                                <?php
+                                                if(isset($videospalabra[4])){
+                                                ?>
 		                                <div style="height: 170px;" class="videograndecolor">
 		                                    <div class="thumbnail" style="height: 170px;">
 		                                        <div class="caption videograndecolor" style="height: 74px;">
@@ -136,8 +167,14 @@
                                                         ?>
                                                         <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $videospalabra[4]['NomMenu'];?></a>
 		                                    </div>
-		                                </div><br/>
+		                                </div>
+                                                <?php
+                                                }
+                                                ?><br/>
 		                                <div style="height: 170px;" class="videograndecolor">
+                                                    <?php
+                                                    if(isset($videospalabra[5])){
+                                                    ?>
 		                                    <div class="thumbnail" style="height: 170px;">
 		                                        <div class="caption videograndecolor" style="height: 74px;">
 		                                            <h3 class="coloreleciones2"><?php echo $videospalabra[5]['TituloVideo'];?></h3>
@@ -159,8 +196,14 @@
                                                         <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $videospalabra[5]['NomMenu'];?></a>
 		                                    </div>
 		                                </div>
+                                                <?php
+                                                }
+                                                ?>
 		                            </div>
 		                            <div class="col-lg-6" style="height: 170px;">
+                                                <?php
+                                                if(isset($videospalabra[6])){
+                                                ?>
 		                                <div style="height: 170px;" class="videograndecolor">
 		                                    <div class="thumbnail" style="height: 170px;">
 		                                        <div class="caption videograndecolor" style="height: 74px;">
@@ -182,8 +225,14 @@
                                                         ?>
                                                         <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $videospalabra[6]['NomMenu'];?></a>
 		                                    </div>
-		                                </div><br/>
+		                                </div>
+                                                <?php
+                                                }
+                                                ?><br/>
 		                                <div style="height: 170px;" class="videograndecolor">
+                                                    <?php
+                                                    if(isset($videospalabra[7])){
+                                                    ?>
 		                                    <div class="thumbnail" style="height: 170px;">
 		                                        <div class="caption videograndecolor" style="height: 74px;">
 		                                            <h3 class="coloreleciones2"><?php echo $videospalabra[7]['TituloVideo'];?></h3>
@@ -204,6 +253,9 @@
                                                         ?>
                                                         <a href="#" class="btn btn-sm botonencimaimgcuatro"><?php echo $videospalabra[7]['NomMenu'];?></a>
 		                                    </div>
+                                                    <?php
+                                                    }
+                                                    ?>
 		                                </div>
 		                            </div>
 		                        </div>
@@ -216,7 +268,9 @@
         			<div class="col-lg-6">
         				<h3 class='pull-left' style='font: 17px/17px "preloblack";font-weight: bold;color: #4d4d4d; margin: 0 0 10px;text-transform: uppercase;'>Últimas noticias</h3>
                         <br/><br/><div class='pull-left' style="font:consolas;font-size:11px; background-color:#eee; padding:1em;width:100%;border:0px;"></div><br/><br/>
-                        <?php foreach ($videostodosuno as $valor1): ?>
+                        <?php 
+                        if(isset($videostodosuno)){
+                        foreach ($videostodosuno as $valor1): ?>
                         <table style="width: 100%;">
                             <tr>
                                 <td style="border-top: 1px solid #ccc8ba;border-right: 1px solid #ccc8ba;width: 50%;text-align: left;"><?php echo $valor1['HoraVideo'];?></td>
@@ -249,12 +303,14 @@
                                 <td style="text-align: justify;width: 50%;height: 110px;"><?php echo $valor1['DescriocionVideo'];?></td>
                             </tr>
                         </table><br/>
-                        <?php endforeach; ?>
+                        <?php endforeach; }?>
         			</div>
         			<div class="col-lg-6">
         				<h3 class='pull-left' style='font: 17px/17px "preloblack";font-weight: bold;color: #4d4d4d; margin: 0 0 10px;text-transform: uppercase;'></h3>
                         <br/><br/><div class='pull-left' style="font:consolas;font-size:11px; background-color:#eee; padding:1em;width:100%;border:0px;"></div><br/><br/>
-                        <?php foreach ($videostodosdos as $valor2): ?>
+                        <?php 
+                        if(isset($videostodosdos)){
+                        foreach ($videostodosdos as $valor2): ?>
                         <table style="width: 100%;">
                             <tr>
                                 <td style="border-top: 1px solid #ccc8ba;border-right: 1px solid #ccc8ba;width: 50%;text-align: left;"><?php echo $valor2['HoraVideo'];?></td>
@@ -287,7 +343,7 @@
                                 <td style="text-align: justify;width: 50%;height: 110px;"><?php echo $valor2['DescriocionVideo'];?></td>
                             </tr>
                         </table><br/>
-                        <?php endforeach; ?>
+                        <?php endforeach;} ?>
         			</div>
         		</div>
 	        </div>
