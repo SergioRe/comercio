@@ -27,14 +27,14 @@ $(document).ready(function() {
             ?>
                 <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">Ingresa</button>
                 <button type="button" class="btn btn-default btn-sm" onclick="registrarme();">Registrate</button>
-                <button type="button" class="btn btn-default btn-sm">Suscríbete</button>
+                <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">Suscríbete</button>
             <?php    
             }else if($login == 'Si'){
             ?>
                 <span class="pid-user-caption">&nbsp;Bienvenido(a),</span>
                 <a class="peruid-link" href="#"><?php echo $NomCompUsu;?></a>&nbsp;
                 <a href="<?= site_url('inicio/cerrarsession') ?>"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></a>
-                <button type="button" class="btn btn-default btn-sm">Suscríbete</button>
+                <button type="button" class="btn btn-default btn-sm" onclick="suscribirme()">Suscríbete</button>
             <?php
             }
             ?>

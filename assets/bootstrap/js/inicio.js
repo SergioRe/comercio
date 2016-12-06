@@ -162,3 +162,62 @@ function enviar_pass(){
     });
     return false;
 }
+
+function suscribirme(){
+    $("#correoelect").val("");
+    $("#myModalSuscribirme").modal("show");
+}
+
+function suscribirmeupdate(){
+    var url = base_url + '/' + pathArray[1] + '/index.php/inicio/json/suscribirme';
+    var correoelect = $("#correoelect").val();
+    if(correoelect === ''){
+        Ext.Msg.show({
+            title: 'ATENCIÓN',
+            msg: 'Debe ingresar su Correo Electrónico.',
+            buttons: Ext.Msg.OK,
+            icon: Ext.Msg.INFO
+        });
+        return false;
+    }
+    $.ajax({
+        url: url,
+        type: "POST",
+	dataType: "JSON",
+        data: {CorreoUsu:correoelect},
+        beforeSend:cargando2,
+        success:function(result){
+            Ext.getBody().unmask();
+            $('#myModalSuscribirme').modal('hide');
+            switch(result.msj){
+                case 'Si':
+                    Ext.Msg.show({
+                        title: 'ATENCIÓN',
+                        msg: 'Proceso realizado correctamente. Se suscribio.',
+                        buttons: Ext.Msg.OK,
+                        icon: Ext.Msg.INFO
+                    });
+                    break;
+                case 'correoNoExiste':
+                    Ext.Msg.show({
+                        title: 'ATENCIÓN',
+                        msg: 'El correo ingresado no existe, por favor ingrese su correo.',
+                        buttons: Ext.Msg.OK,
+                        icon: Ext.Msg.INFO
+                    });
+                    break;
+                default:
+                    Ext.Msg.show({
+                        title: 'ATENCIÓN',
+                        msg: 'ERROR: '+result.msj,
+                        buttons: Ext.Msg.OK,
+                        icon: Ext.Msg.ERROR
+                    });
+                    break;        
+            }
+        },
+        timeout:40000,
+        error: problemas3
+    });
+    return false;
+}

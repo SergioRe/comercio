@@ -97,6 +97,17 @@ class Inicio extends CI_Controller {
                     echo json_encode(array('msj'=>$data['respuesta']));
                 }
                 break;
+            case 'suscribirme':
+                $existeCorreo = $this->usuarios->existeCorreo($_POST['CorreoUsu']);
+                $datos = count($existeCorreo);
+                if($datos > 0){
+                    $data['respuesta'] = $this->usuarios->correoUpdate($_POST['CorreoUsu']);
+                    echo json_encode(array('msj'=>$data['respuesta']));
+                }else{
+                    $data['respuesta'] = 'correoNoExiste';
+                    echo json_encode(array('msj'=>$data['respuesta']));
+                }
+                break;
         endswitch;
     }
 

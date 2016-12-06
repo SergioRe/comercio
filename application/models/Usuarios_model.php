@@ -111,4 +111,15 @@ class Usuarios_model extends CI_Model {
             return 'Excepción capturada: '.  $e->getMessage(). "\n";
         }
     }
+    
+    public function correoUpdate($CorreoUsu){
+        try {
+            $this->db->where('CorreoUsu', $CorreoUsu);
+            $data =array('SuscribirmeUsu'=>'S');
+            $this->db->update($this->table , $data);
+            return 'Si';
+        }catch (Exception $e) {
+            return 'Excepción capturada: '.  $e->getMessage(). "\n";
+        }
+    }
 }

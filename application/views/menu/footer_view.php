@@ -136,6 +136,25 @@
     </div>
 </div>
 
+<div id="myModalSuscribirme" class="modal fade bd-example-modal-sm" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <span class="textoaliniado">Ingresa tu correo electrónico con el que te registrastes.</span>
+            </div>
+            <div class="modal-body">
+                <form method="post" class="form-signin">
+                    <span id="reauth-email" class="reauth-email"></span>
+                    <input type="email" id="correoelect" name="correoelect" class="form-control" placeholder="Correo Electrínico" maxlength="40" /><br/>
+                    <input class="btn btn-sm btn-warning btn-block btn-signin" onclick="suscribirmeupdate();" type="button" value="ENVIAR"/><br/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Modal -->
 <div id="myModalRegistro" class="modal fade" role="dialog">
     <div class="modal-dialog">

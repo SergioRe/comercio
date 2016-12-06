@@ -32,7 +32,6 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#">Reportes</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><span class="glyphicon glyphicon-user"></span> <?php echo $NomCompUsu;?></a></li>
